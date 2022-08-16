@@ -85,7 +85,7 @@ function isValidEmailAddress(index, emailAddress) {
 }
 // enableButton validation
 function enableButtonValidation() {
-  if (templateReady && emailReady && emailSubject) {
+  if (emailReady && emailSubject) {
     enable("#send-email-button");
   } else {
     disable("#send-email-button");
@@ -107,89 +107,89 @@ function disable(id) {
     .addClass("disable");
 }
 //Submit
-$("#send-email-button").click(() => {
-  disable("#send-email-button");
-  var count = 0;
-  $("#progress").html("");
-  emails.forEach((email) => {
-    $("#progress").removeClass("d-none");
-    $("#check").addClass("d-none");
-    count++;
-    $("#progress").append(
-      `<div class="progress-message" id="progress-message-${count}">
-        <div>${count}) ${email}</div>
-        <div class="loading-container" id="loading-container-${count}">
-          <img src="images/loading.gif" alt="loading">
-        </div>
-      </div>`
-    );
-  });
+// $("#send-email-button").click(() => {
+//   disable("#send-email-button");
+//   var count = 0;
+//   $("#progress").html("");
+//   emails.forEach((email) => {
+//     $("#progress").removeClass("d-none");
+//     $("#check").addClass("d-none");
+//     count++;
+//     $("#progress").append(
+//       `<div class="progress-message" id="progress-message-${count}">
+//         <div>${count}) ${email}</div>
+//         <div class="loading-container" id="loading-container-${count}">
+//           <img src="images/loading.gif" alt="loading">
+//         </div>
+//       </div>`
+//     );
+//   });
 
-  count = 0;
-  emails.forEach((email) => {
-    count++;
-    let url = "./sendgrid module/send-email.php";
-    $.ajax({
-      type: "POST",
-      url: url,
-      data: {
-        email: email,
-        count: count,
-        template: emailTemplate,
-        subject: emailSubject,
-      },
-      success: function (result) {
-        var resultArray = result.split("] =>");
-        var output = [];
+  // count = 0;
+  // emails.forEach((email) => {
+  //   count++;
+  //   let url = "{{url('sendcomposeemail')}}";
+  //   $.ajax({
+  //     type: "POST",
+  //     url: url,
+  //     data: {
+  //       email: email,
+  //       count: count,
+  //       template: emailTemplate,
+  //       subject: emailSubject,
+  //     },
+  //     success: function (result) {
+  //       var resultArray = result.split("] =>");
+  //       var output = [];
 
-        resultArray.map(function (i, v) {
-          output.push(i);
-        });
+  //       resultArray.map(function (i, v) {
+  //         output.push(i);
+  //       });
 
-        var ahmCount = result.split("ahmer_email_count-")[1];
-        var x = output[0].substring(0, 3);
-        switch (x) {
-          case "200":
-            $(`#progress-message-${ahmCount}`).addClass("alert-danger");
-            $(`#loading-container-${ahmCount}`).html("200: Not delivered");
-            break;
-          case "202":
-            $(`#progress-message-${ahmCount}`).addClass("alert-success");
-            $(`#loading-container-${ahmCount}`).html(
-              "202: Email sent successfully"
-            );
-            break;
-          case "401":
-            $(`#progress-message-${ahmCount}`).addClass("alert-danger");
-            $(`#loading-container-${ahmCount}`).html(
-              "401: Authorization problem"
-            );
-            break;
-          case "400":
-            ahmCount = output[16].split("-")[1];
-            $(`#progress-message-${ahmCount}`).addClass("alert-danger");
-            $(`#loading-container-${ahmCount}`).html(
-              output[16].split(":")[2].split('"')[1].split(",")[0]
-            );
-            break;
-          case "500":
-            ahmCount = output[16].split("-")[1];
-            $(`#progress-message-${ahmCount}`).addClass("alert-danger");
-            $(`#loading-container-${ahmCount}`).html("SendGrid server error");
-            break;
-          case "503":
-            ahmCount = output[16].split("-")[1];
-            $(`#progress-message-${ahmCount}`).addClass("alert-danger");
-            $(`#loading-container-${ahmCount}`).html(
-              "SendGrid v3 not available now"
-            );
-            break;
-          default:
-            $(`#progress-message-${ahmCount}`).addClass("alert-danger");
-            $(`#loading-container-${ahmCount}`).html("some other error");
-            break;
-        }
-      },
-    });
-  });
-});
+  //       var ahmCount = result.split("ahmer_email_count-")[1];
+  //       var x = output[0].substring(0, 3);
+  //       switch (x) {
+  //         case "200":
+  //           $(`#progress-message-${ahmCount}`).addClass("alert-danger");
+  //           $(`#loading-container-${ahmCount}`).html("200: Not delivered");
+  //           break;
+  //         case "202":
+  //           $(`#progress-message-${ahmCount}`).addClass("alert-success");
+  //           $(`#loading-container-${ahmCount}`).html(
+  //             "202: Email sent successfully"
+  //           );
+  //           break;
+  //         case "401":
+  //           $(`#progress-message-${ahmCount}`).addClass("alert-danger");
+  //           $(`#loading-container-${ahmCount}`).html(
+  //             "401: Authorization problem"
+  //           );
+  //           break;
+  //         case "400":
+  //           ahmCount = output[16].split("-")[1];
+  //           $(`#progress-message-${ahmCount}`).addClass("alert-danger");
+  //           $(`#loading-container-${ahmCount}`).html(
+  //             output[16].split(":")[2].split('"')[1].split(",")[0]
+  //           );
+  //           break;
+  //         case "500":
+  //           ahmCount = output[16].split("-")[1];
+  //           $(`#progress-message-${ahmCount}`).addClass("alert-danger");
+  //           $(`#loading-container-${ahmCount}`).html("SendGrid server error");
+  //           break;
+  //         case "503":
+  //           ahmCount = output[16].split("-")[1];
+  //           $(`#progress-message-${ahmCount}`).addClass("alert-danger");
+  //           $(`#loading-container-${ahmCount}`).html(
+  //             "SendGrid v3 not available now"
+  //           );
+  //           break;
+  //         default:
+  //           $(`#progress-message-${ahmCount}`).addClass("alert-danger");
+  //           $(`#loading-container-${ahmCount}`).html("some other error");
+  //           break;
+  //       }
+  //     },
+  //   });
+  // });
+// });

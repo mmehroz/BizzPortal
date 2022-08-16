@@ -51,8 +51,23 @@
                     <input type="text" name="emailsubject" id="email-subject" class="form-control" placeholder="Subject" required>
                 </div>
                 <div class="form-group">
-                    <label>To Email <span style="color: red"> Enter Multiple By Coma Saperated</span></label><br><label>Example <span style="color: red"> recipient1@abc.com,recipient2@abc.com,recipient3@abc.com</span></label>
-                    <textarea class="form-control" id="email-boxf" name="toemail" rows="4" style="height: 200px" required placeholder="Enter Recipient Email" required></textarea>
+                    <div class="row">
+                        <div class="col-6">
+                            <label>To Email <span style="color: red"> Enter Multiple By Line Break</span></label><br><label>Example<span style="color: red"> recipient1@abc.com</span><br><span style="color: red"> recipient2@abc.com</span></label>
+                            <textarea class="form-control" id="email-box" name="toemail" rows="4" style="height: 200px" required placeholder="Enter Recipient Email" required></textarea>
+                        </div>
+                        <div class="col-6">
+                            <div class="check mt-4" id="check"></div>
+                            <div class="progress-area mt-4 d-none" id="progress">
+                                <div class="progress-message" id="progress-message">
+                                    <div>avidhaus.ahmer@gmail.com</div>
+                                    <div class="loading-container" id="loading-container">
+                                        <img src="images/loading.gif" alt="loading">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label>Select Type</label><br>
@@ -74,7 +89,7 @@
                     </div>
 	                <div class="row">
 	        			<div class="col-12">
-	                		<input type="submit" class="btn btn-primary mt-3 form-control" value="Send Email" />
+	                		<input type="submit" id="send-email-button" class="btn btn-primary mt-3 form-control" value="Send Email" />
 	                	</div>
 	            	</div>
             </form>

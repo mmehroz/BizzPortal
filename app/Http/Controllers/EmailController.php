@@ -36,7 +36,7 @@ class EmailController extends Controller
         		]);
 				$compose = $request->compose;
 			}
-			$toemail = explode(',', $request->toemail);
+			$toemail = explode("\n", $request->toemail);
 			foreach ($toemail as $toemails) {
 				Mail::send('email.compose', [ 
 					'datas' =>$compose,
