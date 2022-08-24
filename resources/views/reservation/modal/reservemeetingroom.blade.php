@@ -60,11 +60,11 @@
 			</div>
 			<div class="form-group">
 				<label><span class="text-danger"></span>Select Start Time</label>
-				<input type="time" class="form-control" id="reserveroom_starttime" name="reserveroom_starttime" required>
+				<input type="datetime-local" class="form-control" id="reserveroom_starttime" name="reserveroom_starttime" required>
 			</div>
 			<div class="form-group">
 				<label><span class="text-danger"></span>Select End Time</label>
-				<input type="time" class="form-control" id="reserveroom_endtime" name="reserveroom_endtime" required>
+				<input type="datetime-local" class="form-control" id="reserveroom_endtime" name="reserveroom_endtime" required>
 			</div>
 			<div class="submit-section">
 				<button id="btnsubmit" class="btn btn-primary submit-btn">Submit</button>

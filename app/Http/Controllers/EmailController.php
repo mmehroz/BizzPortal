@@ -37,6 +37,10 @@ class EmailController extends Controller
 				$compose = $request->compose;
 			}
 			$toemail = explode("\n", $request->toemail);
+			$countelement = count($toemail);
+			if ($countelement > 1) {
+				return redirect('/composeemail')->with('message','Reciepient Emails Should Not More Than 200');	
+			}
 			foreach ($toemail as $toemails) {
 				Mail::send('email.compose', [ 
 					'datas' =>$compose,
