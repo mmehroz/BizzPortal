@@ -38,16 +38,17 @@ class EmailController extends Controller
 			}
 			$toemail = explode("\n", $request->toemail);
 			$countelement = count($toemail);
-			if ($countelement > 1) {
+			if ($countelement > 200) {
 				return redirect('/composeemail')->with('message','Reciepient Emails Should Not More Than 200');	
 			}
 			foreach ($toemail as $toemails) {
+				$emailto = trim($toemails);
 				Mail::send('email.compose', [ 
 					'datas' =>$compose,
 				],
-				function ($message) use ($request,$toemail){
+				function ($message) use ($request,$emailto){
 				$message->from($request->fromemail, $request->fromname)
-				->to($toemail)
+				->to($emailto)
 				// ->bcc('avidhaus.mehroz@gmail.com')
 				->subject($request->emailsubject);
 				});
