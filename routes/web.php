@@ -56,6 +56,9 @@ Route::any('/submitaddcar','carController@submitaddcar');
 Route::get('/editcar/{id}','carController@editcar');
 Route::any('/submiteditcar','carController@submiteditcar');
 Route::get('/deletecar/{id}','carController@deletecar');
+Route::get('/rentaddition/{id}','carController@rentaddition');
+Route::any('/submitrentaddition','carController@submitrentaddition');
+Route::any('/viewrentadditionlog/{id}','carController@viewrentadditionlog');
 
 Route::get('/reservemeetingroom','ReservationController@reservemeetingroom');
 Route::any('/submitreservtion','ReservationController@submitreservtion');
