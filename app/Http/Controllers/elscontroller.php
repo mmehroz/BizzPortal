@@ -293,8 +293,12 @@ class elscontroller extends Controller
 		->select('role.*')
 		->get();
 		
+		$getcar = DB::connection('mysql')->table('car')
+		->where('status_id','=',2)
+		->select('car_id','car_name')
+		->get();
 		
-		$allData = array("depart" => $depart, "desg" => $desg, "role" => $role,"manager" => $manager);
+		$allData = array("depart" => $depart, "desg" => $desg, "role" => $role, "manager" => $manager, 'car' => $getcar);
 		
 		// dd($allData);
 		
@@ -369,6 +373,10 @@ class elscontroller extends Controller
 			$post->elsemployees_emailaddress = $request->emailaddress ;
 			$post->elsemployees_emailpassword = $request->emailpassword ;
 			$post->elsemployees_emailhost = $request->emailhost ;
+			$post->elsemployees_careligibility = $request->elsemployees_careligibility ;
+			$post->elsemployees_assigncaroramount = $request->elsemployees_assigncaroramount ;
+			$post->car_id = $request->car_id ;
+			$post->elsemployees_caramount = $request->elsemployees_caramount ;
 			$post->elsemployees_changeby = session()->get("name") ;
 			$post->elsemployees_addby = session()->get("name") ;
 			$post->created_at = date('Y-m-d H:i:s');
@@ -1043,6 +1051,11 @@ class elscontroller extends Controller
 						->where('payrollsalaries.EMP_BADGE_ID','=',$task->elsemployees_batchid)
 						->select('payrollsalaries.Salary','payrollsalaries.fund','attendance_allowance','punctuality_allowance','transport_allowance','fuel_allowance')
 						->first();
+
+						$getcar = DB::connection('mysql')->table('car')
+						->where('status_id','=',2)
+						->select('car_id','car_name')
+						->get();
 						$payroll = array();
 						if ($getpayroll) {
 							$payroll[0] = $getpayroll->Salary;
@@ -1061,7 +1074,7 @@ class elscontroller extends Controller
 						}
 						// dd($payroll);
 						
-						$allData = array("depart" => $depart, "desg" => $desg, "role" => $role, "empstatus" => $status,"manager" => $manager,"user" =>$task,"salary" =>$payroll);
+						$allData = array("depart" => $depart, "desg" => $desg, "role" => $role, "empstatus" => $status,"manager" => $manager,"user" =>$task,"salary" =>$payroll, 'car' => $getcar);
 				
 					// dd($allData);
 					
@@ -1147,6 +1160,10 @@ class elscontroller extends Controller
 				$post->elsemployees_emailaddress = $request->emailaddress ;
 				$post->elsemployees_emailpassword = $request->emailpassword ;
 				$post->elsemployees_emailhost = $request->emailhost ;
+				$post->elsemployees_careligibility = $request->elsemployees_careligibility ;
+				$post->elsemployees_assigncaroramount = $request->elsemployees_assigncaroramount ;
+				$post->car_id = $request->car_id ;
+				$post->elsemployees_caramount = $request->elsemployees_caramount ;
 	
 				if (session()->get('role') == 1 || session()->get('role') == 2 ) {
 				$post->elsemployees_annualleaves = $request->emp_annual_leave;

@@ -56,7 +56,6 @@
 				                  <div class="dropdown dropdown-action">
 				                    <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
 				                    <div class="dropdown-menu dropdown-menu-right">
-				                      <a class="dropdown-item" href="#" onclick="assigncar({{$val->car_id}})"><i class="fa fa-plus m-r-5"></i>Add Rent Addition</a>
 				                      <a class="dropdown-item" href="#" onclick="rentaddition({{$val->car_id}})"><i class="fa fa-plus m-r-5"></i>Add Rent Addition</a>
 				                      <a class="dropdown-item" href="#" onclick="viewrentadditionlog({{$val->car_id}})"><i class="fa fa-eye m-r-5"></i>View Rent Addition Log</a>
 				                      <a class="dropdown-item" href="#" onclick="editcar({{$val->car_id}})"><i class="fa fa-pencil m-r-5"></i>Edit</a>

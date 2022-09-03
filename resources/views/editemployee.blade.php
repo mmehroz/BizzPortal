@@ -219,11 +219,100 @@
 								</div>
 							</div>
 							</div>
+							<div class="row">
+						    <div class="col-md-4">
+								<div class="form-group">
+									<label class="col-form-label">Is Eligible For Car?</label><br>
+									<select class="form-control " name="elsemployees_careligibility" id="elsemployees_careligibility">
+										@if($data["user"]->elsemployees_careligibility == "Yes")
+		                                <option selected value="{{ $data["user"]->elsemployees_careligibility }}">{{ $data["user"]->elsemployees_careligibility }}</option>
+		                                <option value="No">No</option>
+										@elseif($data["user"]->elsemployees_careligibility == "No")
+										<option selected value="{{ $data["user"]->elsemployees_careligibility }}">{{ $data["user"]->elsemployees_careligibility }}</option>
+										<option value="Yes">Yes</option>
+										@else
+										<option value="" selected>Please Select</option>
+										<option value="No">No</option>
+										<option value="Yes">Yes</option>
+										@endif
+		                            </select>
+								</div>
+							</div>
+							<div class="col-md-4" id="assign" style="display: none;">
+								<div class="form-group">
+									<label class="col-form-label">Assign Car Or Add Amount</label><br>
+									<select class="form-control " name="elsemployees_assigncaroramount" id="elsemployees_assigncaroramount">
+										@if($data["user"]->elsemployees_assigncaroramount == "Assign")
+		                                <option selected value="{{ $data["user"]->elsemployees_assigncaroramount }}">{{ $data["user"]->elsemployees_assigncaroramount }}</option>
+		                                <option value="Add">Add Amount</option>
+										@elseif($data["user"]->elsemployees_assigncaroramount == "Add")
+										<option selected value="{{ $data["user"]->elsemployees_assigncaroramount }}">{{ $data["user"]->elsemployees_assigncaroramount }}</option>
+										<option value="Assign">Assign</option>
+										@else
+										<option value="" selected>Please Select</option>
+										<option value="Assign">Assign</option>
+										<option value="Add">Add Amount</option>
+		                                @endif
+		                            </select>
+								</div>
+							</div>
+							<div class="col-md-4" id="car" style="display: none;">
+								<div class="form-group">
+									<label class="col-form-label">Select Car</label><br>
+									<select class="form-control " name="car_id" id="elsemployees_car">
+										<option value="" selected>Please Select</option>
+										@foreach($data['car'] as $cars)
+										<option @if ($data["user"]->car_id == $cars->car_id ) {{"selected"}} @endif <option value={{$cars->car_id}}>{{$cars->car_name}}</option>
+										@endforeach
+		                            </select>
+								</div>
+							</div>
+							<div class="col-md-4" id="amount" style="display: none;">
+								<div class="form-group">
+									<label class="col-form-label">Enter Amount</label><br>
+									<input type="number" name="elsemployees_caramount" id="elsemployees_caramount" placeholder="Please Enter Car Rent Amount" title="Please Enter Car Rent Amount" required class="form-control" id="caramount" value="{{ $data["user"]->elsemployees_ext }}">
+								</div>
+							</div>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div><br>
-						<div class="row">
+			<script type="text/javascript">
+				$(document).ready(function(){
+				$("#elsemployees_careligibility").change(function(){
+				    $(this).find("option:selected").each(function(){
+				        var optionValue = $(this).attr("value");
+				        if(optionValue == "Yes"){
+				            // $(".box").not("." + optionValue).hide();
+				            $("#assign").show();
+				        } else{
+				            $("#assign").hide();
+				            $("#amount").hide();
+				            $("#car").hide();
+				        }
+				    });
+				}).change();
+				$("#elsemployees_assigncaroramount").change(function(){
+				    $(this).find("option:selected").each(function(){
+				        var optionValue = $(this).attr("value");
+				        if(optionValue == "Assign"){
+				            // $(".box").not("." + optionValue).hide();
+				            $("#car").show();
+				             $("#amount").hide();
+				        } else if(optionValue == "Add"){
+				            // $(".box").not("." + optionValue).hide();
+				            $("#amount").show();
+				            $("#car").hide();
+				        } else{
+				            $("#amount").hide();
+				            $("#car").hide();
+				        }
+				    });
+				}).change();
+				});
+			</script>
+			<div class="row">
 			<div class="col-md-12">
 				<div class="card flex-fill">
 					<div class="card-header">
@@ -242,9 +331,20 @@
 									<label class="col-form-label">Employement Type</label>
 										<select class="form-control "   placeholder="Employement Type" name="emp_type" >
 											<option selected="" value="{{ $data["user"]->elsemployees_type }}">{{ $data["user"]->elsemployees_type }}</option>
-											<option value="Revenue">Revenue</option>
+											@if($data["user"]->elsemployees_type == "Revenue")
 			                                <option value="Sales">Sales</option>
 			                                <option value="Other">Other</option>
+											@elseif($data["user"]->elsemployees_type == "Sales")
+											<option value="Revenue">Revenue</option>
+											<option value="Other">Other</option>
+											@elseif($data["user"]->elsemployees_type == "Other")
+											<option value="Revenue">Revenue</option>
+											<option value="Sales">Sales</option>
+											@else
+											<option value="Revenue">Revenue</option>
+											<option value="Sales">Sales</option>
+											<option value="Other">Other</option>
+											@endif
                                 		</select>
 									</div>
 								</div>
