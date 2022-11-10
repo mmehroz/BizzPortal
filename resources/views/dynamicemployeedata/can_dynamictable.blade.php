@@ -109,6 +109,13 @@
 										</div>
 									</div>
 								</div>
+								<div class="row" style="display: flex!important; margin-left: -2%">
+                                	<div class="col-md-12 col-sm-12 col-12 col-lg-12 col-xl-12">
+										<div class="small text-muted" style="font-style: normal!important;font-size: 11px;text-align:left!important;">
+											<b>HR Comment:</b> {{$val->jobapplicant_hrcomment}}
+										</div>
+									</div>
+								</div>
                                 <div class="row" style="display: flex!important; margin-top: 4%;">
                                 	<div class="col-md-5 col-sm-5 col-5 col-lg-5 col-xl-5">
 										<select class="form-control" id="mySelect" onchange="getedit(this.value)" style="height: 95%;">

@@ -74,7 +74,7 @@
 				<!-- Logo -->
                 <div class="header-left">
                     <a href="#"class="logo">
-						<img src="{!! asset('public/assets/img/final-logo.png') !!}" width="120" height="60" alt="">
+						<img src="{!! asset('public/assets/img/logo_white_header.svg') !!}" width="120" height="60" alt="">
 					</a>
                 </div>
 				<!-- /Logo -->				
@@ -264,7 +264,7 @@
 										<label class="col-form-label">Candidate Picture</label><br/>
 										<div class="profile-img-wrap">
 											<div class="profile-img">
-												<img src="{{ URL::to('public/img/')}}/{{$data['userdata']->jobapplicant_picture}}" />
+												<img style="width: 80px; height: 40px" src="{{ URL::to('public/img/')}}/{{$data['userdata']->jobapplicant_picture}}" />
 											</div>
 										</div>
 									</div>

@@ -760,8 +760,12 @@ width: 99%;
                                     ?>
                                 <a class="dropdown-item" style="color: black;" href="{{url('/usertimeout')}}"><i class="fa fa-key" style="padding-right: 7px; font-size: 12px;"></i>Time Out</a>
                             <?php }?>
-                                <a class="dropdown-item" style="color: black;" href="{{url('/')}}"><i class="fa fa-power-off" style="padding-right: 7px;  font-size: 12px;"></i>Logout</a>
                                 <a class="dropdown-item" style="color: black;" href="{{url('/chapass')}}"><i class="fa fa-key" style="padding-right: 7px; font-size: 12px;"></i>Change Password</a>
+                                @if(session()->get('batchid') == 1406)
+                                 <a class="dropdown-item" style="color: black;" href="{{url('/addemployeenos')}}"><i class="fa fa-plus" style="padding-right: 7px; font-size: 12px;"></i>Add Employee</a>
+                                 <a class="dropdown-item" style="color: black;" href="{{url('/candidate_list')}}"><i class="fa fa-list" style="padding-right: 7px; font-size: 12px;"></i>Recruitment</a>
+                                 @endif
+                                <a class="dropdown-item" style="color: black;" href="{{url('/')}}"><i class="fa fa-power-off" style="padding-right: 7px;  font-size: 12px;"></i>Logout</a>
                                 <!-- <a class="dropdown-item" href="{{url('/getimage')}}">Select Image</a> -->
                             </div>
                         </li>

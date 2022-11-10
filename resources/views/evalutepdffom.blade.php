@@ -30,7 +30,7 @@
        
     }
 .main .head h2{
-    background-color: rgb(82, 86, 89);
+    background-color: #0F5298;
     color: white;
     width: 100%;
     height: 30px;
@@ -72,7 +72,7 @@ th, td {
 </style>
 <body>
     <section class="logo">
-        <img width="30%;" src="http://209.182.216.71/public/assets/img/final-logo.png"/>
+        <img width="30%;" src="https://bizzworldcommunications.com/public/bwc-logo.png"/>
         <div class="hor"></div>
     </section>
     <section class="main">
@@ -83,10 +83,10 @@ th, td {
         </div>
         <div class="img"><img height="100px;" width="100px;" src="{{ URL::to('public/img/')}}/{{$datas->jobapplicant_picture}}"/></div>
         <div>
-            <label style="color: #b71c1c; font-weight: bold; padding-left: 50px;padding-top: 15px; text-decoration: underline;">Position Applied For:</label><span> <label>{{ $datas->jobapplicant_postionapppliedform }}</label></span>
+            <label style="color: #000; font-weight: bold; padding-left: 50px;padding-top: 15px; text-decoration: underline;">Position Applied For:</label><span> <label>{{ $datas->jobapplicant_postionapppliedform }}</label></span>
         </div>
         <div style="margin-left: 400px; margin-top: -20px; padding-bottom: 10px">
-            <label style="color: #b71c1c; font-weight: bold; text-decoration: underline;">Career Level:</label><span> <label>@if($datas->jobapplicant_careerlevel == "stusclcol" ) Student (School/College)
+            <label style="color: #000; font-weight: bold; text-decoration: underline;">Career Level:</label><span> <label>@if($datas->jobapplicant_careerlevel == "stusclcol" ) Student (School/College)
                                                             @elseif( $datas->jobapplicant_careerlevel == "undgra" ) Student (Undergrad./Grad.)
                                                             @elseif( $datas->jobapplicant_careerlevel == "entlev" ) Entry Level
                                                             @elseif( $datas->jobapplicant_careerlevel == "expnomana" ) Experienced (Non-Managerial)
@@ -97,35 +97,35 @@ th, td {
         </div>
         
         <div>
-            <label style="color: #b71c1c; font-weight: bold; padding-left: 50px;  text-decoration: underline;">Department:</label><span> <label>{{ $datas->dept_name }}</label></span>
+            <label style="color: #000; font-weight: bold; padding-left: 50px;  text-decoration: underline;">Department:</label><span> <label>{{ $datas->dept_name }}</label></span>
         </div>
         <div style="margin-left: 400px; margin-top: -20px; padding-bottom: 10px">
-            <label style="color: #b71c1c; font-weight: bold; text-decoration: underline;">Current Salary RS.</label><span> <label>{{ $datas->jobapplicant_currentsalary }}</label></span>
+            <label style="color: #000; font-weight: bold; text-decoration: underline;">Current Salary RS.</label><span> <label>{{ $datas->jobapplicant_currentsalary }}</label></span>
         </div>
         
         <div>
-            <label style="color: #b71c1c; font-weight: bold; padding-left: 50px; text-decoration: underline;">Monthly Expected Salary RS.</label><span> <label>{{ $datas->jobapplicant_monthlyexpectedsalary }}</label></span>
+            <label style="color: #000; font-weight: bold; padding-left: 50px; text-decoration: underline;">Monthly Expected Salary RS.</label><span> <label>{{ $datas->jobapplicant_monthlyexpectedsalary }}</label></span>
         </div>
         <div style="margin-left: 400px; margin-top: -20px; padding-bottom: 10px">
-            <label style="color: #b71c1c; font-weight: bold; text-decoration: underline;">Negotiable / Not Negotiable:</label><span> <label>{{ $datas->jobapplicant_negotiablesalary }}</label></span>
+            <label style="color: #000; font-weight: bold; text-decoration: underline;">Negotiable / Not Negotiable:</label><span> <label>{{ $datas->jobapplicant_negotiablesalary }}</label></span>
         </div>
       
         <div>
-            <label style="color: #b71c1c; font-weight: bold; padding-left: 50px; text-decoration: underline;">Reason To Left Last Job.</label><span> <label>{{ $datas->jobapplicant_reasonofleave }}</label></span>
+            <label style="color: #000; font-weight: bold; padding-left: 50px; text-decoration: underline;">Reason To Left Last Job.</label><span> <label>{{ $datas->jobapplicant_reasonofleave }}</label></span>
         </div>
         <div style="margin-left: 400px; margin-top: -20px; padding-bottom: 10px">
-            <label style="color: #b71c1c; font-weight: bold; text-decoration: underline;">Current Benefits:</label><span> <label>{{ $datas->jobapplicant_remarksofleave }}</label></span>
+            <label style="color: #000; font-weight: bold; text-decoration: underline;">Current Benefits:</label><span> <label>{{ $datas->jobapplicant_remarksofleave }}</label></span>
         </div>
        
         <div>
-            <label style="color: #b71c1c; font-weight: bold; padding-left: 50px; text-decoration: underline;">Comfortable / Agreed for Night Shift?</label><span> <label>{{ $datas->jobapplicant_nightshift }}</label></span>
+            <label style="color: #000; font-weight: bold; padding-left: 50px; text-decoration: underline;">Comfortable / Agreed for Night Shift?</label><span> <label>{{ $datas->jobapplicant_nightshift }}</label></span>
         </div>
         <div style="margin-left: 400px; margin-top: -20px; padding-bottom: 10px">
-            <label style="color: #b71c1c; font-weight: bold; text-decoration: underline;">Communication Skills:</label><span> <label>{{ $datas->jobapplicant_communicationskills }}</label></span>
+            <label style="color: #000; font-weight: bold; text-decoration: underline;">Communication Skills:</label><span> <label>{{ $datas->jobapplicant_communicationskills }}</label></span>
         </div>
         
         <div>
-            <label style="color: #b71c1c; font-weight: bold; padding-left: 50px;  text-decoration:  underline;">Period Required For Joining:</label><span> <label>{{ $datas->jobapplicant_periodjoining }}</label></span>
+            <label style="color: #000; font-weight: bold; padding-left: 50px;  text-decoration:  underline;">Period Required For Joining:</label><span> <label>{{ $datas->jobapplicant_periodjoining }}</label></span>
         </div>
     </section>
     <!-- Personal detail -->
@@ -137,81 +137,81 @@ th, td {
         </div>
         
         <div>
-            <label style="color: #b71c1c; font-weight: bold; padding-left: 50px;padding-top: 15px; text-decoration: underline;">Name:</label><span> <label>{{ $datas->jobapplicant_name }}</label></span>
+            <label style="color: #000; font-weight: bold; padding-left: 50px;padding-top: 15px; text-decoration: underline;">Name:</label><span> <label>{{ $datas->jobapplicant_name }}</label></span>
         </div>
         <div style="margin-left: 400px; margin-top: -20px; padding-bottom: 10px">
-            <label style="color: #b71c1c; font-weight: bold; text-decoration: underline;">FATHER'S/HUSBAND'S Name:</label><span> <label>{{ $datas->jobapplicant_fname }}</label></span>
+            <label style="color: #000; font-weight: bold; text-decoration: underline;">FATHER'S/HUSBAND'S Name:</label><span> <label>{{ $datas->jobapplicant_fname }}</label></span>
         </div>
         
         <div>
-            <label style="color: #b71c1c; font-weight: bold; padding-left: 50px;  text-decoration: underline;">EMAIL:</label><span> {{ $datas->log_email }}<label></label></span>
+            <label style="color: #000; font-weight: bold; padding-left: 50px;  text-decoration: underline;">EMAIL:</label><span> {{ $datas->log_email }}<label></label></span>
         </div>
         <div style="margin-left: 400px; margin-top: -20px; padding-bottom: 10px">
-            <label style="color: #b71c1c; font-weight: bold; text-decoration: underline;">Gender:</label><span> <label>{{ $datas->jobapplicant_gender }}</label></span>
+            <label style="color: #000; font-weight: bold; text-decoration: underline;">Gender:</label><span> <label>{{ $datas->jobapplicant_gender }}</label></span>
         </div>
         
         <div>
-            <label style="color: #b71c1c; font-weight: bold; padding-left: 50px; text-decoration: underline;">MOBILE #:</label><span> <label>@if( $datas->jobapplicant_contact == "") -
+            <label style="color: #000; font-weight: bold; padding-left: 50px; text-decoration: underline;">MOBILE #:</label><span> <label>@if( $datas->jobapplicant_contact == "") -
                           @elseif($datas->jobapplicant_contact != "") {{$datas->jobapplicant_contact}}
                           @endif</label></span>
         </div>
         <div style="margin-left: 400px; margin-top: -20px; padding-bottom: 10px">
-            <label style="color: #b71c1c; font-weight: bold; text-decoration: underline;">RES/OFFICE #:</label><span> <label>@if( $datas->jobapplicant_officeno == "") -
+            <label style="color: #000; font-weight: bold; text-decoration: underline;">RES/OFFICE #:</label><span> <label>@if( $datas->jobapplicant_officeno == "") -
                           @elseif($datas->jobapplicant_officeno != "") {{$datas->jobapplicant_officeno}}
                           @endif</label></span>
         </div>
       
         <div>
-            <label style="color: #b71c1c; font-weight: bold; padding-left: 50px; text-decoration: underline;">DATE OF BIRTH:</label><span> <label>{{ $datas->jobapplicant_dob }}</label></span>
+            <label style="color: #000; font-weight: bold; padding-left: 50px; text-decoration: underline;">DATE OF BIRTH:</label><span> <label>{{ $datas->jobapplicant_dob }}</label></span>
         </div>
         <div style="margin-left: 400px; margin-top: -20px; padding-bottom: 10px">
-            <label style="color: #b71c1c; font-weight: bold; text-decoration: underline;">AGE:</label><span> <label> @if( $datas->jobapplicant_age == "") -
+            <label style="color: #000; font-weight: bold; text-decoration: underline;">AGE:</label><span> <label> @if( $datas->jobapplicant_age == "") -
                           @elseif($datas->jobapplicant_age != "") {{$datas->jobapplicant_age}}
                           @endif</label></span>
         </div>
        
         <div>
-            <label style="color: #b71c1c; font-weight: bold; padding-left: 50px; text-decoration: underline;">PLACE OF BIRTH:</label><span> <label>@if( $datas->jobapplicant_placeob == "") -
+            <label style="color: #000; font-weight: bold; padding-left: 50px; text-decoration: underline;">PLACE OF BIRTH:</label><span> <label>@if( $datas->jobapplicant_placeob == "") -
                           @elseif($datas->jobapplicant_placeob != "") {{$datas->jobapplicant_placeob}}
                           @endif</label></span>
         </div>
         <div style="margin-left: 400px; margin-top: -20px; padding-bottom: 10px">
-            <label style="color: #b71c1c; font-weight: bold; text-decoration: underline;">N.I.C NO:</label><span> <label> @if( $datas->jobapplicant_cnic == "") -
+            <label style="color: #000; font-weight: bold; text-decoration: underline;">N.I.C NO:</label><span> <label> @if( $datas->jobapplicant_cnic == "") -
                           @elseif($datas->jobapplicant_cnic != "") {{$datas->jobapplicant_cnic}}
                           @endif</label></span>
         </div>
         <div>
-            <label style="color: #b71c1c; font-weight: bold; padding-left: 50px; text-decoration: underline;">Reference:</label><span> <label>@if( $datas->jobapplicant_reference == "") -
+            <label style="color: #000; font-weight: bold; padding-left: 50px; text-decoration: underline;">Reference:</label><span> <label>@if( $datas->jobapplicant_reference == "") -
                           @elseif($datas->jobapplicant_reference != "") {{$datas->jobapplicant_reference}}
                           @endif</label></span>
         </div>
         <div style="margin-left: 400px; margin-top: -20px; padding-bottom: 10px">
-            <label style="color: #b71c1c; font-weight: bold; text-decoration: underline;">NATIONALITY:</label><span> <label>@if( $datas->jobapplicant_nationality == "") -
+            <label style="color: #000; font-weight: bold; text-decoration: underline;">NATIONALITY:</label><span> <label>@if( $datas->jobapplicant_nationality == "") -
                           @elseif($datas->jobapplicant_nationality != "") {{$datas->jobapplicant_nationality}}
                           @endif</label></span>
         </div>
         <div>
-            <label style="color: #b71c1c; font-weight: bold; padding-left: 50px; text-decoration: underline;">RELIGION:</label><span> <label> @if( $datas->jobapplicant_religion == "") -
+            <label style="color: #000; font-weight: bold; padding-left: 50px; text-decoration: underline;">RELIGION:</label><span> <label> @if( $datas->jobapplicant_religion == "") -
                           @elseif($datas->jobapplicant_religion != "") {{$datas->jobapplicant_religion}}
                           @endif</label></span>
         </div>
         <div style="margin-left: 400px; margin-top: -20px; padding-bottom: 10px">
-            <label style="color: #b71c1c; font-weight: bold; text-decoration: underline;">MARITAL STATUS:</label><span> <label>  @if( $datas->jobapplicant_martialstatus == "") -
+            <label style="color: #000; font-weight: bold; text-decoration: underline;">MARITAL STATUS:</label><span> <label>  @if( $datas->jobapplicant_martialstatus == "") -
                           @elseif($datas->jobapplicant_martialstatus != "") {{$datas->jobapplicant_martialstatus}}
                           @endif</label></span>
         </div>
         <div style="padding-bottom: 10px;">
-            <label style="color: #b71c1c; font-weight: bold; padding-left: 50px; padding-bottom: 10px; text-decoration: underline;">OCCUPATION:</label><span> <label>@if( $datas->jobapplicant_occupation == "") -
+            <label style="color: #000; font-weight: bold; padding-left: 50px; padding-bottom: 10px; text-decoration: underline;">OCCUPATION:</label><span> <label>@if( $datas->jobapplicant_occupation == "") -
                           @elseif($datas->jobapplicant_occupation != "") {{$datas->jobapplicant_occupation}}
                           @endif</label></span>
         </div>
         <div style="padding-bottom: 10px;">
-            <label style="color: #b71c1c; font-weight: bold; padding-left: 50px; ;  text-decoration:  underline;">ADDRESS (Permanent):</label><span> <label> @if( $datas->jobapplicant_address == "") -
+            <label style="color: #000; font-weight: bold; padding-left: 50px; ;  text-decoration:  underline;">ADDRESS (Permanent):</label><span> <label> @if( $datas->jobapplicant_address == "") -
                           @elseif($datas->jobapplicant_address != "") {{$datas->jobapplicant_address}}
                           @endif</label></span>
         </div>
         <div style="padding-bottom: 0px;">
-            <label style="color: #b71c1c; font-weight: bold; padding-left: 50px;  text-decoration:  underline;">ADDRESS (Temporary):</label><span> <label>@if( $datas->jobapplicant_addresstemporaray == "") -
+            <label style="color: #000; font-weight: bold; padding-left: 50px;  text-decoration:  underline;">ADDRESS (Temporary):</label><span> <label>@if( $datas->jobapplicant_addresstemporaray == "") -
                           @elseif($datas->jobapplicant_addresstemporaray != "") {{$datas->jobapplicant_addresstemporaray}}
                           @endif</label></span>
         </div>
@@ -224,7 +224,7 @@ th, td {
                 EDUCATIONAL RECORD
             </h2>
         </div>
-        <h3 style="text-align: center; color: #b71c1c;">EDUCATIONAL / PROFESSIONAL QUALIFICATIONS: (LIST THE LAST ONE FIRST)</h3>
+        <h3 style="text-align: center; color: #000;">EDUCATIONAL / PROFESSIONAL QUALIFICATIONS: (LIST THE LAST ONE FIRST)</h3>
         <div>
             <table id="t01" style="width: 100%;">
   <tr>
@@ -293,7 +293,7 @@ th, td {
                 EMPLOYMENT RECORD
             </h2>
         </div>
-        <h3 style="text-align: center; color: #b71c1c;">(LIST THE LAST ONE FIRST)</h3>
+        <h3 style="text-align: center; color: #000;">(LIST THE LAST ONE FIRST)</h3>
         <div>
             <table id="t01" style="width: 100%">
   <tr>

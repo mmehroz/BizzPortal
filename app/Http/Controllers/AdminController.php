@@ -331,6 +331,7 @@ class AdminController extends Controller
 		->where('jobapplicant.jobapplicant_channel','=','1')
 		->where('jobapplicant.jobapplicant_status','=','candidatelist')
 		->select('jobapplicant.*','hrm_Department.*','hrm_login.*')
+		->orderBy('jobapplicant_id', 'DESC')
 		->paginate(10);
 
 
@@ -749,8 +750,7 @@ class AdminController extends Controller
 		
 	}
 	
-	public function candiaction($value){
-	
+	public function candiaction($value,$comment){
 		$action = explode("~", $value);
 		
 		$task =  DB::connection('mysql')->table('jobapplicant')
@@ -774,6 +774,7 @@ class AdminController extends Controller
             ->update([
            'updated_at' => date('Y-m-d H:i:s'),
 		   'jobapplicant_status' => $action[0],
+		   'jobapplicant_hrcomment' => $comment,
 		   'jobapplicant_ChangeBy' => session()->get("name"),
 			]);
 			
@@ -973,7 +974,6 @@ class AdminController extends Controller
 		->select('jobapplicant.*','hrm_Department.*','hrm_login.*')
 		->get();
 		
-		
 		$Attend = DB::connection('mysql')->table('jobapplicant')
 		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
 		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
@@ -981,6 +981,7 @@ class AdminController extends Controller
 		->where('jobapplicant.jobapplicant_status','=','attend')
 		->select('jobapplicant.*','hrm_Department.*','hrm_login.*')
 		->get();
+		// dd($Attend);
 		
 		$Notattend = DB::connection('mysql')->table('jobapplicant')
 		->join('hrm_login','hrm_login.log_id', '=','jobapplicant.jobapplicant_log_id')
@@ -1006,9 +1007,9 @@ class AdminController extends Controller
 		 
 		 
 		$evuinterviewform = DB::connection('mysql')->table('jobapplicant')
-		->join('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
-		->join('sub_department','sub_department.sd_id', '=','jobapplicant.jobapplicant_sub_department')
-		->join('can_evulation','can_evulation.can_evu_job_id', '=','jobapplicant.jobapplicant_id')
+		->leftjoin('hrm_Department','hrm_Department.dept_id', '=','jobapplicant.jobapplicant_department')
+		->leftjoin('sub_department','sub_department.sd_id', '=','jobapplicant.jobapplicant_sub_department')
+		->leftjoin('can_evulation','can_evulation.can_evu_job_id', '=','jobapplicant.jobapplicant_id')
 		->where('jobapplicant.jobapplicant_id','=',$id)
 		->select('jobapplicant.*','hrm_Department.dept_name','sub_department.*','can_evulation.*')
 		->first();

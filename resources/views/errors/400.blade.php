@@ -22,7 +22,7 @@ svg{
   width: 500px;
     height: 400px;
     text-align: center;
-    fill: #640d1d;
+    fill: ##0f5298;
 }
 path#XMLID_5_ {
    

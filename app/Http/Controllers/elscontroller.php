@@ -386,6 +386,18 @@ class elscontroller extends Controller
 
 			$created = $post->save();
 
+			if ($request->elsemployees_careligibility == "Yes") {
+				$insert = array(
+                'carassign_month' => date('Y-m'),
+                'carassign_to' => $request->emp_batch,
+                'car_id' => $request->car_id,
+                'status_id'=> 2,
+                'created_by'=>  session()->get("batchid"),
+                'created_at'=> date('Y-m-d h:i:s'),
+                );
+            	DB::connection('mysql')->table('carassign')->insert($insert);
+			}
+
 			$insert[] = array(
                 'Name' => $request->emp_name,
                 'EMP_BADGE_ID' => $request->emp_batch,
@@ -1175,6 +1187,18 @@ class elscontroller extends Controller
 				$post->elsemployees_changeby = session()->get("name");
 				$post->updated_at = date('Y-m-d H:i:s');
 				$updated = $post->save();
+
+				if ($request->elsemployees_careligibility == "Yes") {
+					$insert = array(
+	                'carassign_month' => date('Y-m'),
+	                'carassign_to' => $request->emp_batch,
+	                'car_id' => $request->car_id,
+	                'status_id'=> 2,
+	                'created_by'=>  session()->get("batchid"),
+	                'created_at'=> date('Y-m-d h:i:s'),
+	                );
+	            	DB::connection('mysql')->table('carassign')->insert($insert);
+				}
 
 				$task = DB::connection('mysql')->table('payrollsalaries')
 				->select('payrollsalaries.*')

@@ -9,9 +9,9 @@
 			label
 			{
 			text-align:justify;
-			font-weight:500;
+			font-weight:200;
 			font-family: Verdana;
-			font-size:14px;
+			font-size:8px;
 			color: #333;
 			}
 			hr
@@ -54,7 +54,7 @@
 			    margin-bottom: 1rem;
 			}
 			.col-form-label {
-				color:#85152d;
+				color:#000;
 			    padding-top: calc(.375rem + 1px);
 			    padding-bottom: calc(.375rem + 1px);
 			    margin-bottom: 0;
@@ -103,7 +103,7 @@
 						<p style='margin-top:0in;margin-right:0in;margin-bottom:.0001pt;margin-left:0in;line-height:107%;font-size:15px;font-family:"Calibri","sans-serif";text-align:center;'>
 							<strong>
 								<u><span style="font-size:19px;line-height:107%;">
-									<img height="100px;" width="200px;" src="http://209.182.216.71/hrm/public/assets/img/final-logo.png"/>
+									<img height="100px;" width="200px;" src="https://bizzworldcommunications.com/public/bwc-logo.png"/>
 								</span></u>
 							</strong>
 						</p>
@@ -113,32 +113,40 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div class="card flex-fill" style="border:2px solid #4a4a4a;">
-						<div class="card-header" style="box-sizing:border-box;padding-top:.75rem;padding-bottom:.75rem;padding-right:1.25rem;padding-left:1.25rem;margin-bottom:0;background-color:#4a4a4a;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgba(0,0,0,.125);border-radius:calc(.25rem - 1px) calc(.25rem - 1px) 0 0;">
-							<h3 class="card-title mb-0 text-center" style="box-sizing:border-box;margin-top:0;margin-bottom:0!important;font-weight:500;line-height:1.2;font-size:20px;orphans:3;widows:3;page-break-after:avoid;font-family:CircularStd;color:#fff;text-align:center!important;">INTERVIEW ASSESSMENT & RECOMMENDATION FORM</h3>
+						<div class="card-header" style="box-sizing:border-box;padding-top:.75rem;padding-bottom:.75rem;padding-right:1.25rem;padding-left:1.25rem;margin-bottom:0;background-color:#4a4a4a;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:rgba(0,0,0,.125);border-radius:calc(.25rem - 1px) calc(.25rem - 1px) 0 0;background-color: #0f5298">
+							<h3 class="card-title mb-0 text-center" style="box-sizing:border-box;margin-top:0;margin-bottom:0!important;font-weight:500;line-height:1.2;font-size:20px;orphans:3;widows:3;page-break-after:avoid;font-family:CircularStd;color:#fff;text-align:center!important;background-color: #0f5298">INTERVIEW ASSESSMENT & RECOMMENDATION FORM</h3>
 						</div>
 						<div class="card-body" style="padding:1.25rem;">
 							<!-- <div class=""> -->
 					            <h4 class="card-title mb-0 text-left" style="color: #000000; background-color: #bfbfbf; text-align: center !important;">Candidate Personal Data</h4>
-					            <div class="row" style="display: flex; margin-top: -250px; margin-right: -15px; margin-left: -15px;">
-								    <div class="col-md-3">
+					            <div class="row">
+								    <div class="col-md-6 col-6 col-lg-6">
 										<div class="form-group">
 											<label class="col-form-label">Name</label>
 											<input type="text" class="form-control" value="{{$datas->jobapplicant_name}}" readonly="">
 										</div>
 									</div>
-								    <div class="col-md-3" style="margin-left:25%;">
+
+
+								    <div class="col-md-6 col-6 col-lg-6">
 										<div class="form-group">
 											<label class="col-form-label">Company</label>
 											<input type="text" class="form-control" name="can_company" value="Bizz World Communication" readonly="">
 										</div>
 									</div>
-								    <div class="col-md-3" style="margin-left:50%;">
+
+
+								</div>
+
+
+								<div class="row">
+								    <div class="col-md-6 col-6">
 										<div class="form-group">
 											<label class="col-form-label">Position Title</label>
 											<input type="text" class="form-control" value="{{$datas->jobapplicant_postionapppliedform}}" readonly="">
 										</div>
 									</div>
-								    <div class="col-md-3" style="margin-left: 75%;">
+								    <div class="col-md-6 col-6">
 										<div class="form-group">
 											<label class="col-form-label">Department</label>
 											<input type="text" class="form-control" value="{{$datas->dept_name}}" readonly="">
@@ -146,7 +154,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="row" style="display: flex; margin-top: -250px; margin-right: -15px; margin-left: -15px;">
+								<div class="row" style=" margin-top: -250px; margin-right: -15px; margin-left: -15px;">
 								    <div class="col-md-3">
 										<div class="form-group">
 											<label class="col-form-label">Sub Department</label>
@@ -172,7 +180,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="row" style="display: flex; margin-top: -250px; margin-right: -15px; margin-left: -15px;">
+								<div class="row" style=" margin-top: -250px; margin-right: -15px; margin-left: -15px;">
 								    <div class="col-md-2">
 										<div class="form-group">
 											<label class="col-form-label">Reference</label>
@@ -204,7 +212,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="row" style="display: flex; margin-top: -170px; margin-right: -15px; margin-left: -15px;">
+								<div class="row" style=" margin-top: -170px; margin-right: -15px; margin-left: -15px;">
 								    <div class="col-md-4">
 										<div class="form-group">
 											<label class="col-form-label">BUDGETED in Business Plan</label>
@@ -224,7 +232,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="row" style="display: flex; margin-right: -15px; margin-left: -15px;">
+								<div class="row" style=" margin-right: -15px; margin-left: -15px;">
 								    <div class="col-md-12">
 										<div class="form-group">
 											<label class="col-form-label">JOB SUMMARY</label>
@@ -236,7 +244,7 @@
 					            <h4 class="card-title mb-0 text-left" style="color: #000000; background-color: #bfbfbf; text-align: center !important;">HR Department Assessment</h4>
 					            <p style="color:#f90202; font-size: 11.8px; padding-bottom: -15px;">Filled by HR Department</p>
 					            <div class="">
-						            <p style="font-size: 11.8px; color: #85152d;">Total Marks: Qualification=3  Professional Training=4  Computer Skill=5 <br> AVG Marks Obtained=3.13</p>
+						            <p style="font-size: 11.8px; color: #000;">Total Marks: Qualification=3  Professional Training=4  Computer Skill=5 <br> AVG Marks Obtained=3.13</p>
 									<table class="table table-bordered table-striped custom-table datatable" id="preempform">
 						                <thead>
 				            			
@@ -260,7 +268,7 @@
 						            </table>
 					            </div>
 					            <div class="">
-						            <p style="font-size: 11.8px; color: #85152d;">Total Marks: Presentation=3  Communication-Verbal=2  Behaviour/Body Language=5  Manner=2  Reasoning=1 <br> AVG Marks Obtained=3.13</p>
+						            <p style="font-size: 11.8px; color: #000;">Total Marks: Presentation=3  Communication-Verbal=2  Behaviour/Body Language=5  Manner=2  Reasoning=1 <br> AVG Marks Obtained=3.13</p>
 									<table class="table table-bordered table-striped custom-table datatable" id="preempform">
 						                <thead>
 				            			
@@ -287,7 +295,7 @@
 						              	</tbody>
 						            </table>
 					            </div>
-					            <div class="row" style="display: flex; margin-bottom: -100px; margin-right: -15px; margin-left: -15px;">
+					            <div class="row" style=" margin-bottom: -100px; margin-right: -15px; margin-left: -15px;">
 								    <div class="col-md-6">
 										<div class="form-group">
 											<label class="col-form-label">Interviewer Name</label>
@@ -301,7 +309,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="row" style="display: flex; margin-right: -15px; margin-left: -15px;">
+								<div class="row" style=" margin-right: -15px; margin-left: -15px;">
 								    <div class="col-md-12">
 										<div class="form-group">
 											<label class="col-form-label">HR Comments</label>
@@ -313,7 +321,7 @@
 								<h4 class="card-title mb-0 text-left" style="color: #000000; background-color: #bfbfbf; text-align: center !important;">Departmental Head Assessment</h4>
 					            <p style="color:#f90202; font-size: 11.8px; padding-bottom: -15px;">Filled by Departmental Head</p>
 					            <div class="">
-						            <p style="font-size: 11.8px; color: #85152d;">Total Marks: Job Relevancy=3 Experience=5 Knowledge of Industry=5 Career Progression=5 Notable Achievement=2 Potential=2<br> AVG Marks Obtained=3.67</p>
+						            <p style="font-size: 11.8px; color: #000;">Total Marks: Job Relevancy=3 Experience=5 Knowledge of Industry=5 Career Progression=5 Notable Achievement=2 Potential=2<br> AVG Marks Obtained=3.67</p>
 									<table class="table table-bordered table-striped custom-table datatable" style="font-size:6px" id="preempform">
 						                <thead>
 				            			
@@ -343,7 +351,7 @@
 						            </table>
 					            </div>
 					            <div class="">
-						            <p style="font-size: 11.8px; color: #85152d;">Piont from 0 to 1.5 = Unsatisfactory, 1.6 to 2.5 = Average, 2.6 to 3.5 = Satisfactory, 3.6 to 4.5 = Good, 4.6 to 5 = Excellent</p>
+						            <p style="font-size: 11.8px; color: #000;">Piont from 0 to 1.5 = Unsatisfactory, 1.6 to 2.5 = Average, 2.6 to 3.5 = Satisfactory, 3.6 to 4.5 = Good, 4.6 to 5 = Excellent</p>
 									<table class="table table-bordered table-striped custom-table datatable" id="preempform">
 						                <thead>
 						                  <tr class="bg-teal-400" style="white-space : nowrap; color: #fff;">
@@ -362,7 +370,7 @@
 						            </table>
 					            </div>
 					            <h4 class="card-title mb-0 text-left" style="color: #000000; background-color: #bfbfbf; text-align: center !important;">Approval Authority</h4>
-					            <div class="row" style="display: flex; margin-top: -80px; margin-right: -15px; margin-left: -15px;">
+					            <div class="row" style=" margin-top: -80px; margin-right: -15px; margin-left: -15px;">
 								    <div class="col-md-6">
 										<div class="form-group">
 											<label class="col-form-label">Proposed Salary By Coo</label>
@@ -376,7 +384,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="row" style="display: flex; margin-top: -160px; margin-right: -15px; margin-left: -15px;">
+								<div class="row" style=" margin-top: -160px; margin-right: -15px; margin-left: -15px;">
 								    <div class="col-md-4">
 										<div class="form-group">
 											<label class="col-form-label">Recommended Salary By HR</label>
@@ -396,7 +404,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="row" style="display: flex; margin-right: -15px; margin-left: -15px;">
+								<div class="row" style=" margin-right: -15px; margin-left: -15px;">
 								    <div class="col-md-12">
 										<div class="form-group">
 											<label class="col-form-label">COO Remarks</label>
@@ -405,7 +413,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="row" style="display: flex; margin-top: -160px; margin-right: -15px; margin-left: -15px;">
+								<div class="row" style=" margin-top: -160px; margin-right: -15px; margin-left: -15px;">
 								    <div class="col-md-4">
 										<div class="form-group">
 											<label class="col-form-label">Approval</label>
@@ -428,7 +436,7 @@
 										</div>
 									</div>
 								</div>
-								<div class="row" style="display: flex; margin-top: -80px; margin-right: -15px; margin-left: -15px;">
+								<div class="row" style=" margin-top: -80px; margin-right: -15px; margin-left: -15px;">
 								    <div class="col-md-6">
 										<div class="form-group">
 											<label class="col-form-label">Salary After Probition Period</label>

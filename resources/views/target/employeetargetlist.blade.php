@@ -34,7 +34,7 @@
 			<div class="col-md-12">
 				<div class="table-responsive">
 					<table class="table table-striped custom-table mb-0 datatable dataTable no-footer" id="sreq">
-						<thead style="color: white; background-color: #640d1d">	
+						<thead style="color: white; background-color: ##0f5298">	
 							<tr>
                 				@if(session()->get("role") <= 3)
                 				<th class="text-right;" style="width: 10%!important;padding-left: 4%!important;">Action</th>

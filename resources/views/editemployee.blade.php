@@ -270,7 +270,7 @@
 							<div class="col-md-4" id="amount" style="display: none;">
 								<div class="form-group">
 									<label class="col-form-label">Enter Amount</label><br>
-									<input type="number" name="elsemployees_caramount" id="elsemployees_caramount" placeholder="Please Enter Car Rent Amount" title="Please Enter Car Rent Amount" required class="form-control" id="caramount" value="{{ $data["user"]->elsemployees_ext }}">
+									<input type="number" name="elsemployees_caramount" id="elsemployees_caramount" placeholder="Please Enter Car Rent Amount" title="Please Enter Car Rent Amount"  class="form-control" id="caramount" value="{{ $data["user"]->elsemployees_ext }}">
 								</div>
 							</div>
 							</div>

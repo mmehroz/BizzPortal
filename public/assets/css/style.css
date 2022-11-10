@@ -242,7 +242,7 @@ a {
     -o-transition: all 0.4s ease;
     -ms-transition: all 0.4s ease;
     -webkit-transition: all 0.4s ease;
-    color: #640d1d;
+    color: ##0f5298;
 }
 
 input,
@@ -359,7 +359,7 @@ select.form-control[size] {
 }
 
 .table tr:nth-child(odd) {
-    /* background-color: #640d1d; 
+    /* background-color: ##0f5298; 
     /* color: white; */
 }
 
@@ -710,14 +710,14 @@ table.dataTable thead>tr>td.sorting {
 .open>.dropdown-toggle.btn-primary:focus,
 .open>.dropdown-toggle.btn-primary:hover {
     background-color: #d51f2e;
-    border: 1px solid #640d1d;
+    border: 1px solid ##0f5298;
 }
 
 .btn-primary.active:not(:disabled):not(.disabled),
 .btn-primary:active:not(:disabled):not(.disabled),
 .show>.btn-primary.dropdown-toggle {
-    background-color: #640d1d;
-    border-color: #640d1d;
+    background-color: ##0f5298;
+    border-color: ##0f5298;
     color: #fff;
 }
 
@@ -1408,7 +1408,7 @@ table.dataTable thead>tr>td.sorting {
 }
 
 .header .header-left {
-    /* background-color: #640d1d; */
+    /* background-color: ##0f5298; */
     float: left;
     height: 60px;
     padding: 0 20px;
@@ -2069,11 +2069,11 @@ table.dataTable thead>tr>td.sorting {
 }
 
 .account-box .account-btn {
-    background: #640d1d;
-    /* background: linear-gradient(to right, #640d1d 0%, #d51f2e 100%);
-    background: linear-gradient(to right, #640d1d 0%, #d51f2e 100%);
-    background: linear-gradient(to right, #640d1d 0%, #d51f2e 100%);
-    background: linear-gradient(to right, #640d1d 0%, #d51f2e 100%); */
+    background: ##0f5298;
+    /* background: linear-gradient(to right, ##0f5298 0%, #d51f2e 100%);
+    background: linear-gradient(to right, ##0f5298 0%, #d51f2e 100%);
+    background: linear-gradient(to right, ##0f5298 0%, #d51f2e 100%);
+    background: linear-gradient(to right, ##0f5298 0%, #d51f2e 100%); */
     border: 0;
     border-radius: 30px;
     display: block;
@@ -2119,11 +2119,11 @@ table.dataTable thead>tr>td.sorting {
 }
 
 .account-footer a {
-    color: #640d1d;
+    color: ##0f5298;
 }
 
 .account-footer a:hover {
-    color: #640d1d;
+    color: ##0f5298;
 }
 
 
@@ -2575,8 +2575,8 @@ table.dataTable thead>tr>td.sorting {
 .continue-btn:hover,
 .continue-btn:focus,
 .continue-btn:active {
-    background-color: #640d1d;
-    border: 1px solid #640d1d;
+    background-color: ##0f5298;
+    border: 1px solid ##0f5298;
     color: #fff;
 }
 
@@ -4031,8 +4031,8 @@ table.dataTable thead>tr>td.sorting {
 }
 
 .edit-icon:hover {
-    background-color: #640d1d;
-    border-color: #640d1d;
+    background-color: ##0f5298;
+    border-color: ##0f5298;
     color: #fff;
 }
 
@@ -6497,7 +6497,7 @@ table.table-inbox tbody tr.checked {
 -----------------------*/
 
 .apply-btn {
-    background: #640d1d;
+    background: ##0f5298;
     border-color: transparent;
     box-shadow: 0 6px 15px rgba(36, 37, 38, 0.08);
     color: #fff;
@@ -6907,7 +6907,7 @@ table.table-inbox tbody tr.checked {
 
 .bootstrap-datetimepicker-widget table td.active,
 .bootstrap-datetimepicker-widget table td.active:hover {
-    background-color: #640d1d;
+    background-color: ##0f5298;
     text-shadow: unset;
 }
 
@@ -9458,7 +9458,7 @@ h1 {
         padding-right: 0;
     }
     a.mobile_btn {
-        color: #640d1d;
+        color: ##0f5298;
         font-size: 24px;
         height: 60px;
         left: 0;
@@ -9949,7 +9949,7 @@ h1 {
     font-size: 18px;
     font-weight: 600;
     line-height: 24px;
-    color: #640d1d;
+    color: ##0f5298;
     text-align: center
 }
 
@@ -9975,7 +9975,7 @@ h1 {
 }
 
 .rest .cart-icon:hover {
-    color: #640d1d
+    color: ##0f5298
 }
 
 .rest .quantity {
@@ -10050,7 +10050,7 @@ h1 {
 
 .rest .quantity.buttons_added .minus:hover,
 .quantity.buttons_added .plus:hover {
-    background: #640d1d;
+    background: ##0f5298;
     color: #fff!important;
     transition: all .2s ease-in-out;
     -webkit-transition: all .2s ease-in-out;
@@ -10210,9 +10210,9 @@ margin-bottom: 5px;
 .game1 .btn{
     width: 150px;
     /*height: 20px !important;*/
-    border: 1px solid #640d1d;
+    border: 1px solid ##0f5298;
     outline: none;
-    background-color: #640d1d;
+    background-color: ##0f5298;
     color: white;
     border-radius: 20px;
     padding-bottom: 30px !important;
@@ -10220,11 +10220,11 @@ margin-bottom: 5px;
 }
 .game1 .btn:hover{
     background-color: white;
-    color: #640d1d;
+    color: ##0f5298;
 }
 
 .game1 .click:hover {
-    color: #640d1d;
+    color: ##0f5298;
 }
 
 .game {

@@ -52,7 +52,7 @@
 				<!-- Logo -->
                 <div class="header-left">
                     <a href="#"class="logo">
-						<img src="{!! asset('public/assets/img/final-logo.png') !!}" width="120" height="60" alt="">
+						<img src="{!! asset('public/assets/img/logo_white_header.svg') !!}" width="120" height="60" alt="">
 					</a>
                 </div>
 				<!-- /Logo -->				

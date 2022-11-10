@@ -150,8 +150,12 @@ background-image: linear-gradient(to bottom, #0F5298 0%, #0F5298 100%);
 						<div class="dropdown-menu">
 							<!--<a class="dropdown-item" href="{{url('/employeeprofile')}}">My Profile</a>-->
 							<a class="dropdown-item" href="#" onclick="return viewprofile({{session()->get("id")}});" ><i class="fa fa-user" style="padding-right: 7px;"></i>My Profile</a>
-							<a class="dropdown-item" href="{{url('/')}}"><i class="fa fa-power-off" style="padding-right: 7px;"></i>Logout</a>
+							@if(session()->get('batchid') == 1406)
+							<a class="dropdown-item" href="{{url('/addemployeenos')}}"><i class="fa fa-plus" style="padding-right: 7px;"></i>Add Employee</a>
+							<a class="dropdown-item" href="{{url('/candidate_list')}}"><i class="fa fa-list" style="padding-right: 7px;"></i>Recruitment</a>
+							@endif
 							<a class="dropdown-item" href="{{url('/chapass')}}"><i class="fa fa-key" style="padding-right: 7px;"></i>Change Password</a>
+							<a class="dropdown-item" href="{{url('/')}}"><i class="fa fa-power-off" style="padding-right: 7px;"></i>Logout</a>
 							<!-- <a class="dropdown-item" href="{{url('/getimage')}}">Select Image</a> -->
 						</div>
 					</li>
@@ -391,7 +395,7 @@ background-image: linear-gradient(to bottom, #0F5298 0%, #0F5298 100%);
 								</ul>
 							</li>
 							@if( session()->get("role") !=	 4)
-							<li class="menu-title" style="color: #640d1d; font-weight: bold"> 
+							<li class="menu-title" style="color: ##0f5298; font-weight: bold"> 
 								<span>Meeting Room</span>
 							</li>
 							<li class="submenu">
@@ -430,7 +434,7 @@ background-image: linear-gradient(to bottom, #0F5298 0%, #0F5298 100%);
 								</ul>
 							</li> -->
 							@if( session()->get("role") !=	 4 )
-							<li class="menu-title" style="color: #640d1d; font-weight: bold"> 
+							<li class="menu-title" style="color: ##0f5298; font-weight: bold"> 
 								<span>HR</span>
 							</li>
 							<li class="submenu">
@@ -453,13 +457,27 @@ background-image: linear-gradient(to bottom, #0F5298 0%, #0F5298 100%);
 								</ul>
 							</li>
 							@endif
+							@if( session()->get("role") <=	 2 )
+							<li class="submenu">
+								<a href="#"><i class="fa fa-money"></i> <span> Vendor Registration </span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="{{url('/vendorlist')}}">Report</a></li>
+								</ul>
+							</li>
+							<li class="submenu">
+								<a href="#"><i class="fa fa-money"></i> <span> Car Registration </span> <span class="menu-arrow"></span></a>
+								<ul style="display: none;">
+									<li><a href="{{url('/carlist')}}">Report</a></li>
+								</ul>
+							</li>
+							@endif
 							<li class="submenu">
 								<a href="#"><i class="fa fa-money"></i> <span> Expense </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
-									<li><a href="{{url('/selectexpensemonth')}}">Report</a></li>
+									<li><a href="{{url('/selectexpensemonth')}}">Monthly</a></li>
+									<li><a href="{{url('/recuringexpenselist')}}">Recurring</a></li>
 								</ul>
 							</li>
-							
 							<li class="submenu">
 								<a href="#"><i class="la la-bullhorn"></i> <span> Announcement</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">	
@@ -551,7 +569,7 @@ background-image: linear-gradient(to bottom, #0F5298 0%, #0F5298 100%);
 								</ul>
 							</li>-->
 							@if(session()->get("dptid") == 4 AND session()->get("role") == 3)
-							<li class="menu-title" style="color: #640d1d; font-weight: bold"> 
+							<li class="menu-title" style="color: ##0f5298; font-weight: bold"> 
 								<span>IT</span>
 							</li>
 							<li class="submenu">
@@ -565,12 +583,12 @@ background-image: linear-gradient(to bottom, #0F5298 0%, #0F5298 100%);
 							<li class="submenu">
 								<a href="#"><i class="la la-file-text"></i> <span>IT Inventory</span> <span class="menu-arrow"></span></a>
 								<ul>
-									<li><a href="{{url('/itticketrequest')}}">Inventory List</a></li>
+									<li><a href="{{url('/itinventorylist')}}">Inventory List</a></li>
 								</ul>
 							</li>
 							@endif
 							@if(session()->get("role") <= 2)
-							<li class="menu-title" style="color: #640d1d; font-weight: bold"> 
+							<li class="menu-title" style="color: ##0f5298; font-weight: bold"> 
 								<span>IT</span>
 							</li>
 							<li class="submenu">
@@ -584,7 +602,7 @@ background-image: linear-gradient(to bottom, #0F5298 0%, #0F5298 100%);
 							<li class="submenu">
 								<a href="#"><i class="la la-file-text"></i> <span>IT Inventory</span> <span class="menu-arrow"></span></a>
 								<ul>
-									<li><a href="{{url('/itticketrequest')}}">Inventory List</a></li>
+									<li><a href="{{url('/itinventorylist')}}">Inventory List</a></li>
 								</ul>
 							</li>
 							<li class="submenu">
@@ -600,7 +618,7 @@ background-image: linear-gradient(to bottom, #0F5298 0%, #0F5298 100%);
                 </div>
             </div>
             @elseif(session()->get("dptid") == 4 AND session()->get("role") >= 3)
-            <li class="menu-title" style="color: #640d1d; font-weight: bold"> 
+            <li class="menu-title" style="color: ##0f5298; font-weight: bold"> 
 				<span>IT</span>
 			</li>
             <div class="sidebar" id="sidebar">

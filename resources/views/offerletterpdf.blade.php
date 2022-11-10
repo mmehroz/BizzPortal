@@ -45,7 +45,7 @@
         text-transform: uppercase;
         width: 100%;
         height: 40px;
-        background-color: #85152d;
+        background-color: #0f5298;
         color: white;
 
     }
@@ -65,7 +65,7 @@
         width: 100%;
         height: 40px;
         color: white;
-        background-color: #85152d;
+        background-color: #0f5298;
         /*margin-bottom: 30px;*/
     }
 
@@ -80,7 +80,7 @@
         padding-top: 8px;
         width: 100%;
         height: 40px;
-        background-color: #85152d;
+        background-color: #0f5298;
         color: white;
         text-transform: uppercase;
         text-align: center;
@@ -97,7 +97,7 @@
     .acc h2 {
         padding-top: 8px;
         color: white;
-        background-color: #85152d;
+        background-color: #0f5298;
         text-transform: uppercase;
         text-align: center;
         width: 100%;
@@ -110,7 +110,7 @@
     <!-- logo -->
     <section class="logo">
         <div class="img" style="width: 100%;">
-            <img src="http://hrm.bizzworldcommunications.com/hrm/public/assets/img/final-logo.png" alt="">
+            <img src="http://bizzworldcommunications.com/public/bwc-logo.png" alt="">
         </div>
     </section>
     <!-- Name & Date -->
