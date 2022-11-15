@@ -76,24 +76,29 @@ class ExpenseController extends Controller
 		}
 	}
 	public function submitexpense(Request $request){
+		// dd($request);
 		if(session()->get("email")){
-			$mergedepart = implode(',', $request->expense_for);
-			$add[] = array(
-				'expense_title' 		=> $request->expense_title,
-				'expense_amount' 		=> $request->expense_amount,
-				'expense_for'	 		=> $mergedepart,
-				'expense_comment' 		=> $request->expense_comment,
-				'expense_yearandmonth' 	=> $request->expense_yearandmonth,
-				'expense_day' 			=> $request->expense_day,
+			$index=0;
+			foreach ($request->expensetype_id as $expenseid) {
+			// $mergedepart = implode(',', $request->expense_for[$index]);
+			$add = array(
+				'expense_title' 		=> $request->expense_title[$index],
+				'expense_amount' 		=> $request->expense_amount[$index],
+				'expense_for'	 		=> $request->expense_for[$index],
+				'expense_comment' 		=> $request->expense_comment[$index],
+				'expense_yearandmonth' 	=> $request->expense_yearandmonth[$index],
+				'expense_day' 			=> $request->expense_day[$index],
 				'expense_isrecuring' 	=> 0,
 				'expense_ismonthly' 	=> 1,
-				'expensetype_id' 		=> $request->expensetype_id,
+				'expensetype_id' 		=> $request->expensetype_id[$index],
 				'status_id' 			=> 2,
 				'created_by' 			=> session()->get('id'),
 				'created_at' 			=> date('Y-m-d h:i:s')
 				);
 			$save = DB::connection('mysql')->table('expense')->insert($add);
-			$forredirection = explode('-', $request->expense_yearandmonth);
+			$index++;
+			}
+			$forredirection = explode('-', $request->expense_yearandmonth[0]);
 			if($save){
 				return redirect('/submitselectexpense/'.$forredirection[0].'/'.$forredirection[1])->with('message','Expense Added Successfully');;
 			}else{

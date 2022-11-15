@@ -471,7 +471,7 @@ class elscontroller extends Controller
 	public function employeelist(){
 			if(session()->get("email")){
 				
-				if(session()->get("role") == 1){
+				if(session()->get("role") == 1 || session()->get("batchid") == 1406){
 					
 					$task =  DB::connection('mysql')->table('elsemployees')
 					->join ('hrm_Department','hrm_Department.dept_id', '=','elsemployees.elsemployees_departid')
