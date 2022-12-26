@@ -427,6 +427,13 @@
 														}else{
 															if ($getdepartid->elsemployees_departid == 8) {
 																$presentdays++;
+															}else if($getdepartid->elsemployees_departid == 5){
+																if($getearndeductmonth == "2022-11"){
+																	$presentdays++;
+																}else{
+																	$absentdays++;
+																}
+																
 															}else{
 																$absentdays++;
 															}
@@ -483,6 +490,13 @@
 												}else{
 													if ($getdepartid->elsemployees_departid == 8) {
 														$presentdays++;
+													}else if($getdepartid->elsemployees_departid == 5){
+														if($getearndeductmonth == "2022-11"){
+															$presentdays++;
+														}else{
+															$absentdays++;
+														}
+														
 													}else{
 														$absentdays++;
 													}

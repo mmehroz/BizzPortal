@@ -46,8 +46,9 @@ class ExpenseController extends Controller
 	public function recuringexpenselist(){
 		if(session()->get("email")){
 			$task = DB::connection('mysql')->table('expense')
+			->join('expensetype','expensetype.expensetype_id','=','expense.expensetype_id')
 			->where('expense.status_id','=',2)
-			->select('expense.*')
+			->select('expense.*','expensetype_name')
 			->get();
 			return view('expense.recuringexpenselist',['data' => $task]);
 		}else{
@@ -56,21 +57,21 @@ class ExpenseController extends Controller
 	}
 	public function addexpense($id){
 		if(session()->get("email")){
-			$task = DB::connection('mysql')->table('expensetype')
-			->where('status_id','=',2)
-			->select('expensetype_id','expensetype_name')
-			->get();
 			$depart = DB::connection('mysql')->table('hrm_department')
 			->select('*')
 			->get();
-			return view('expense.modals.add',['data' => $task, 'yearandmonth' => $id, 'depart' => $depart]);
+			return view('expense.modals.add',['yearandmonth' => $id, 'depart' => $depart]);
 		}else{
 			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
 	}
 	public function addrecuringexpense(){
 		if(session()->get("email")){
-			return view('expense.modals.addrecuring');
+			$task = DB::connection('mysql')->table('expensetype')
+			->where('status_id','=',2)
+			->select('expensetype_id','expensetype_name')
+			->get();
+			return view('expense.modals.addrecuring',['data' => $task]);
 		}else{
 			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
@@ -79,7 +80,7 @@ class ExpenseController extends Controller
 		// dd($request);
 		if(session()->get("email")){
 			$index=0;
-			foreach ($request->expensetype_id as $expenseid) {
+			foreach ($request->expense_title as $expenseid) {
 			// $mergedepart = implode(',', $request->expense_for[$index]);
 			$add = array(
 				'expense_title' 		=> $request->expense_title[$index],
@@ -90,7 +91,7 @@ class ExpenseController extends Controller
 				'expense_day' 			=> $request->expense_day[$index],
 				'expense_isrecuring' 	=> 0,
 				'expense_ismonthly' 	=> 1,
-				'expensetype_id' 		=> $request->expensetype_id[$index],
+				'expensetype_id' 		=> 5,
 				'status_id' 			=> 2,
 				'created_by' 			=> session()->get('id'),
 				'created_at' 			=> date('Y-m-d h:i:s')
@@ -113,6 +114,7 @@ class ExpenseController extends Controller
 			$add[] = array(
 				'expense_title' 		=> $request->expense_title,
 				'expense_amount' 		=> $request->expense_amount,
+				'expensetype_id' 		=> $request->expensetype_id,
 				'expense_comment' 		=> $request->expense_comment,
 				'expense_isrecuring' 	=> 1,
 				'expense_ismonthly' 	=> 0,
@@ -167,7 +169,6 @@ class ExpenseController extends Controller
 				'expense_amount' 		=> $request->expense_amount,
 				'expense_comment' 		=> $request->expense_comment,
 				'expense_yearandmonth' 	=> $request->expense_yearandmonth,
-				'expensetype_id' 		=> $request->expensetype_id,
 				'updated_by' 			=> session()->get('id'),
 				'updated_at' 			=> date('Y-m-d h:i:s')
 				);

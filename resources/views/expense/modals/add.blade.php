@@ -47,10 +47,16 @@
 					<span aria-hidden="true">&times;</span>
 				</button>
 			</div>
+			<div style="display: flex;
+    justify-content: end;
+    margin-right: 25px;
+    margin-top: 10px;">
 			<button class="btn btn-md btn-primary" 
-		      id="addBtn" type="button">
-		        Add new Row
+		      id="addBtn" type="button" ttle="Add More">
+		        Add More
 		    </button>
+			</div>
+	
 			<div class="modal-body">
 			<form action="{{ URL::to('/submitexpense')}}" id="submitexpense" method="POST"  enctype="multipart/form-data">
 			{{ csrf_field() }}
@@ -61,7 +67,6 @@
 								<table class="table table-striped custom-table mb-0 datatable dataTable no-footer" id="correctionatt">
 									<thead>
 										<tr>
-										<th>Type</th>
 										<th>For</th>
 										<th>Title</th>
 										<th>Amount</th>
@@ -74,14 +79,6 @@
 									<tbody id="tbody">
 										<tr>
 										<td>
-										<select name="expensetype_id[]" class="form-control selectpicker" data-live-search="true" required>
-											<option selected="" value="">Select Expense Type</option>
-											@foreach($data as $val)
-				                            <option value="{{$val->expensetype_id}}">{{$val->expensetype_name}}</option>
-				                        	@endforeach 
-				                        </select>
-				                    	</td>
-	               						<td>
 										<select class="form-control selectpicker" name="expense_for[]" data-live-search="true" required>
 											<option value="All">All</option>
 											@foreach($depart as $departs)
@@ -158,15 +155,7 @@
 	var rowIdx = 0;
 	$('#addBtn').on('click', function () {
   	$('#tbody').append(`<tr id="R${++rowIdx}">
-         <td>
-		<select name="expensetype_id[]" class="form-control" data-live-search="true" required>
-			<option selected="" value="">Select Expense Type</option>
-			@foreach($data as $val)
-            <option value="{{$val->expensetype_id}}">{{$val->expensetype_name}}</option>
-        	@endforeach 
-        </select>
-    	</td>
-		<td>
+        <td>
 		<select class="form-control" name="expense_for[]" data-live-search="true" required>
 			<option value="All">All</option>
 			@foreach($depart as $departs)
