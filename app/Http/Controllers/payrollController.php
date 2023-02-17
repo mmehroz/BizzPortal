@@ -3380,7 +3380,7 @@ class payrollController extends Controller
                      $taskdata = $taskdata->setPath('http://localhost:401/hrm/attendancedashboarddata');
                      
                      
-                     return view('dynamicemployeedata.dynamicattendancetable', ['data' => $taskdata,'presentday' => $preday,'absentday' => $absday, 'empleavedays'=> $empleaves, 'month' => $month]);
+                     return view('dynamicemployeedata.dynamicattendancetable', ['data' => $taskdata,'presentday' => $preday,'absentday' => $absday, 'empleavedays'=> $empleaves,'year' => $year, 'month' => $month]);
                      }else{
                          return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
                      }

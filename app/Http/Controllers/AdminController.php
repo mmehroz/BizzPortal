@@ -801,15 +801,15 @@ class AdminController extends Controller
 								'candidate'=>$task,
 								];
 						
-						Mail::send('emails.managerfirstmail',[
-							'datas' =>$all,
-							],
-						function ($message){
-						 $message->to('salman.khairi@bizzworld.com');
-						 $message->cc('hr@bizzworld.com');
-						 $message->bcc('muhammad.mehroz@bizzworld.com');
-						 $message->subject('Candidate Arrival For Interview');
-						});
+						// Mail::send('emails.managerfirstmail',[
+						// 	'datas' =>$all,
+						// 	],
+						// function ($message){
+						//  $message->to('salman.khairi@bizzworld.com');
+						//  $message->cc('hr@bizzworld.com');
+						//  $message->bcc('muhammad.mehroz@bizzworld.com');
+						//  $message->subject('Candidate Arrival For Interview');
+						// });
 						
 					}else{
 					
@@ -829,15 +829,15 @@ class AdminController extends Controller
 								'candidate'=>$task,
 								];
 						
-						Mail::send('emails.managerfirstmail',[
-							'datas' =>$all,
-							],
-						function ($message) use ($managername) {
-						 $message->to($managername);
-						 $message->cc('hr@bizzworld.com');
-						 $message->bcc('muhammad.mehroz@bizzworld.com');
-						 $message->subject('Candidate Arrival For Interview');
-						});
+						// Mail::send('emails.managerfirstmail',[
+						// 	'datas' =>$all,
+						// 	],
+						// function ($message) use ($managername) {
+						//  $message->to($managername);
+						//  $message->cc('hr@bizzworld.com');
+						//  $message->bcc('muhammad.mehroz@bizzworld.com');
+						//  $message->subject('Candidate Arrival For Interview');
+						// });
 						
 					}
 				

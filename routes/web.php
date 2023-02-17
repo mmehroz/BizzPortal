@@ -159,7 +159,7 @@ Route::middleware('email.admin.check')->group(function(){
 	Route::get('/screeninglistdata','AdminController@yajrascrtable')->name('datatable.scrdata');
 	Route::get('/irreleventlistdata','AdminController@yajrairrtable')->name('datatable.irrdata');
 	Route::get('/irexperiencelist','AdminController@yajraintable')->name('datatable.irxdata');
-	Route::get('/adamaction/{id}','AdminController@candiaction');
+	Route::get('/adamaction/{id}/{comment}','AdminController@candiaction');
 	Route::get('/inprocesscandidates','AdminController@inprocandidatelist');
 	Route::get('/emailtocallfiorawait/{id}','AdminController@cfinterview');
 	Route::any('/submicallfiorawait','AdminController@savecallfiorawait');
@@ -486,3 +486,5 @@ Route::any('submitrecuringexpense','ExpenseController@submitrecuringexpense');
 Route::any('editrecuringexpense/{id}','ExpenseController@editrecuringexpense');
 Route::any('submiteditrecuringexpense','ExpenseController@submiteditrecuringexpense');
 Route::any('submitopeningbalance','ExpenseController@submitopeningbalance');
+Route::any('addmorebalance/{id}','ExpenseController@addmorebalance');
+Route::any('submitaddmorebalance','ExpenseController@submitaddmorebalance');

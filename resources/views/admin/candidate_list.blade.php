@@ -175,6 +175,7 @@ function getedit($id){
 	    if (result.value) {
 	    	$comment = result.value;
 	        $.get('{{ URL::to("/adamaction")}}/'+$id+'/'+$comment);
+			window.location.reload();
 	  		swal("Aww! Delivered Successfully!", {
 	   	   icon: "success",
 	   	   });

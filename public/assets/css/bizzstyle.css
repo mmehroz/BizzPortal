@@ -2,6 +2,10 @@
                 margin: 0;
                 padding: 0;
                 box-sizing: border-box;
+                font-family: 'Raleway', sans-serif;
+            }
+            body{
+                font-family: 'Raleway', sans-serif;
             }
             
             h5 {
@@ -21,17 +25,23 @@
             }
             
             .navbar ul li a {
-                color: white;
                 text-decoration: none;
+                font-family: 'Open Sans', sans-serif;
+                padding-top: 15px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #000;
             }
             
-            .navbar img {
-                width: 150px;
+            .headerlogo {
+                width: 185px;
                 margin-bottom: 5px;
+                transform: translateY(11px);
             }
             
             .nav1 {
-                background-color: #0F5298 !important;
+                background-color: #fff !important;
+                height: 70px;
             }
             
             .navbar ul li a i {
@@ -43,6 +53,16 @@
                 border-left: 1px solid white;
                 height: 28px;
                 margin-top: 19px;
+            }
+            .navdata{
+                font-family: 'Open Sans', sans-serif;
+    padding-left: 5px;
+    font-weight: 200;
+    background: #f9f9f9;
+    color: #000;
+    font-size: 12px;
+    margin-left: 5px;
+    margin-top: 3px;
             }
             
             .nav1 .dropdown-menu {
@@ -88,13 +108,415 @@
             .nav1 .dropdown-toggle::after {
                 display: none;
             }
+            .personaldetailsection{
+                margin-top: 30px;
+            }
+
+            .personaldetails{
+                background: #fff;
+                margin-left: 10px;
+                box-shadow: 0px 6px 16px rgb(0 0 0 / 20%);
+                border-radius: 10px;
+            }
+            .personaldetailsheading1{
+                padding-top: 30px;
+                font-weight: bold;
+                color: #000;
+            }
+            .personaldetailsinnerdiv{
+                padding-top: 5px;
+            }
+
+
+            .mess{
+                background: #fff;
+                box-shadow: 0px 6px 16px rgb(0 0 0 / 20%);
+                border-radius: 10px;
+                margin-top: 15px;
+                margin-left: 10px;
+            }
+
+
+.messbtn1 {
+padding: 0px; 
+background: #F5F5F5; 
+color: #000;
+border: 1px solid #d3d3d3;
+font-weight: 600;
+font-size: 17px;
+height: 40px;
+border-radius: 10px;
+}
+.messbtn2{
+    padding: 0px;
+    background: #F5F5F5;
+    color: #000;
+    border: 1px solid #d3d3d3;
+    font-weight: 600;
+    font-size: 17px;
+    height: 40px;
+    border-radius: 10px;
+}
+.messbtn3{
+    padding: 0px;
+     background: #F5F5F5;
+      color: #000;
+       border: 1px solid #d3d3d3;
+        font-weight: 600; 
+        font-size: 17px; 
+        height: 40px; 
+        border-radius: 10px;
+}
+
+            .birthdaysection{
+                background: #fff;
+                box-shadow: 0px 6px 16px rgb(0 0 0 / 20%); 
+                border-radius: 10px;
+                padding-bottom: 25px;
+                margin-top: 15px;
+                padding-left: 15px;
+                padding-right: 15px;
+                margin-left: 10px;
+                height: 1225px;
+            }
+            .birthdaysectionheading1{
+                padding-top: 30px;
+                font-weight: bold;
+                color: #000;
+            }
+            .birthdaysectioninnerdiv{
+                height: 1080px !important;
+    overflow-y: scroll !important;
+    background-color: white;
+    margin-top: 15px;
+    border-radius: 4px;
+            }
+
+            .statusection{
+                background: #fff;
+                border-radius: 10px;
+                box-shadow: 0px 6px 16px rgb(0 0 0 / 20%);
+            }
+            .statusectionheading1{
+                padding-top: 30px;
+                font-weight: bold;
+                color: #000;
+            }
+            .statussectioninnerdiv{
+                background: #f9f9f9;
+                padding: 7px 9px;
+                width: 93%;
+                height: 33px;
+            }
+            .statussectionpara{
+                padding-right: 10px;
+            color: #007bff;
+            }
+            .statussectionhr{
+                width: 95%;
+                margin-left: 8px;
+                margin-top: 10px !important;
+                margin-bottom: 0 !important;
+            }
+            .mainbtns{
+            text-decoration: none;
+             font-size: 16px; 
+             color: #fff;
+             background: #0f5298;
+             border-radius: 10px;
+             display: flex;
+             justify-content: center;
+             height: 40px;
+             padding-top: 8px;
+            }
+            .mainbtnsspan{
+                color: #fff;
+                padding-right: 10px;
+            }
+
+            .activitiesection{
+                background: #fff;
+                box-shadow: 0px 6px 16px rgb(0 0 0 / 20%); 
+                border-radius: 10px; 
+                padding-bottom: 25px;
+                margin-top: 15px;
+            }
+            .activitiesectiondivleft{
+                background: #f9f9f9;
+                display: flex;
+                justify-content: center;
+                margin-left: 10px;
+            }
+            .activitiesectionanchor{
+                color: #000;
+                font-size:11px;
+                padding-top: 10px;
+                font-weight: 600;
+                text-align: center;
+            }
+.activitiesectiondivcenter{
+    background: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right:10px
+}
+.activitiesectiondivright{
+    background: #f9f9f9;
+    display: flex;
+    justify-content: center;
+    margin-right: 10px;
+}
+            .card .card-heading {
+                padding: 0 20px;
+                margin: 0;
+            }
             
+            .card .card-heading.simple {
+                font-size: 20px;
+                font-weight: 300;
+                color: #777;
+                border-bottom: 1px solid #e5e5e5;
+            }
+            
+            .card .card-heading.image img {
+                display: inline-block;
+                width: 46px;
+                height: 46px;
+                margin-right: 15px;
+                vertical-align: top;
+                border: 0;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                border-radius: 50%;
+            }
+            
+            .card .card-heading.image .card-heading-header {
+                display: inline-block;
+                vertical-align: top;
+            }
+            
+            .card .card-heading.image .card-heading-header h3 {
+                margin: 0;
+                font-size: 14px;
+                line-height: 16px;
+                color: #262626;
+            }
+            
+            .card .card-heading.image .card-heading-header span {
+                font-size: 12px;
+                color: #999999;
+            }
+            
+            .card .card-body {
+               
+            }
+            
+            .card .card-media {
+                padding: 0 20px;
+                margin: 0 -14px;
+            }
+            
+            .card .card-media img {
+                max-width: 100%;
+                max-height: 100%;
+            }
+            
+            .card .card-actions {
+                min-height: 30px;
+                padding: 0 20px 20px 20px;
+                margin: 20px 0 0 0;
+            }
+            
+            .card .card-comments {
+                padding: 20px;
+                margin: 0;
+                background-color: #f8f8f8;
+            }
+            
+            .card .card-comments .comments-collapse-toggle {
+                padding: 0;
+                margin: 0 20px 12px 20px;
+            }
+            
+            .card .card-comments .comments-collapse-toggle a,
+            .card .card-comments .comments-collapse-toggle span {
+                padding-right: 5px;
+                overflow: hidden;
+                font-size: 12px;
+                color: #999;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            
+            .card-comments .media-heading {
+                font-size: 13px;
+                font-weight: bold;
+            }
+            
+            .card.people {
+                position: relative;
+                display: inline-block;
+                width: 170px;
+                height: 300px;
+                padding-top: 0;
+                margin-left: 20px;
+                overflow: hidden;
+                vertical-align: top;
+            }
+            
+            .card.people:first-child {
+                margin-left: 0;
+            }
+            
+            .card.people .card-top {
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: inline-block;
+                width: 170px;
+                height: 150px;
+                background-color: #ffffff;
+            }
+            
+            .card.people .card-top.green {
+                background-color: #53a93f;
+            }
+            
+            .card.people .card-top.blue {
+                background-color: #427fed;
+            }
+            
+            .card.people .card-info {
+                position: absolute;
+                top: 150px;
+                display: inline-block;
+                width: 100%;
+                height: 101px;
+                overflow: hidden;
+                background: #ffffff;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+            
+            .card.people .card-info .title {
+                display: block;
+                margin: 8px 14px 0 14px;
+                overflow: hidden;
+                font-size: 16px;
+                font-weight: bold;
+                line-height: 18px;
+                color: #404040;
+            }
+            
+            .card.people .card-info .desc {
+                display: block;
+                margin: 8px 14px 0 14px;
+                overflow: hidden;
+                font-size: 12px;
+                line-height: 16px;
+                color: #737373;
+                text-overflow: ellipsis;
+            }
+            
+            .card.people .card-bottom {
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                display: inline-block;
+                width: 100%;
+                padding: 10px 20px;
+                line-height: 29px;
+                text-align: center;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+            
+            .card.hovercard {
+                position: relative;
+                padding-top: 0;
+                overflow: hidden;
+                text-align: center;
+                background-color: rgba(214, 224, 226, 0.2);
+            }
+            
+            .card.hovercard .cardheader {
+                background: url("http://lorempixel.com/850/280/nature/4/");
+                background-size: cover;
+                height: 135px;
+            }
+            
+            .card.hovercard .avatar {
+                position: relative;
+                top: -50px;
+                margin-bottom: -50px;
+            }
+            
+            .card.hovercard .avatar img {
+                width: 100px;
+                height: 100px;
+                max-width: 100px;
+                max-height: 100px;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                border-radius: 50%;
+                border: 5px solid rgba(255,255,255,0.5);
+            }
+            
+            .card.hovercard .info {
+                padding: 4px 8px 10px;
+            }
+            
+            .card.hovercard .info .title {
+                margin-bottom: 4px;
+                font-size: 24px;
+                line-height: 1;
+                color: #262626;
+                vertical-align: middle;
+            }
+            
+            .card.hovercard .info .desc {
+                overflow: hidden;
+                font-size: 12px;
+                line-height: 20px;
+                color: #737373;
+                text-overflow: ellipsis;
+            }
+            
+            .card.hovercard .bottom {
+                padding: 0 20px;
+                margin-bottom: 17px;
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             .nav1 .has-arrow .dropdown-toggle:after {
                 border-top: 0;
                 border-left: 0;
                 color: black;
-                border-bottom: 2px solid #fff;
-                border-right: 2px solid #fff;
+                border-bottom: 2px solid #000;
+                border-right: 2px solid #000;
                 content: '';
                 height: 8px;
                 display: inline-block;
@@ -109,6 +531,8 @@
                 transition: all 0.15s ease-in-out;
                 width: 8px;
                 vertical-align: 2px;
+                margin-left: 10px;
+                margin-top: 5px;
             }
             
             .nav1 .has-arrow .dropdown-toggle[aria-expanded="true"]:after {
@@ -127,13 +551,10 @@
             .banner {
                 border: 2px solid white;
                 border-radius: 6px;
-                 padding: 10px;
-                margin-top: 13px;
+                /* margin-top: 13px; */
                 background: white;
-                width: 101.5%;
-                overflow: hidden;
-                height: 300px;
-                
+                width: 100%;
+                overflow: hidden;  
             }
             
             .banner img {
@@ -405,10 +826,10 @@
             /* info */
             
             .info {
-                background-color: white;
+                /* background-color: white;
                 margin-top: 13px;
                 padding: 7px;
-                border-radius: 6px;
+                border-radius: 6px; */
             }
             
             .main .info .time3 {
@@ -920,11 +1341,11 @@
                 padding: 8px;
             }
             
-            .main .bio {
+            /* .main .bio {
                 height: 390px;
                 overflow: scroll;
                 scroll-behavior: smooth;
-            }
+            } */
             .main .sal .time7 {
                 width: 105.3%;
                 height: 35px;
@@ -1331,21 +1752,22 @@
             
             .left-side {
                 width: 100%;
-                height: 120px;
+                height: 185px;
                 background: white;
                 border-bottom-left-radius: 6px;
                 border-bottom-right-radius: 6px;
-                /*margin-top: -10px;*/
-                font-size: 14px;
+                position: relative;
             }
-            .left-side .profile {
-                width: 150px;
-                height: 150px;
-                overflow-y: hidden;
-                border-radius: 50%;
-                margin-top: -50px;
-                border: 12px solid white;
-                background: white;
+           .profile {
+            width: 150px;
+            height: 150px;
+            overflow-y: hidden;
+            border-radius: 50%;
+            border: 5px solid white;
+            background: white;
+            position: absolute;
+            bottom: 55%;
+            left: 35%;
             }
             
             @media screen and (max-width: 1024px) {
@@ -1365,12 +1787,11 @@
                 
             }
             
-            .left-side h6 {
-                margin-top: 10px;
-            }
-            
-            .left-side .pro {
-                font-size: 14px;
+            .pro::before{
+                content:"|";
+                font-size: 20px;
+                padding-right: 10px;
+                padding-left: 10px;
             }
             
             .main .id {
@@ -1474,9 +1895,7 @@
     }
     
     .time31:hover {
-        background-color: white;
-        color: #0F5298 !important;
-        outline: none;
+        
     }
     .mess button:focus{
         outline: none;
@@ -1538,9 +1957,7 @@
             }
             
             .time15:hover {
-                background-color: white;
-                color: #0F5298 !important;
-                font-weight: 800 !important;
+
             }
             
             .time15 .abc {
@@ -2081,21 +2498,32 @@
               .scroll .cp button {
                 background-color: #0F5298 !important;
                 color: white !important;
-                width: 65%;
-                position: absolute;
-                right: 0px;
-                top: -38px;
-                left: 572px;
+    
 
               }
               
                .scroll .vc {
                 color: white !important;
-                position: absolute;
-                top: -68px;
-                left: 40px;
+         
               }
-              
+              .emojiPickerIconWrap{
+                display: flex !important;
+              }
+              .emojiPickerIconWrap .black{
+                width: 65px !important;
+                margin-left: 10px;
+                background-size: 40% !important;
+                background-color: #f9f9f9 !important;
+              }
+              .scroll .emojiPickerIconWrap input
+ {
+    background-color: #f9f9f9 !important;
+    border-radius: 26px;
+    color: #000 !important;
+ }
+ input:focus{
+    box-shadow: none !important;
+ }
                .scroll .contr2 {
                 display: block;
                 width: 96.5%;
@@ -2104,23 +2532,23 @@
                 font-size: 1rem;
                 font-weight: 400;
                 line-height: 1.5;
-                color: white !important;
-                background-color: #323334 !important;
+                color: #000 !important;
+                background-color: #f9f9f9 !important;
                 background-clip: padding-box;
-                border: 1px solid #232428 !important;
+                border: 1px solid #f9f9f9 !important;
                 border-radius: .25rem;
                 -webkit-transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
                 transition: border-color .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
                 transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
                 transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out,-webkit-box-shadow .15s ease-in-out;
-                margin-left: 16px;
+
               }
               @media only screen and (min-width: 1201px) {
-                .bio1 {
+                /* .bio1 {
                   height: 530px !important;
-                }
+                } */
                 .scroll .emojiPickerIconWrap input {
-                  width: 110% !important;
+                  
                 }
                  .scroll2 .BA .rounded-circle {
                   width: 35px;
@@ -2149,13 +2577,10 @@
               
               @media only screen and (min-width: 1300px) {
                  .scroll2 .emojiPickerIcon {
-                  position: relative;
-                  right: -188px !important;
+          
                 }
                  .scroll2 .emojiPickerIconWrap input {
-                  width: 114% !important;
-                  position: relative;
-                  left: 23px;
+                 
                 }
                  .scroll2 .BA button {
                   left: 45px;
@@ -2173,40 +2598,35 @@
               }
               
               @media only screen and (min-width: 1333px) {
-                .bio1 {
+                /* .bio1 {
                   height: 546px !important;
-                }
+                } */
                  .scroll2 .BA button {
                   left: 57px;
                 }
                  .scroll2 .emojiPickerIconWrap input {
-                  width: 122% !important;
-                  position: relative;
-                  left: 23px;
+                 
                 }
               }
               
               @media only screen and (min-width: 1340px) {
-                .bio1 {
+                /* .bio1 {
                   height: 564px !important;
-                }
+                } */
               }
               
               @media only screen and (min-width: 1400px) {
-                .bio1 {
+                /* .bio1 {
                   height: 603px !important;
-                }
+                } */
                  .scroll2 .BA button {
                   left: 70px;
                 }
                  .scroll2 .emojiPickerIconWrap input {
-                  width: 130% !important;
-                  position: relative;
-                  left: 23px;
+                
                 }
                  .scroll2 .emojiPickerIcon {
-                  position: relative;
-                  right: -213px !important;
+                
                 }
                  .scroll2 .date p {
                   font-size: 9px;
@@ -2217,17 +2637,15 @@
               }
               
               @media only screen and (min-width: 1500px) {
-                .bio1 {
+                /* .bio1 {
                   height: 620px !important;
-                }
+                } */
                  .scroll .vc2 {
                   color: white !important;
-                  position: absolute;
-                  top: -8px;
-                  left: 68px;
+             
                 }
                  .scroll .emojiPickerIconWrap input {
-                  width: 108% !important;
+                  
                 }
                  .scroll .cp .emojiPickerIcon {
                   position: absolute;
@@ -2241,8 +2659,7 @@
                   width: 142% !important;
                 }
                  .scroll2 .emojiPickerIcon {
-                  position: relative;
-                  right: -234px !important;
+                 
                 }
               }
               
@@ -2254,15 +2671,13 @@
                   width: 160% !important;
                 }
                  .scroll2 .emojiPickerIcon {
-                  position: relative;
-                  right: -261px !important;
+                
                 }
               }
               .scroll .vc2 {
                 color: #0F5298 !important;
                 position: absolute;
-                top: -8px;
-                left: 36px;
+               
                             }
             .cp .emojiPickerIconWrap input {
                 background: rgb(246 251 253) !important;

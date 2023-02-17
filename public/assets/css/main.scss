@@ -1,30 +1,30 @@
 .dark-mode {
     background-color: black;
     .banner {
-        border: 2px solid #232428;
-        background: #232428;
+        border: 2px solid #fff;
+        background: #fff;
     }
     .left-side {
-        background-color: #232428;
+        background-color: #fff;
         color: white !important;
         & h6 {
             color: white !important;
         }
         & .profile {
-            border: 12px solid #232428;
-            background: #232428;
+            border: 12px solid #fff;
+            background: #fff;
         }
     }
     /* leftSide End */
     .main .id {
-        background-color: #232428;
+        background-color: #fff;
         color: white !important;
     }
     /* id Section End */
     .main .mess {
-        background-color: #232428;
+        background-color: #fff;
         color: white !important;
-        border: #232428;
+        border: #fff;
         & p {
             color: white !important;
         }
@@ -44,7 +44,7 @@
         & .readmore{
             background-color: #323334 !important;
             color: white !important;
-            border: #232428 !important;
+            border: #fff !important;
         }
         & .time16 {
             background-color: #323334;
@@ -79,25 +79,22 @@
         opacity: 0.6 !important;
     } 
     .pt2{
-        background-color: #232428 !important;
+        background-color: #fff !important;
     }
     /* ann ection end */
     .scroll3{
        
     }
     .scroll {
-        background-color: #232428;
-        color: white;
+        background-color: #fff !important;
+        color: black;
         .cp{
             display: flex !important;
             & .emojiPickerIcon{
-                position: absolute;
-                top: 0px;
-                right: -60px;
+                
             }
             .rounded-circle{
-                position: absolute;
-                left: 31px;
+          
             }
         }
         & .date p {
@@ -108,10 +105,10 @@
             color: white !important;
         }
         & .sec {
-            border: 0px solid #232428;
+            border: 0px solid #fff;
             margin: 0px;
             & img {
-                border: 2px solid #232428;
+                border: 2px solid #fff;
             }
         }
         & .hor {
@@ -126,11 +123,11 @@
         }
         & .emojiPickerIconWrap input{
             width: 100% !important;
-            background-color: #323334 !important;
-            color: white !important;
-            border: #232428 !important;
-            outline: #232428 !important;
-            margin-left: -31px;
+            background-color: #fff !important;
+            color: black !important;
+            border: #fff !important;
+            outline: #fff !important;
+           
             
             
         }
@@ -146,15 +143,11 @@
             background-color: #323334 !important;
             color: white !important;
             width: 65%;
-            position: absolute;
-            left: -19px;
-            top: 0px;
+      
         }
         & .vc{
             color: white !important;
-            position: absolute;
-            top: -36px;
-            left: 40px;
+          
         }
         & .contr2{
             display: block;
@@ -167,7 +160,7 @@
     color: white !important;
     background-color: #323334 !important;
     background-clip: padding-box;
-    border: 1px solid #232428 !important;
+    border: 1px solid #fff !important;
     border-radius: .25rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
     margin-left: 16px;
@@ -178,13 +171,11 @@
         }
         .vc2{
             color: white !important;
-            position: absolute;
-            top: -8px;
-            left: 51px;
+           
         }
     }
     .main .row1 {
-        background-color: #232428;
+        background-color: #fff;
         & .time {
             background-color: transparent !important;
             color: white !important;
@@ -193,7 +184,7 @@
             &:hover {
                 background-color: #323334 !important;
                 color: white !important;
-                border: #232428 !important;
+                border: #fff !important;
             }
             &:hover .abc {
                 background-color: #323334 !important;
@@ -207,12 +198,12 @@
     }
     /* nav */
     .nav1 {
-        background-color: #232428 !important;
+        background-color: #fff !important;
         color: white !important;
     }
     /* remind */
     .remind {
-        background-color: #232428;
+        background-color: #fff;
     }
     & .time2 {
         background-color: transparent !important;
@@ -224,13 +215,13 @@
         &:hover{
             background-color: #323334 !important;
             color: white !important;
-            border: #232428 !important;
+            border: #fff !important;
         }
     }
     /* info */
     .info {
-        background-color: #232428 !important;
-        border: #232428 !important;
+        background-color: #fff !important;
+        border: #fff !important;
         & .time13 {
             background-color: transparent !important;
             border:1px solid #FFFFFf !important;
@@ -240,12 +231,12 @@
             }
             &:hover{
                 background-color: #323334 !important;
-                border: #232428 !important;
+                border: #fff !important;
             }
         }
         & .time3 {
             background-color: #323334 !important;
-            border: #232428 !important;
+            border: #fff !important;
             & .abc {
                 background-color: #323334 !important;
                 color: white !important;
@@ -257,8 +248,8 @@
     }
     /* act */
     .act {
-        background-color: #232428 !important;
-        border: #232428 !important;
+        background-color: #fff !important;
+        border: #fff !important;
         & .time4 {
             background-color: #323334 !important;
             color: white !important;
@@ -276,8 +267,8 @@
             }
         }
         .time6 {
-            border: #232428 !important;
-            background-color: #232428 !important;
+            border: #fff !important;
+            background-color: #fff !important;
             & .abc {
                 background-color: #323334 !important;
                 color: white !important;
@@ -287,13 +278,13 @@
             background-color: transparent !important;
             &:hover{
                 background-color: #323334 !important;
-                border: #232428 !important;
+                border: #fff !important;
             }
         }
         
         .dropdown1 {
             background-color: #323334 !important;
-            border: #232428 !important;
+            border: #fff !important;
             & .dropdown-content {
                 background-color: #323334 !important;
             }
@@ -304,7 +295,7 @@
         }
     }
     .sal{
-        background-color: #232428 !important;
+        background-color: #fff !important;
         & .table{
             color: white !important;
             & thead tr{
@@ -313,7 +304,7 @@
                 font-weight: 700 !important;
             }
             & tr .attt{
-                background-color: #232428 !important;
+                background-color: #fff !important;
                 color: white !important;
             }
         }
@@ -334,13 +325,13 @@
             }
             &:hover{
                 background-color: #323334 !important;
-                border: #232428 !important;
+                border: #fff !important;
             }
         }
     }
     // work
     .work{
-        background-color: #232428 !important;
+        background-color: #fff !important;
         color: white !important;
         .time8{
             color: white;
@@ -359,17 +350,17 @@
             }
             &:hover{
                 background-color: #323334 !important;
-                border: #232428 !important;
+                border: #fff !important;
             }
         }
     }
     // train
     .train .time6{
-        background-color: #232428 !important;
+        background-color: #fff !important;
         color: white;
-        border:1px solid #232428 !important;
+        border:1px solid #fff !important;
         & .dropdown-content{
-            background-color: #232428 !important;
+            background-color: #fff !important;
             color: white !important;
         }
         
@@ -378,9 +369,9 @@
         opacity: 0.6 !important;
     }
     .time31{
-        background-color: #232428 !important;
+        background-color: #fff !important;
         color: white !important;
-        border:1px solid #232428 !important;
+        border:1px solid #fff !important;
         & .abc{
             text-decoration: none !important;
         }
@@ -390,7 +381,7 @@
     }
     // slider
     .slider{
-        background-color: #232428 !important;
+        background-color: #fff !important;
         color: white !important;
         & .time17{
             background-color: #323334 !important;
@@ -409,16 +400,16 @@
             }
             &:hover{
                 background-color: #323334 !important;
-                border: #232428 !important;
+                border: #fff !important;
             }
         }
     }
     // bio
     .bio{
-        background-color: #232428 !important;
+        background-color: #fff !important;
         color: white !important;
         &table{
-            background-color: #232428 !important;
+            background-color: #fff !important;
         }
         & table tr td{
             color: white !important;
@@ -432,15 +423,19 @@
             border-radius: 50% !important;
         }
         & .table td, .table th{
-            border-top: 1px solid #232428 !important;
+            border-top: 1px solid #fff !important;
         }
         & tbody tr{
             border-bottom: 1px solid #323334 !important;
         }
     }
+    .dark-mode .bio {
+        background-color: #fff !important;
+        color: #000 !important;
+    }
     // footer
     footer{
-        background-color: #232428 !important;
+        background-color: #fff !important;
         color: white !important;
     }
     // scroll2
@@ -463,8 +458,8 @@
         }
         & .sec img{
         width: 100% !important;
-        border: 0px solid #232428 !important;
-        border: 0px solid #232428;
+        border: 0px solid #fff !important;
+        border: 0px solid #fff;
         margin: 0px !important;
         }
         & .emojiPickerIconWrap input{
@@ -488,7 +483,7 @@
                 width: 40px;
                 left: 12px;
                 background-color: #323334 !important;
-                border: #232428 !important;
+                border: #fff !important;
                 border-radius: 4px;
                 color: white !important;
                 outline: none;
@@ -506,7 +501,7 @@
     }
     // modal
     .modal-content{
-        background-color: #232428 !important;
+        background-color: #fff !important;
         color: white !important;
     }
     .modal-body .scroll1 .comment1{
@@ -569,7 +564,7 @@
 // max
 @media only screen and (max-width: 1200px) {
     .bio1{
-        height: 540px !important;
+        height: 1580px !important;
     }
     .dark-mode .scroll2 .emojiPickerIconWrap input {
         width: 106% !important;
@@ -584,16 +579,9 @@
     }
     .dark-mode .scroll .vc {
         color: white !important;
-        position: absolute;
-        top: -36px;
-        left: 34px;
-        white-space: nowrap;
     }
     .dark-mode .scroll .vc2 {
         color: white !important;
-        position: absolute;
-        top: -8px;
-        left: 46px;
         
        
     }
@@ -610,10 +598,10 @@
 // min
 @media only screen and (min-width: 1201px) {
     .bio1{
-        height: 582px !important;
+        height: 1580px !important;
     }
     .scroll .emojiPickerIconWrap input {
-            width: 110% !important;
+            width: 100% !important;
     }
     .dark-mode .scroll2 .BA .rounded-circle {
         width: 35px;
@@ -624,7 +612,7 @@
     .dark-mode .scroll2 .emojiPickerIconWrap input {
         width: 91% !important;
         position: relative !important;
-        left: 65px !important;
+        left: 0px !important;
         top: 0px !important;
     }
     .dark-mode .scroll2 .BA button{
@@ -673,7 +661,7 @@
 
 @media only screen and (min-width: 1333px) {
     .bio1{
-        height: 600px !important;
+        height: 1580px !important;
     }
     .dark-mode .scroll2 .BA button {
         left: 57px;
@@ -686,12 +674,12 @@
 }
 @media only screen and (min-width: 1340px) {
     .bio1{
-        height: 636px !important;
+        height: 1580px !important;
     }
 }
 @media only screen and (min-width: 1400px) {
     .bio1{
-        height: 657px !important;
+        height: 1580px !important;
     }
     .dark-mode .scroll2 .BA button {
         left: 89px !important;
@@ -712,23 +700,26 @@
         padding-top: 2px;
     }
 }
+.dark-mode .scroll .emojiPickerIconWrap input {
+    width: 100% !important;
+    /* background-color: #323334 !important; */
+    color: white !important;
+    border: #fff !important;
+    outline: #fff !important;
+    /* margin-left: -31px; */
+}
 @media only screen and (min-width: 1500px) {
     .bio1{
-        height: 678px !important;
+        height: 1580px !important;
     }
     .dark-mode .scroll .vc2{
     color: white !important;
-    position: absolute;
-    top: -8px;
-    left: 68px;
     }
     .dark-mode .scroll .emojiPickerIconWrap input {
-        width: 108% !important;
+        width: 100% !important;
     }
     .dark-mode .scroll .cp .emojiPickerIcon {
-        position: absolute;
-        top: 0px;
-        right: -81px;
+
     }
     .dark-mode .scroll2 .BA button {
         left: 111px !important;
@@ -752,4 +743,8 @@
         position: relative;
         right: -261px !important;
     }
+}
+.dark-mode .bio {
+     background-color: #fff !important; 
+    color: white !important;
 }

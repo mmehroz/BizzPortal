@@ -34,6 +34,7 @@ class ExpenseController extends Controller
 				$task = DB::connection('mysql')->table('expense')
 				->join('expensetype','expensetype.expensetype_id','=','expense.expensetype_id')
 				->where('expense.expense_yearandmonth','=',$yearandmonth)
+				->where('expense.expensetype_id','=',5)
 				->where('expense.status_id','=',2)
 				->select('expense.*','expensetype_name')
 				->get();
@@ -48,6 +49,7 @@ class ExpenseController extends Controller
 			$task = DB::connection('mysql')->table('expense')
 			->join('expensetype','expensetype.expensetype_id','=','expense.expensetype_id')
 			->where('expense.status_id','=',2)
+			->where('expense.expensetype_id','!=',5)
 			->select('expense.*','expensetype_name')
 			->get();
 			return view('expense.recuringexpenselist',['data' => $task]);
@@ -64,6 +66,35 @@ class ExpenseController extends Controller
 		}else{
 			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
+	}
+	public function addmorebalance($id){
+		if (session()->get('email')) {
+			$split = explode('~', $id);
+			return view('expense.modals.addmorebalance',['yearandmonth' => $split[0], 'expense_id' => $split[1]]);
+		}else{
+			return redirect('/')->width('essage', 'You Are Not Allowed To Visit Portal Without Login');
+		}
+	}
+	public function submitaddmorebalance(Request $request){
+		if(session()->get("email")){
+			$splitmonth = explode('-', $request->expenseopening_month);
+			$add[] = array(
+				'expenseopening_moretitle' 		=> $request->expenseopening_moretitle,
+				'expenseopening_morebalance'	=> $request->expenseopening_morebalance,
+				'expense_id'					=> $request->expense_id,
+				'expenseopening_month' 			=> $request->expenseopening_month,
+				'expenseopening_date' 			=> date('Y-m-d'),
+				'status_id' 					=> 2,
+				);
+			$save = DB::connection('mysql')->table('expenseopening')->insert($add);
+			if($save){
+				return redirect('/submitselectexpense/'.$splitmonth[0].'/'.$splitmonth[1])->with('message','Additional Balance Added Successfully');;
+			}else{
+				return redirect('/recuringexpenselist')->with('message','Oops! Something went wrong');;
+			}
+		}else{
+				return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');;
+		} 
 	}
 	public function addrecuringexpense(){
 		if(session()->get("email")){

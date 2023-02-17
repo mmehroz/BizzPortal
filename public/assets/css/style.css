@@ -146,7 +146,7 @@ Version      : 3.4
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
 
 /*-----------------
-    1. General
+	1. General
 -----------------------*/
 
 html {
@@ -331,11 +331,11 @@ select.form-control[size] {
 
 
 /*-----------------
-    2. Table
+	2. Table
 -----------------------*/
 
 .panel-body table tr td {
-    border: 1px solid lightgray !important;
+   
     font-size: 14px;
 }
 
@@ -355,7 +355,7 @@ select.form-control[size] {
 }
 
 .table tr:nth-child(even) {
-    background-color: #eee;
+    /* background-color: #eee; */
 }
 
 .table tr:nth-child(odd) {
@@ -389,7 +389,7 @@ table.table td h2.table-avatar {
 }
 
 .bg-teal-400>th {
-    background-color: #D5F3FE !important;
+    background: #D5F3FE !important;
     color: #000000 !important;
     font-weight: bold !important;
 }
@@ -436,14 +436,14 @@ table.dataTable thead>tr>td.sorting_asc,
 table.dataTable thead>tr>td.sorting_desc,
 table.dataTable thead>tr>td.sorting {
     padding-right: 30px !important;
-    color: #000000;
-    background-color: #D5F3FE;
-    border: 1px solid #D5F3FE;
+    color: #fff;
+    background-color: #0096FF;
+    border: 1px solid lightgray;
 }
 
 
 /*-----------------
-    3. Helper Class
+	3. Helper Class
 -----------------------*/
 
 .p-20 {
@@ -572,7 +572,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    4. Bootstrap Classes
+	4. Bootstrap Classes
 -----------------------*/
 
 .btn {
@@ -1114,7 +1114,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    5. Animation
+	5. Animation
 -----------------------*/
 
 @-moz-keyframes pulse {
@@ -1183,7 +1183,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    6. Toggle Button
+	6. Toggle Button
 -----------------------*/
 
 .check {
@@ -1313,7 +1313,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    7. Modal
+	7. Modal
 -----------------------*/
 
 .modal {
@@ -1392,7 +1392,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    8. Header
+	8. Header
 -----------------------*/
 
 .header {
@@ -1594,7 +1594,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    9. Sidebar
+	9. Sidebar
 -----------------------*/
 
 .sidebar {
@@ -1886,7 +1886,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    10. Content
+	10. Content
 -----------------------*/
 
 .page-wrapper {
@@ -2000,7 +2000,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    11. Login
+	11. Login
 -----------------------*/
 
 .account-page {
@@ -2128,7 +2128,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    12. Dashboard
+	12. Dashboard
 -----------------------*/
 
 .card-table .card-header {
@@ -2156,12 +2156,11 @@ table.dataTable thead>tr>td.sorting {
 
 .custom-table tr {
     background-color: #0F5298;
-    box-shadow: 0 0 3px #0F5298;
+   
 }
 
 .custom-table tbody tr {
     background-color: #f6fbfd;
-    box-shadow: 0 0 3px #2c3325;
 }
 
 .datatable.table.table-stripped thead tr {
@@ -2175,7 +2174,7 @@ table.dataTable thead>tr>td.sorting {
 .table.custom-table>tfoot>tr>th,
 .table.custom-table>thead>tr>td,
 .table.custom-table>thead>tr>th {
-    padding: 10px 8px;
+    padding: 1px 8px;
     vertical-align: middle;
     background-color: white;
 }
@@ -2255,7 +2254,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    13. Activity
+	13. Activity
 -----------------------*/
 
 .activity-box {
@@ -2377,7 +2376,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    14. Select2
+	14. Select2
 -----------------------*/
 
 .select2-container .select2-selection--single {
@@ -2427,7 +2426,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    15. Nav Tabs
+	15. Nav Tabs
 -----------------------*/
 
 .nav-tabs .nav-link {
@@ -2507,7 +2506,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    16. Holidays
+	16. Holidays
 -----------------------*/
 
 .custom-table tr.holiday-completed {
@@ -2529,7 +2528,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    17. Delete Modal
+	17. Delete Modal
 -----------------------*/
 
 .form-header {
@@ -2602,7 +2601,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    18. Edit Profile
+	18. Edit Profile
 -----------------------*/
 
 .profile-img-wrap {
@@ -2684,7 +2683,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    19. Chat
+	19. Chat
 -----------------------*/
 
 .chat-avatar-sm {
@@ -3502,7 +3501,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    20. Focus Label
+	20. Focus Label
 -----------------------*/
 
 .form-focus {
@@ -3619,7 +3618,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    21. Leave
+	21. Leave
 -----------------------*/
 
 .filter-row .btn {
@@ -3644,7 +3643,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    22. Employee
+	22. Employee
 -----------------------*/
 
 .action-icon {
@@ -3765,7 +3764,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    23. Events
+	23. Events
 -----------------------*/
 
 .calendar {
@@ -3953,7 +3952,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    24. Profile
+	24. Profile
 -----------------------*/
 
 .profile-details {
@@ -4179,7 +4178,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    25. Notifications
+	25. Notifications
 -----------------------*/
 
 .notifications {
@@ -4327,7 +4326,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    26. Roles & Permissions
+	26. Roles & Permissions
 -----------------------*/
 
 .roles-menu {
@@ -4380,7 +4379,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    27. Chat Right Sidebar
+	27. Chat Right Sidebar
 -----------------------*/
 
 .fixed-header .custom-menu {
@@ -4463,7 +4462,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    28. Projects
+	28. Projects
 -----------------------*/
 
 .team-members {
@@ -4556,7 +4555,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    29. Invoice
+	29. Invoice
 -----------------------*/
 
 .invoice-details,
@@ -4614,7 +4613,7 @@ table.dataTable thead>tr>td.sorting {
 
 
 /*-----------------
-    30. Task
+	30. Task
 -----------------------*/
 
 .task-chat-contents {
@@ -5390,7 +5389,7 @@ html.menu-opened body {
 
 
 /*-----------------
-    31. Project View
+	31. Project View
 -----------------------*/
 
 .project-user .list-box {
@@ -5440,7 +5439,7 @@ html.menu-opened body {
 
 
 /*-----------------
-    32. Payslip
+	32. Payslip
 -----------------------*/
 
 .payslip-title {
@@ -5452,7 +5451,7 @@ html.menu-opened body {
 
 
 /*-----------------
-    33. Attendance
+	33. Attendance
 -----------------------*/
 
 .first-off {
@@ -5654,7 +5653,7 @@ html.menu-opened body {
 
 
 /*-----------------
-    34. Ticket
+	34. Ticket
 -----------------------*/
 
 .ticket-header {
@@ -5676,7 +5675,7 @@ html.menu-opened body {
 
 
 /*-----------------
-    35. Client Profile
+	35. Client Profile
 -----------------------*/
 
 .tab-box {
@@ -5700,7 +5699,7 @@ html.menu-opened body {
 
 
 /*-----------------
-    36. Inbox
+	36. Inbox
 -----------------------*/
 
 .table-inbox input[type="radio"],
@@ -5794,7 +5793,7 @@ table.table-inbox tbody tr.checked {
 
 
 /*-----------------
-    37. Mail View
+	37. Mail View
 -----------------------*/
 
 .attachments {
@@ -5893,7 +5892,7 @@ table.table-inbox tbody tr.checked {
 
 
 /*-----------------
-    38. Voice call
+	38. Voice call
 -----------------------*/
 
 .voice-call-avatar {
@@ -6118,7 +6117,7 @@ table.table-inbox tbody tr.checked {
 
 
 /*-----------------
-    39. Video Call
+	39. Video Call
 -----------------------*/
 
 .content-full {
@@ -6138,7 +6137,7 @@ table.table-inbox tbody tr.checked {
 
 
 /*-----------------
-    40. Outgoing Call
+	40. Outgoing Call
 -----------------------*/
 
 .call-box {
@@ -6276,7 +6275,7 @@ table.table-inbox tbody tr.checked {
 
 
 /*-----------------
-    41. Incoming Call
+	41. Incoming Call
 -----------------------*/
 
 .incoming-btns {
@@ -6285,7 +6284,7 @@ table.table-inbox tbody tr.checked {
 
 
 /*-----------------
-    42. Contacts
+	42. Contacts
 -----------------------*/
 
 .contacts-header {
@@ -6428,7 +6427,7 @@ table.table-inbox tbody tr.checked {
 
 
 /*-----------------
-    43. Chat Sidebar
+	43. Chat Sidebar
 -----------------------*/
 
 .chat-sidebar {
@@ -6493,7 +6492,7 @@ table.table-inbox tbody tr.checked {
 
 
 /*-----------------
-    44. Jobs
+	44. Jobs
 -----------------------*/
 
 .apply-btn {
@@ -6586,7 +6585,7 @@ table.table-inbox tbody tr.checked {
 
 
 /*-----------------
-    45. Job Details
+	45. Job Details
 -----------------------*/
 
 .job-info {
@@ -6752,7 +6751,7 @@ table.table-inbox tbody tr.checked {
 
 
 /*-----------------
-    46. Notification Settings
+	46. Notification Settings
 -----------------------*/
 
 .notification-list .list-group-item {
@@ -6765,7 +6764,7 @@ table.table-inbox tbody tr.checked {
 
 
 /*-----------------
-    47. Leave Settings
+	47. Leave Settings
 -----------------------*/
 
 .leave-item {
@@ -6888,7 +6887,7 @@ table.table-inbox tbody tr.checked {
 
 
 /*-----------------
-    48. Termination
+	48. Termination
 -----------------------*/
 
 .add-group-btn {
@@ -6913,7 +6912,7 @@ table.table-inbox tbody tr.checked {
 
 
 /*-----------------
-    49. Loader
+	49. Loader
 -----------------------*/
 
 #loader-wrapper {
@@ -7017,7 +7016,7 @@ table.table-inbox tbody tr.checked {
 
 
 /*-----------------
-    50. Payroll Items
+	50. Payroll Items
 -----------------------*/
 
 .page-menu .nav-tabs>li>a {
@@ -7047,7 +7046,7 @@ table.table-inbox tbody tr.checked {
 
 
 /*-----------------
-    51. Error
+	51. Error
 -----------------------*/
 
 .error-page {
@@ -7091,7 +7090,7 @@ table.table-inbox tbody tr.checked {
 
 
 /*-----------------
-    52. Lock Screen
+	52. Lock Screen
 -----------------------*/
 
 .lock-user {
@@ -7106,7 +7105,7 @@ table.table-inbox tbody tr.checked {
 
 
 /*-----------------
-    53. OTP
+	53. OTP
 -----------------------*/
 
 .otp-wrap {
@@ -7134,7 +7133,7 @@ table.table-inbox tbody tr.checked {
 
 
 /*-----------------
-    54. Salary Settings
+	54. Salary Settings
 -----------------------*/
 
 .settings-widget+.settings-widget {
@@ -7157,7 +7156,7 @@ table.table-inbox tbody tr.checked {
 
 
 /*-----------------
-    55. Components
+	55. Components
 -----------------------*/
 
 .comp-buttons .btn {
@@ -7216,7 +7215,7 @@ table.table-inbox tbody tr.checked {
 
 
 /*-----------------
-    56. Search
+	56. Search
 -----------------------*/
 
 .main-search {
@@ -7304,7 +7303,7 @@ table.table-inbox tbody tr.checked {
 
 
 /*-----------------
-    57. Knowledgebase
+	57. Knowledgebase
 -----------------------*/
 
 .topics {
@@ -7644,7 +7643,7 @@ ul.comment-list li ul.children {
 
 
 /*-----------------
-    58. FAQ
+	58. FAQ
 -----------------------*/
 
 .faq-card .card-header {
@@ -7730,7 +7729,7 @@ ul.comment-list li ul.children {
 
 
 /*-----------------
-    59. Employee Dashboard
+	59. Employee Dashboard
 -----------------------*/
 
 .welcome-box {
@@ -7904,7 +7903,7 @@ ul.comment-list li ul.children {
 
 
 /*-----------------
-    60. Performance Review
+	60. Performance Review
 -----------------------*/
 
 .review-table tr {
@@ -7959,7 +7958,7 @@ ul.comment-list li ul.children {
 
 
 /*-----------------
-    61. Kanban Board
+	61. Kanban Board
 -----------------------*/
 
 .card>.task-header {
@@ -8671,7 +8670,7 @@ ul.comment-list li ul.children {
 
 
 /*-----------------
-    62. File Manager
+	62. File Manager
 -----------------------*/
 
 .file-wrap {
@@ -9043,7 +9042,7 @@ ul.comment-list li ul.children {
 
 
 /*-----------------
-    63. Subscriptions
+	63. Subscriptions
 -----------------------*/
 
 .pricing-box {
@@ -9190,7 +9189,7 @@ h1 {
 
 
 /*-----------------
-    64. Responsive
+	64. Responsive
 -----------------------*/
 
 @media only screen and (min-width: 991px) {
@@ -10234,8 +10233,8 @@ margin-bottom: 5px;
     /*height: 280px;*/
     display: block;
     text-align: center;
-        /* border: 1px solid black; */
-        transition: 0.5s;
+    /* border: 1px solid black; */
+    transition: 0.5s;
     border-radius: 6px;
     overflow: hidden;
 }
