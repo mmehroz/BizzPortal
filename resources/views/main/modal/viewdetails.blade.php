@@ -23,6 +23,12 @@
                                    {!!$data->announcement_desc!!}
                                 </p>
                             </div>
+                            <?php
+                            $getexplode = explode(".", $data->announcement_image);
+                            $getextension = end($getexplode);
+                            $allowedimageext = array('jpeg','bmp','png','jpg','gif');
+                            if (in_array($getextension, $allowedimageext)) {
+                            ?>
                             @if($data->announcement_image != "no_image.jpg")
                             <div class="col-lg-12 col-md-12 col-sm-12">
                                 <div class="sec">
@@ -30,6 +36,15 @@
                                 </div>
                             </div>
                             @endif
+                            <?php
+                            }else{
+                            ?>
+                            <video width="100%" autoplay muted loop>
+                            <source src="{{URL::to('public/announcement/')}}/{{$data->announcement_image}}" class="w-100" type="video/mp4" />
+                            </video>
+                            <?php
+                            }
+                            ?>
                         </div>
                     </div>
                 </div>

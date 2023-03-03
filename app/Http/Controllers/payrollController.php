@@ -3231,7 +3231,7 @@ class payrollController extends Controller
                         $from = Carbon::createFromDate($year,$month,31);
                     }
                     elseif($month == 2){
-                        $from = Carbon::createFromDate($year,$month,30);
+                        $from = Carbon::createFromDate($year,$month,29);
                     }else{
                         $from = Carbon::createFromDate($year,$month,32);
                     }
@@ -4523,7 +4523,7 @@ class payrollController extends Controller
         ->where('increment.increment_year','<=',$splitfunddate[0])
         ->where('increment.increment_month','<=',$splitfunddate[1])
         ->where('increment.increment_year','!=',$formatedpreviousyear)
-		->where('increment.increment_month','!=',$formatedpreviousmonth)
+        ->where('increment.increment_month','!=',$formatedpreviousmonth)
         ->where('increment.status_id','=',2)
         ->select('increment.increment_amount')
         ->sum('increment.increment_amount');
@@ -4538,7 +4538,7 @@ class payrollController extends Controller
         ->sum('increment.increment_amount');
         }
         // decrement start
-		$getdecrementprevyear = DB::connection('mysql')->table('decrement')
+        $getdecrementprevyear = DB::connection('mysql')->table('decrement')
         ->where('decrement.elsemployees_batchid','=',$request->addBatchId)
         ->where('decrement.decrement_year','<',$splitfunddate[0])
         ->where('decrement.status_id','=',2)
@@ -4546,9 +4546,9 @@ class payrollController extends Controller
         ->sum('decrement.decrement_amount');
         if ($getdecrementprevyear>0) {
         $previousyear = new DateTime($splitfunddate[0].'-01');
-		$formatedpreviousyear = $previousyear->modify('-1 year')->format('Y-m-d');
-		$previousmonth = new DateTime($splitfunddate[1].'01');
-		$formatedpreviousmonth = $previousmonth->modify('-1 month')->format('Y-m-d');
+        $formatedpreviousyear = $previousyear->modify('-1 year')->format('Y-m-d');
+        $previousmonth = new DateTime($splitfunddate[1].'01');
+        $formatedpreviousmonth = $previousmonth->modify('-1 month')->format('Y-m-d');
         $getprevdecrement = DB::connection('mysql')->table('decrement')
         ->where('decrement.elsemployees_batchid','=',$request->addBatchId)
         ->where('decrement.decrement_year','<',$splitfunddate[0])
@@ -4574,13 +4574,13 @@ class payrollController extends Controller
         ->select('decrement.decrement_amount')
         ->sum('decrement.decrement_amount');
         }
-		$decrement;
-		if (isset($getdecrement)) {
-			$decrement  = $getdecrement;
-		}else{
-			$decrement = "0";
-		}
-		// decrement end
+        $decrement;
+        if (isset($getdecrement)) {
+            $decrement  = $getdecrement;
+        }else{
+            $decrement = "0";
+        }
+        // decrement end
         $totalsalary = $getsalary->Salary+$getincrement-$decrement;
         if ($splitfunddate[1] == 12) {
          $task = DB::connection('mysql')->table('payrollsalaries')

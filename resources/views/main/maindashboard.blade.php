@@ -1440,7 +1440,7 @@ top: 99% !important;
 </footer>
 <!-- Footer -->
 
-
+<div id="modals">
 </body>
 <script>
 function itticket() {
@@ -1453,7 +1453,7 @@ function viewdetails($id){
     $.get('{{ URL::to("/viewdetails")}}/'+$id,function(data){
     $('#modals').empty().append(data);
     $('#view').modal('show');
-    console.log("test");
+    /* console.log("test"); */
     });
 }
 function empreminder(){

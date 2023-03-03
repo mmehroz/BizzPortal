@@ -98,7 +98,9 @@ select.form-control:not([size]):not([multiple]) {
 			<div class="row align-items-center">
 				<div class="col">
 					<h5 class="page-titleheading text-center font-weight-bold">Daily BioMetric Attendance</h5> 
-					
+					@if(session('message'))
+						<div><p class="alert alert-success" >{{session('message')}}</p> </div>
+					@endif
 					<!-- <ul class="breadcrumb">
 						<li class="breadcrumb-item"><a href="{{url('/mainDashboard')}}">Dashboard</a></li>
 						<li class="breadcrumb-item active">Monthly Attendance Log</li>
@@ -108,108 +110,123 @@ select.form-control:not([size]):not([multiple]) {
 		</div>
 		<div class="row mt-2">
 
-			<div class="col-lg-3">
+			<div class="col-lg-4">
 				<div class="div1">
 <div class="text-center"><span class="dash-widget-icons"><i class="fa fa-check-square-o"></i></span></div>
 <div class="text-center" style="padding-top: 10px;"><span class="span1">Present Days</span>
 	<h4 id='predays'>0</h4></div>
 				</div>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-lg-4">
 				<div class="div1">
 <div class="text-center"><span class="dash-widget-icons"><i class="fa fa-window-close"></i></span></div>
 <div class="text-center" style="padding-top: 10px;"><span class="span1">OFF Days</span><h4 id='absdays'>0</h4></div>
 				</div>
 			</div>
-			<div class="col-lg-3">
+			<div class="col-lg-4">
 				<div class="div1">
 <div class="text-center"><span class="dash-widget-icons"><i class="fa fa-star"></i></span></div>
 <div class="text-center" style="padding-top: 10px;"><span class="span1">Leaves</span><h4 id='levdays'>0</h4></div>
 				</div>
 			</div>
-			@if(session('message'))
-			<div><p class="alert alert-success" >{{session('message')}}</p> </div>
-		@endif
-			<div class="col-lg-3">
-				<div class="div2"  id="modals">
-					<form id="frmeditstore">
-<div>
-	<label for="attyear">Select Year</label>
-				        		<select id="attendanceyear" name="attendanceyear"   class="form-control" required >
-									<option value="" selected="" disabled="">Select Year</option>
-									<option value="2020">2020</option>
-									<option value="2021">2021</option>
-									<option value="2022">2022</option>
-									<option value="2023" selected>2023</option>
-									<option value="2024">2024</option>
-									<option value="2025">2025</option>
-									<option value="2026">2026</option>
-									<option value="2027">2027</option>
-									<option value="2028">2028</option>
-									<option value="2029">2029</option>
-									<option value="2030">2030</option>
-								</select>
-								</div>
-								<div>
-									<label class="focus-label">Select Month</label>
-									<select class="form-control" name="mydata" id="searchdrop">
-										<option value="" selected="" disabled="">Select</option>
-										<option value="01">January</option>
-										<option value="02">Feburary</option>
-										<option value="03">March</option>
-										<option value="04">April</option>
-										<option value="05">May</option>
-										<option value="06">June</option>
-										<option value="07">July</option>
-										<option value="08">August</option>
-										<option value="09">September</option>
-										<option value="10">October</option>
-										<option value="11">November</option>
-										<option value="12">December</option>
-									</select>
-								</div>
-								<?php
-								if(session()->get("role") <= 2){
-								$task =  DB::connection('mysql')->table('elsemployees')
-								->where('elsemployees.elsemployees_status','=',2)
-								->select('elsemployees.*')
-								->get();
-								// dd($task);
-								}
-								elseif(session()->get("role") == 4){
-								$task =  DB::connection('mysql')->table('elsemployees')
-								->where('elsemployees.elsemployees_status','=',2)
-								->where('elsemployees.elsemployees_empid','=',session()->get("id"))
-								->select('elsemployees.*')
-								->get();
-								// dd($task);
-								}else{
-								$task = DB::connection('mysql')->table('elsemployees')
-								->where('elsemployees.elsemployees_status','=',2)
-								->where('elsemployees.elsemployees_reportingto','=',session()->get("id"))
-								->select('elsemployees.*')
-								->get();
-
-								}
-								?>
-								<div>
-									<label class="focus-label">Select Employee</label>
-							
-									<select class="form-control" data-width="fit" id="addtm1" data-live-search="true" placeholder="Enter TM Name" name="emp_report"  required>
-										@if(session()->get('role') == 3)
-		                            	<option value={{session()->get('batchid')}}>{{session()->get('name')}}-{{session()->get('batchid')}}</option>
-		                            	@endif
-		                            	@foreach($task as $mnger)
-		                                <option value={{$mnger->elsemployees_batchid}}>{{$mnger->elsemployees_name}}-{{$mnger->elsemployees_batchid}}</option>
-		                            	@endforeach 
-	                                </select>
 </div>
-
-<div id="field"></div></div>
-						</form>
-						</div>
-		</div>
 		<br/>
+		<!-- filter section start -->
+		<div class="div2"  id="modals">
+		<form id="frmeditstore">
+		<div class="row">
+			<div class="col-lg-3">
+				<!-- <div class="div2"  id="modals"> -->
+					<!-- <div> -->
+					<label for="attyear">Select Year</label>
+					<select id="attendanceyear" name="attendanceyear"   class="form-control" required >
+						<option value="" selected="" disabled="">Select Year</option>
+						<option value="2020">2020</option>
+						<option value="2021">2021</option>
+						<option value="2022">2022</option>
+						<option value="2023" selected>2023</option>
+						<option value="2024">2024</option>
+						<option value="2025">2025</option>
+						<option value="2026">2026</option>
+						<option value="2027">2027</option>
+						<option value="2028">2028</option>
+						<option value="2029">2029</option>
+						<option value="2030">2030</option>
+					</select>
+				<!-- </div> -->
+			</div>
+			<div class="col-lg-3">
+				<!-- <div> -->
+					<label class="focus-label">Select Month</label>
+					<select class="form-control" name="mydata" id="searchdrop">
+						<option value="" selected="" disabled="">Select</option>
+						<option value="01">January</option>
+						<option value="02">Feburary</option>
+						<option value="03">March</option>
+						<option value="04">April</option>
+						<option value="05">May</option>
+						<option value="06">June</option>
+						<option value="07">July</option>
+						<option value="08">August</option>
+						<option value="09">September</option>
+						<option value="10">October</option>
+						<option value="11">November</option>
+						<option value="12">December</option>
+					</select>
+				<!-- </div> -->
+			</div>
+			<div class="col-lg-3">
+				<?php
+				if(session()->get("role") <= 2){
+				$task =  DB::connection('mysql')->table('elsemployees')
+				->where('elsemployees.elsemployees_status','=',2)
+				->select('elsemployees.*')
+				->get();
+				// dd($task);
+				}
+				elseif(session()->get("role") == 4){
+				$task =  DB::connection('mysql')->table('elsemployees')
+				->where('elsemployees.elsemployees_status','=',2)
+				->where('elsemployees.elsemployees_empid','=',session()->get("id"))
+				->select('elsemployees.*')
+				->get();
+				// dd($task);
+				}else{
+				$task = DB::connection('mysql')->table('elsemployees')
+				->where('elsemployees.elsemployees_status','=',2)
+				->where('elsemployees.elsemployees_reportingto','=',session()->get("id"))
+				->select('elsemployees.*')
+				->get();
+
+				}
+				?>
+				<!-- <div> -->
+					<label class="focus-label">Select Employee</label>
+					<style>
+						:not(.input-group)>.bootstrap-select.form-control:not([class*=col-]) {
+							width: 100% !important;
+						}
+					</style>
+					<select class="form-control selectpicker" data-width="fit" id="addtm1" data-live-search="true" placeholder="Enter TM Name" name="emp_report"  required>
+						@if(session()->get('role') == 3)
+						<option value={{session()->get('batchid')}}>{{session()->get('name')}}-{{session()->get('batchid')}}</option>
+						@endif
+						@foreach($task as $mnger)
+						<option value={{$mnger->elsemployees_batchid}}>{{$mnger->elsemployees_name}}-{{$mnger->elsemployees_batchid}}</option>
+						@endforeach 
+					</select>
+				<!-- </div> -->
+			</div>
+			<div class="col-lg-3">
+			<label class="focus-label"></label>
+				<div id="field"></div>
+			</div>
+		</div>
+		</form>
+		
+	</div>
+		
+		<!-- filter section end -->
 		<div class="row">
 			<div class="col-md-12">
 				<div class="table-responsive">

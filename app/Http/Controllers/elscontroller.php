@@ -3404,7 +3404,7 @@ class elscontroller extends Controller
 				if(session()->get("email")){
 				if(session()->get("role") <= 2){
 					$this->validate($request, [
-                	  	'image'=>'mimes:jpeg,bmp,png,jpg,gif,mp4,wmv,avi,mkv,mpg,mpeg,webm,|max:20120',
+                	  	'image'=>'mimes:jpeg,bmp,png,jpg,gif,mp4,wmv,avi,mkv,mpg,mpeg,webm,|max:80120',
                 	    'announcementfor'=>'required',
                 	    'annoutitle'=>'required',
                 	    'annoudesc'=>'required',
