@@ -941,9 +941,9 @@ color: black;
                     Signature of Director _____________________ <span style="margin-left: 300px;"> Signature of Employee
                         ___________________</span>
                 </p> -->
-                <p style="margin-top: 50px; font-weight: 700;margin-left: 50px">
+                <!-- <p style="margin-top: 50px; font-weight: 700;margin-left: 50px">
                     System generated document (Signature & Stamp is not Necessary), to Verify Contact @ (hr@bizzworldcommunications.com)
-                </p>
+                </p> -->
             </div>
             <footer style="font-size: 12px; margin-top: 50px; font-weight: 700; color: black; height: 30px;">
                 <p>Email: Info@bizzworldcommunications.com <span
