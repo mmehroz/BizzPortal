@@ -6,7 +6,16 @@
         <meta name="description" content="Register Your Self In Our Recruitment Portal For Your Dream Job | Bizz World Communication">
 		<meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, management, minimal, modern, accounts, invoice, html5, responsive, CRM, Projects">
         <meta name="author" content="Register Your Self In Our Recruitment Portal For Your Dream Job | Bizz World Communication">
-        <meta name="robots" content="noindex, nofollow">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:wght@500&family=Raleway:wght@500&display=swap" rel="stylesheet">
+<meta name="robots" content="noindex, nofollow">
         <title>HRMS</title>
 		<script src="https://cdn.tiny.cloud/1/0x3tdic9crkvey6ukojhz2xq52p85wkzbmuke9acab2c7m85/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
 		<!-- Favicon -->
@@ -346,7 +355,7 @@ background-image: linear-gradient(to bottom, #0F5298 0%, #0F5298 100%);
 							</li>
 							
 							<li class="submenu">
-								<a href="#"><i class="la la-edit"></i> <span> Biomatric Attendance</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fas fa-fingerprint"></i> <span> Biomatric Attendance</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="{{url('/selectmonthforattendance')}}">Monthly Bio Attendance</a></li>
 									<li><a href="{{url('/dailyattendance')}}">Daily Attendance</a></li>
@@ -359,7 +368,7 @@ background-image: linear-gradient(to bottom, #0F5298 0%, #0F5298 100%);
 							</li>
 							@if(session()->get('role') != 4)
 							<li class="submenu">
-								<a href="#"><i class="la la-edit"></i> <span> Portal Attendance</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fa fa-check"></i> <span> Portal Attendance</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<!-- <li><a href="{{url('/attendance')}}">Mark Attendance</a></li> -->
 									<li><a href="{{url('/viewattendnce')}}">Timein Cont</a></li>
@@ -387,7 +396,7 @@ background-image: linear-gradient(to bottom, #0F5298 0%, #0F5298 100%);
 								</ul>
 							</li>
 							<li class="submenu">
-								<a href="#"><i class="la la-file-text"></i> <span>Food Portal</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fas fa-hamburger"></i> <span>Food Portal</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 										<li><a href="{{url('/restaurantlist')}}">Restaurant List</a></li>
 										<li><a href="{{url('/deliveryordertlist')}}">Awaiting To Deliver</a></li>
@@ -399,7 +408,7 @@ background-image: linear-gradient(to bottom, #0F5298 0%, #0F5298 100%);
 								<span>Meeting Room</span>
 							</li>
 							<li class="submenu">
-								<a href="#"><i class="la la-money"></i> <span> Reservations </span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fas fa-clipboard"></i> <span> Reservations </span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="{{url('/reservationreport')}}">Report</a></li>
 								</ul>
@@ -498,7 +507,7 @@ background-image: linear-gradient(to bottom, #0F5298 0%, #0F5298 100%);
 							</li>
 							
 							<li class="submenu">
-								<a href="#"><i class="la la-bullhorn"></i> <span> Gallery</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fa fa-image"></i> <span> Gallery</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">	
 									<li class="submenu">
 										<li><a href="{{url('/albumlist')}}">Album List</a></li>
@@ -516,7 +525,7 @@ background-image: linear-gradient(to bottom, #0F5298 0%, #0F5298 100%);
 							</li>
 
 							<li class="submenu">
-								<a href="#"><i class="la la-external-link-square"></i> <span> Resignation</span> <span class="menu-arrow"></span></a>
+								<a href="#"><i class="fa fa-sign-out"></i> <span> Resignation</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">	
 									<li class="submenu">
 										<li><a href="{{url('/resignationlist')}}">Resignation List</a></li>
@@ -736,7 +745,7 @@ background-image: linear-gradient(to bottom, #0F5298 0%, #0F5298 100%);
 		<script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.html5.min.js"></script>
 		<!-- <script src="{!! asset('public/assets/js/buttons.print.min.js') !!}"></script> -->
 		<script src="https://cdn.datatables.net/buttons/1.6.1/js/buttons.print.min.js"></script>
-		
+		<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
 		<!-- SelectPicker JS -->
 		<script src="{!! asset('public/assets/js/selectpicker.js') !!}"></script>
 		

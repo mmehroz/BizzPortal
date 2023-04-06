@@ -209,6 +209,7 @@
 													$arrivaltime;
 													$halfdaytime;
 													$dt = $attendancestatus->attendance_date;
+													$chkin = substr($attendancestatus->attendance_mark, -2);
 													$emptimeinfo = DB::connection('mysql')->table('elsemployeestiming')
 									                ->where('elsemployeestiming.emptime_batchid','=',$val->elsemployees_batchid)
 									                ->select('elsemployeestiming.*')
@@ -248,6 +249,13 @@
 													$halfdays++;
 												?>
 													<td style="background-color: #b7cefa;">Half Day</td>
+												<?php
+												}
+											
+												elseif($chkin == "AM"){
+													$absentdays++;
+												?>
+													<td style="background-color: lightgray;">Unacceptable</td>
 												<?php
 												}
 												else{

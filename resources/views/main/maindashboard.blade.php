@@ -575,7 +575,7 @@ width: 99%;
     color: #000;
     font-weight: 600;
     margin-bottom: 0 !important;
-    padding-left: 35px;
+    padding-left: 10px;
     font-family: 'Raleway', sans-serif;
 }
 .officeoptionsheading{
@@ -587,6 +587,8 @@ width: 99%;
     padding-top: 7px;
     font-family: 'Raleway', sans-serif;
 }
+
+
 
 @media screen and (min-width: 1600px){
 
@@ -626,6 +628,7 @@ top: 99% !important;
 }
 
 
+}
 </style>
 <script>
  $(function() {
@@ -737,7 +740,7 @@ top: 99% !important;
      <section class="personaldetailsection">
         <div class="container-fluid">
             <div class="row">
-                <div class="col-lg-4">
+                <div class="col-lg-3">
 
                     <div class="personaldetails">
                         <h3 class="text-center personaldetailsheading1">Personal Details</h3>
@@ -756,11 +759,8 @@ top: 99% !important;
                             <div class="col-lg-5"> <p class="persondetailcolhead">Cell:</p></div>
                             <div class="col-lg-7"><span class="font-weight-bold text-black">{{$data->elsemployees_cno}}</span></div>
                         </div>
-                        <hr>
-                        <div class="d-flex  mt-1">
-                            <div class="col-lg-5"><p class="persondetailcolhead">Email:</p></div>
-                            <div class="col-lg-7"><span class="font-weight-bold text-black">{{$data->elsemployees_email}}</span></div>
-                        </div>
+                        
+                       
                         <hr>
                         <div class="d-flex  mt-1" style="padding-top: 5px;">
                             <div class="col-lg-5"><p class="persondetailcolhead">Department:</p></div>
@@ -773,6 +773,11 @@ top: 99% !important;
                            <div class="col-lg-7"><span class="font-weight-bold text-black">{{$data->DESG_NAME}}</span></div>
                         </div>
                          <hr>
+                         <div class="d-flex  mt-1" style="padding-top: 5px;">
+                            <div class="col-lg-5"><p class="persondetailcolhead">Reporting To:</p></div>
+                            <div class="col-lg-7"><span class="font-weight-bold text-black">{{$data->reportingto}}</span></div>
+                        </div>
+						<hr>
                          <div class="d-flex mt-1" style="padding-top: 5px;">
                             <div class="col-lg-5"><p class="persondetailcolhead">Joining Date:</p></div>
                             <div class="col-lg-7"><span class="font-weight-bold text-black">{{$data->elsemployees_dofjoining}}</span></div>
@@ -943,7 +948,7 @@ top: 99% !important;
                             </div>
                         </div>
                 </div>
-                <div class="col-lg-5">
+                <div class="col-lg-6">
                     <div style="background: #fff; box-shadow: 0px 6px 16px rgb(0 0 0 / 20%); border-radius: 10px;">
                         <div class="banner">
                             @if($data->elsemployees_coverimage == null)
@@ -971,6 +976,8 @@ top: 99% !important;
                                     <div class="d-flex justify-content-center">
                                         <h6 class="mt-1" style="font-weight: bold;">{{$data->DESG_NAME}}</h6>
                                       <h6 class="pro" style="font-weight: bold;">{{$data->dept_name}}</h6>
+                                      <h6 class="pro" style="font-weight: bold;">{{$data->elsemployees_email}}</h6>
+                                      
                                     </div>
                                 </div>
                         </div>
@@ -1205,8 +1212,8 @@ top: 99% !important;
 </div>
 <div>
                         <div class="col-lg-12 mt-3"><a class="mainbtns" id="upload_link" target="_blank" href="http://192.168.0.6:5100/"><span><i class="mainbtnsspan fa fa-envelope-open-text"></i></span>Email</a></div>
-                        <div class="col-lg-12 mt-3"><a class="mainbtns" id="upload_link" target="_blank" href="http://192.168.0.6:3000/"><span><i class="mainbtnsspan fa fa-envelope-open-text"></i></span>Chat</a></div>
-                        <div class="col-lg-12 mt-3"><a class="mainbtns" id="upload_link" target="_blank" href="http://192.168.0.7:4001"><span><i  class="mainbtnsspan fa fa-envelope-open-text"></i></span>CRM</a></div>
+                        <div class="col-lg-12 mt-3"><a class="mainbtns" id="upload_link" target="_blank" href="http://192.168.0.6:3000/"><span><i class="mainbtnsspan  fas fa-comment"></i></span>Chat</a></div>
+                        <div class="col-lg-12 mt-3"><a class="mainbtns" id="upload_link" target="_blank" href="http://192.168.0.7:4001"><span><i  class="mainbtnsspan fa fa fa-users"></i></span>CRM</a></div>
                     </div>
                     <div class="activitiesection">
                     <h3 class="font-weight-bold text-black text-center pt-4 pb-4">My Acitivities</h3>
@@ -1333,7 +1340,7 @@ top: 99% !important;
                         </div>
                         <div class="row">
                             <div class="col-lg-12">
-                                <a href="{{URL::to('dailyattendance')}}" style="color: #fff; height: 40px; margin-top: 8px; border-radius: 10px; margin-left: 5px; margin-right: 5px; text-align: center; padding-top: 10px; background: #0f5298; display: flex; justify-content: center;">View All Attendance</a>
+                                <a href="{{URL::to('dailyattendance')}}" class="attendancebtn">View All Attendance</a>
                             </div>
                             </div>
                        

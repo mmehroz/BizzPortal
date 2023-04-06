@@ -80,8 +80,6 @@ select.form-control:not([size]):not([multiple]) {
     box-shadow: 0px 6px 16px rgb(0 0 0 / 20%);
     border-radius: 10px;
 	padding: 10px;
-	height: 138px;
-    overflow-y: scroll;
 }
 .page-titleheading{
 	font-family: 'Raleway', sans-serif;

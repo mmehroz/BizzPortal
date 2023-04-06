@@ -56,322 +56,389 @@
 	.highcharts-data-table tr:hover {
 	    background: #f1f7ff;
 	}
+	.media{
+		
+	}
+	.media-body{
+		padding-left: 15px;
+		
+	}
+	.media-body h5{
+		font-size: 14px;color:#000000; height: 9px; font-family: 'Montserrat', sans-serif; font-weight:600;
+	}
+	.media-body span{
+	color: #98a6ad;
+	text-transform: capitalize;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 14px;
+}
+.headingtitle{
+	margin-left: 0px;
+    color: #000;
+    font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.abc{
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; padding: 30px; border-radius: 7px;
+		
+}
+.table-responsive {
+	background: #fff;
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	border-radius: 5px;
+}
+.table {
+    width: 100%;
+    max-width: 100%;
+
+}
+.table>tbody>tr>td {
+    padding: 12px 8px;
+    vertical-align: middle;
+    border-color: #ddd;
+    font-weight: 300;
+    font-size: 13px;
+    color: #3c4858;
+    font-family: 'Raleway', sans-serif;
+}
+.table td, .table th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+.tableheading{
+	text-align: center;
+    font-size: 18px;
+    padding-top: 15px;
+    color: #000;
+	font-family: 'Raleway', sans-serif;
+    font-weight: 600;
+}
+
+table.table td h2.table-avatar{
+	font-weight: 300;
+    font-size: 13px;
+    color: #3c4858;
+    font-family: 'Raleway', sans-serif;
+}
+.submitbtn{
+	background: #0F5298 !important;
+    color: #fff !important;
+    font-weight: 600;
+    width: 35%;
+    margin-left: 10px;
+}
+.calendarbtn{
+	width: 35%;
+}
+.scrolldiv{
+	height: 490px;
+	overflow-y: scroll;
+}
+
 </style>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 			<!-- Page Wrapper -->
             <div class="page-wrapper">
 			
 				<!-- Page Content -->
-                <div class="content container-fluid">
-				
-					<!-- Page Header -->
-					<div class="page-header">
-						<div class="row">
-							<div class="col-sm-12">
-								<div class="welcome-box">
-									<div class="welcome-img" onclick="getimage()">
-										<script>
-											$(document).ready(function(){
-											  $('.toast').toast('show');
-											});
-												function getimage(){
-													$.get('{{ URL::to("/getimage")}}',function(data){
-												    $('#modals').empty().append(data);
-												    $('#getimage').modal('show');
-												    });
-												}
-										</script>
-										<img alt="" title="Click To Change Image" src="{{URL::to('public/img/')}}/{{$data['empdata']->elsemployees_image}}">
-									</div>
-									<div class="welcome-det">
-										<h3 class="page-title">Welcome HR!</h3>
-										<ul class="breadcrumb">
-											<li class="breadcrumb-item active">Dashboard</li>
-										</ul>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					<!-- <div class="page-header">
-						<div class="row">
-							<div class="col-sm-12">
-								<h3 class="page-title">Welcome HR!</h3>
-								<ul class="breadcrumb">
-									<li class="breadcrumb-item active">Dashboard</li>
-								</ul>
-							</div>
-						</div>
-					</div> -->
-					<!-- /Page Header -->
-				
-					<div class="row">
-						<div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
-							<div class="card dash-widget">
-								<div class="card-body">
-									<span class="dash-widget-icon"><i class="fa fa-users"></i></span>
-									<div class="dash-widget-info">
-										<h3>{{$data['emptota']}}</h3>
-										<span>No Of Employees</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
-							<div class="card dash-widget">
-								<div class="card-body">
-									<span class="dash-widget-icon"><i class="fa fa-cubes"></i></span>
-									<div class="dash-widget-info">
-										<h3>{{$data['countdpt']}}</h3>
-										<span>No Of Departments</span>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-6 col-sm-6 col-lg-6 col-xl-4">
-							<div class="card dash-widget">
-								<div class="card-body">
-									<span class="dash-widget-icon"><i class="fa fa-usd"></i></span>
-									<div class="dash-widget-info">
-										<h3>{{$data['desgc']}}</h3>
-										<span>No Of Designations</span>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="row">
-						<div class="col-md-12">
-							<div class="row">
-								<div class="col-md-8">
-									<div class="card">
-										<div class="card-body">
-											
-										
-                                <!-- <form> -->
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label>Company</label>
-                                                <input type="text" class="form-control" disabled placeholder="Company" value="Bizz World Communication">
-                                            </div>
-                                        </div>
-                                   
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label for="exampleInputEmail1">Email address</label>
-                                                <input type="email" class="form-control" disabled placeholder="email" value="{{$data['empdata']->elsemployees_email}}">
-                                            </div>
-                                        </div>
-                                    </div>
+			
 
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                             <div class="form-group">
-                                                <label>User Id</label>
-                                                <input type="text" class="form-control" disabled placeholder="Username" value="{{$data['empdata']->elsemployees_batchid}}">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                       <div class="form-group">
-                                                <label>Employee Name</label>
-                                                <input type="text" class="form-control" disabled placeholder="Company" value="{{$data['empdata']->elsemployees_name}}">
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <div class="row">
-                                        <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label>Role</label>
-                                                <input type="text" class="form-control" disabled placeholder="Home Address" value="{{$data['empdata']->rolename}}">
-                                            </div>
-                                        </div>
-                                             <div class="col-md-6">
-                                            <div class="form-group">
-                                                <label>Status</label>
-                                                <input type="text" class="form-control" disabled placeholder="Home Address" value="Active"> 
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-md-10">
-                                            <div class="form-group">
-                                    			<input type="month" class="form-control" name="filter" id="filter">
-                                    		</div>
-                                    	</div>
-                                    	<div class="col-md-2">
-                                            <div class="form-group">
-                                    			<input type="button" class="btn form-control" name="btnfilter" value="Submit" onclick="filteradminDashboard();" style="color: #0c0c0c;background-color: #d5f3fe; border-color: #0f5298;">
-                                    		</div>
-                                    	</div>
-                                    </div>
-                                     <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="form-group">
-                                            	<figure class="highcharts-figure">
-													<div id="container"></div>
-												</figure>
-											</div>
-										</div>
-									</div>
-                            	<div class="clearfix"></div>
-                            </div>
-                        </div>
-					</div>
-								<div class="col-md-4">
-									<div class="card" >
-										<div class="card-body">
-											 <div class="container">
- 											<div class="toast" data-autohide="false">
-											    <div class="toast-header" style="background: #D5F3FE; color: #000000 !important;">
-											      <strong class="mr-auto text-primary" style="color: #000000 !important;"><i class="fa fa-bell mr-2"></i> Pending Complains</strong>
-											      <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" style="color: white !important; font-weight: 700">&times;</button>
-											    </div>
-											    <div class="toast-body" style="height: 240px; overflow-x: hidden;">
-											    	<?php $getcomplains = DB::connection('mysql')->table('complain')
-											    	->join ('elsemployees','elsemployees.elsemployees_batchid', '=','complain.created_by')
-													->where('complainstatus_id','=', 1) 
-													->orderBy('complain_id','DESC') 
-													->select('complain.*','elsemployees_empid','elsemployees_name','elsemployees_image')
-													->get();?>
-												
-													@foreach ($getcomplains as $complains)
-													@if(isset($complains->complain_id))
-													<div class="row pt-2">
-													<div class="col-8"><h6 style="font-size: 0.79rem; color: black; font-weight: 550; letter-spacing: 1px">{{$complains->elsemployees_name}}</h6></div>
-													<div class="col-4 text-right"><h6 style="font-size: 0.79rem !important; color: black; font-weight: 550">{{$complains->complain_date}}</h6></div>
-													<div class="col-12">
-														<div class="divider" style="width: 100%; border-bottom: 1px solid lightgray; margin-bottom: 5px"></div>
-													</div>
-													
-													<div class="col-12">
-														<a href="{{url('/complainreport')}}">
-														<p class="pt-3" style="text-align: justify; word-break: break-all; color: darkgray; font-weight: 550; font-size: 0.85rem;">
-															{{$complains->complain_note}}
-														</p>
-														</a>
-													</div>
-													</div>
-													@endif
-													@endforeach
-											    </div>
-											  </div>
-											</div>
-										<ul class="breadcrumb">
-											<li class="breadcrumb-item active" style="color: #000000">Up Comming Employee Birthday</li>
-										</ul>
-											<div class="table-responsive" style="height: auto !important;">
-					<table class="table table-striped custom-table datatable"  id="bd">
+
+
+				<div class="container-fluid">
+<div class="col-lg-12">
+<div>
+
+	<div class="row mt-2 abc">
+		<div class="col-lg-12 mb-3">
+			<h3 class="headingtitle">Personal Details</h3>
+		</div>
+		<div class="col-lg-4">
+			<div class="media">
+				<img src="{!! asset('public/img/user.png') !!}" style="width: 10%;">
+				<div class="media-body">
+				  <h5 class="mt-0">Name</h5>
+				 <span>{{$data['empdata']->elsemployees_name}}</span> 
+				</div>
+			  </div>											
+		</div>
+
+		<div class="col-lg-4">
+			
+			  <div class="media">
+				<img src="{!! asset('public/img/mail.png') !!}" style="width: 10%;">
+				<div class="media-body">
+				  <h5 class="mt-0">Email address</h5>
+				  <span>{{$data['empdata']->elsemployees_email}}</span> 
+				</div>
+			  </div>
+		</div>
+		<div class="col-lg-4">
+			<div class="media">
+				<img src="{!! asset('public/img/userid.png') !!}" style="width: 10%;">
+				<div class="media-body">
+				  <h5 class="mt-0">User Id</h5>
+				 <span>{{$data['empdata']->elsemployees_batchid}}</span> 
+				</div>
+			  </div>
+	
+		</div>
+		<div class="col-lg-4 mt-5">
+			<div class="media">
+				<img src="{!! asset('public/img/company.png') !!}" style="width: 10%;">
+				<div class="media-body">
+				  <h5 class="mt-0">Company</h5>
+				 <span>BizzWorld Communication</span> 
+				</div>
+			  </div>
+		
+		</div>
+
+		<div class="col-lg-4 mt-5">
+			<div class="media">
+				<img src="{!! asset('public/img/role.png') !!}" style="width: 10%;">
+				<div class="media-body">
+				  <h5 class="mt-0">Role</h5>
+				 <span>{{$data['empdata']->rolename}}</span> 
+				</div>
+			  </div>
+	
+		</div>
+		<div class="col-lg-4 mt-5">
+			<div class="media">
+				<img src="{!! asset('public/img/status.png') !!}" style="width: 10%;">
+				<div class="media-body">
+				  <h5 class="mt-0">Status</h5>
+				 <span>Active</span> 
+				</div>
+			  </div>
+		
+		</div>
+	</div>
+	<div class="row mt-2 abc">
+		<div class="col-lg-12 mb-3">
+			<h3 class="headingtitle">Office Details</h3>
+		</div>
+		<div class="col-lg-4">
+			<div class="media">
+				<img src="{!! asset('public/img/employees.png') !!}" style="width: 10%;">
+				<div class="media-body">
+				  <h5 class="mt-0">No Of Employees</h5>
+				 <span>{{$data['emptota']}}</span> 
+				</div>
+			  </div>
+		</div>
+
+		<div class="col-lg-4">
+			<div class="media">
+				<img src="{!! asset('public/img/departments.png') !!}" style="width: 10%;">
+				<div class="media-body">
+				  <h5 class="mt-0">No Of Departments</h5>
+				 <span>{{$data['countdpt']}}</span> 
+				</div>
+		  </div>
+		</div>
+
+
+		<div class="col-lg-4">
+			<div class="media">
+				<img src="{!! asset('public/img/designation.png') !!}" style="width: 10%;">
+				<div class="media-body">
+				  <h5 class="mt-0">No Of Designations</h5>
+				 <span>{{$data['desgc']}}</span> 
+				</div>
+			  </div>
+		</div>
+
+
+
+	
+		
+	</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+				</div>
+
+				<div class="container-fluid">
+				<div class="row mt-3">
+					<div class="col-lg-8">
+						
+						<div class="card">
+							<div class="card-body">
+								
+								<div class="form-group d-flex">
+									<input type="month" class="form-control calendarbtn" name="filter" id="filter">
+									<input type="button" class="btn form-control submitbtn" name="btnfilter" value="Submit" onclick="filteradminDashboard();" style="color: #0c0c0c;background-color: #d5f3fe; border-color: #0f5298;">
+								</div>
+							
+					<!-- <form> -->
+			   
+
+				
+
+			
+								<div class="form-group">
+									<figure class="highcharts-figure">
+										<div id="container"></div>
+									</figure>
+								</div>
+				
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		
+				</div>
+					<div class="col-lg-4">
+						<div class="scrolldiv">
+						<div class="table-responsive">
+							<h3 class="tableheading">Up Comming Employee Birthday</h3>
+							<table class="table" >
 						<thead>
-							<tr class="bg-teal-400" style="white-space : nowrap; color: white">
-							 	<th>Name</th>
-								<th>Department</th>
-								<th>DOB</th>
-							</tr>
+							<tr class="bg-light">
+								<th>Name</th>
+								<th class="text-center">Department</th>
+								<th class="text-center">Dob</th>
 						</thead>
 						<tbody>
 							@foreach ($data['bddata'] as $val)
-							@if(isset($val->elsemployees_empid))
-								<tr>
-								 	<td>
+								@if(isset($val->elsemployees_empid))
+							<tr>
+								
+									<td class="">
 										<h2 class="table-avatar">
 											<a href="{{url('/employeeprofile')}}/{{$val->elsemployees_empid}}" target="_blank">
 												<img  style="cursor: pointer;" alt="" title="Click To View Profile" class="avatar" src="{{URL::to('public/img/')}}/{{$val->elsemployees_image}}">
 											</a>
-											<!-- <a href="{{url('/employeeprofile')}}"> -->
+									
 											{{$val->elsemployees_name}}
-											<!-- <span></span></a> -->
-										</h2>
-										</td>
-									<td>{{$val->dept_name}}</td>
-									<td>{{$val->elsemployees_dofbirth}}</td>
-								</tr>
-								@endif
-							@endforeach
-						</tbody>
-					</table>
-				</div>
-				
-										</div>
-										<div class="card-body">
-										<ul class="breadcrumb">
-											<li class="breadcrumb-item active" style="color: #000000">Up Comming Payroll Employee</li>
-										</ul>
-											<div class="table-responsive" style="height: auto !important;">
-											<table class="table table-striped custom-table datatable"  id="bd">
-												<thead>
-													<tr class="bg-teal-400" style="white-space : nowrap; color: white">
-													 	<th>Name</th>
-														<th>Department</th>
-														<th>DOJ</th>
-													</tr>
-												</thead>
-												<tbody>
-													@foreach ($data['pdata'] as $val)
-													@if(isset($val->elsemployees_empid))
-														<tr>
-														 	<td>
-																<h2 class="table-avatar">
-																	<a href="{{url('/employeeprofile')}}/{{$val->elsemployees_empid}}" target="_blank">
-																		<img  style="cursor: pointer;" alt="" title="Click To View Profile" class="avatar" src="{{URL::to('public/img/')}}/{{$val->elsemployees_image}}">
-																	</a>
-																	<!-- <a href="{{url('/employeeprofile')}}"> -->
-																	{{$val->elsemployees_name}}
-																	<!-- <span></span></a> -->
-																</h2>
-																</td>
-															<td>{{$val->dept_name}}</td>
-															<td>{{$val->elsemployees_dofjoining}}</td>
-														</tr>
-														@endif
-													@endforeach
+										
+										</h2></td>
+									<td class="text-center">{{$val->dept_name}}</td>
+									<td class="text-center">{{$val->elsemployees_dofbirth}}</td>
+								</tr>			
 												</tbody>
-											</table>
-										</div>
-									</div>
-										<div class="card-body">
-										<ul class="breadcrumb">
-											<li class="breadcrumb-item active" style="color: #000000">Up Comming Employee Anniversary</li>
-										</ul>
-											<div class="table-responsive" style="height: auto !important;">
-					<table class="table table-striped custom-table datatable" id="bd">
+												@endif
+												@endforeach
+					</table>
+						</div>
+						<div class="table-responsive mt-3">
+							<h3 class="tableheading">Up Comming Employee Anniversary</h3>
+							<table class="table" >
 						<thead>
-							<tr class="bg-teal-400" style="white-space : nowrap; color: white">
-							 	<th>Name</th>
-								<th>Department</th>
-								<th>DOJ</th>
-							</tr>
+							<tr class="bg-light">
+								<th>Name</th>
+								<th class="text-center">Department</th>
+								<th class="text-center">Doj</th>
 						</thead>
 						<tbody>
 							@foreach ($data['jdata'] as $val)
 							@if(isset($val->elsemployees_empid))
-								<tr>
-								 	<td>
+							<tr>
+								
+									<td class="">
 										<h2 class="table-avatar">
 											<a href="{{url('/employeeprofile')}}/{{$val->elsemployees_empid}}" target="_blank">
-												<img  style="cursor: pointer;" alt="" title="Click To View Profile" class="avatar" src="{{URL::to('public/img/')}}/{{$val->elsemployees_image}}">
+												<img  style="cursor: pointer; border-radius: 35px;" alt="" title="Click To View Profile" class="avatar" src="{{URL::to('public/img/')}}/{{$val->elsemployees_image}}">
 											</a>
-											<!-- <a href="{{url('/employeeprofile')}}"> -->
+									
 											{{$val->elsemployees_name}}
-											<!-- <span></span></a> -->
-										</h2>
-										</td>
-									<td>{{$val->dept_name}}</td>
-									<td>{{$val->elsemployees_dofjoining}}</td>
-								</tr>
-								@endif
-							@endforeach
-						</tbody>
+										
+										</h2></td>
+									<td class="text-center">{{$val->dept_name}}</td>
+									<td class="text-center">{{$val->elsemployees_dofjoining}}</td>
+								</tr>			
+												</tbody>
+												@endif
+												@endforeach
 					</table>
+						</div>
+						<div class="table-responsive mt-3">
+							<h3 class="tableheading">Up Comming Payroll Employee</h3>
+							<table class="table" >
+						<thead>
+							<tr class="bg-light">
+								<th>Name</th>
+								<th class="text-center">Department</th>
+								<th class="text-center">Doj</th>
+						</thead>
+						<tbody>
+							@foreach ($data['pdata'] as $val)
+							@if(isset($val->elsemployees_empid))
+							<tr>
+								
+									<td class="">
+										<h2 class="table-avatar">
+											<a href="{{url('/employeeprofile')}}/{{$val->elsemployees_empid}}" target="_blank">
+												<img  style="cursor: pointer; border-radius: 35px;" alt="" title="Click To View Profile" class="avatar" src="{{URL::to('public/img/')}}/{{$val->elsemployees_image}}">
+											</a>
+									
+											{{$val->elsemployees_name}}
+										
+										</h2></td>
+									<td class="text-center">{{$val->dept_name}}</td>
+									<td class="text-center">{{$val->elsemployees_dofjoining}}</td>
+								</tr>			
+												</tbody>
+												@endif
+												@endforeach
+					</table>
+						</div>
+						<div class="table-responsive mt-3">
+							<h3 class="tableheading">Pending Complains</h3>
+							<table class="table" >
+						<thead>
+							<tr class="bg-light">
+								<th>Name</th>
+								<th class="text-center">Date</th>
+								<th class="text-center">Complain</th>
+						</thead>
+						<tbody>
+							<?php $getcomplains = DB::connection('mysql')->table('complain')
+							->join ('elsemployees','elsemployees.elsemployees_batchid', '=','complain.created_by')
+							->where('complainstatus_id','=', 1) 
+							->orderBy('complain_id','DESC') 
+							->select('complain.*','elsemployees_empid','elsemployees_name','elsemployees_image')
+							->get();?>
+						
+							@foreach ($getcomplains as $complains)
+							@if(isset($complains->complain_id))
+							<tr>
+								
+									<td class="">
+										{{$complains->elsemployees_name}}</td>
+									<td class="text-center">{{$complains->complain_date}}</td>
+									<td class="text-center">{{$complains->complain_note}}</td>
+								</tr>			
+												</tbody>
+												@endif
+												@endforeach
+					</table>
+						</div>
+					</div>
+					</div>
 				</div>
-			</div>
-		</div>
-	</div>
-</div>
-		</div>
-	</div>
+			
+				</div>
+                <div class="content container-fluid">
+				
+			
+				
+			
+					
+
 </div>				
 		</div>
 	</div>

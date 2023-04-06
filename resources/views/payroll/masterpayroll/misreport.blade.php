@@ -446,7 +446,14 @@
 												}
 												}
 												}else{
+												if($val->elsemployees_batchid == 1071){
+													$presentdays++;
+												}else{
 												if($attendancestatus != NULL){
+													$chkin = substr($attendancestatus->attendance_mark, -2);
+													if($chkin == "AM"){
+														$absentdays++;
+													}else{
 													$arrivaltime;
 													$halfdaytime;
 													$dt = $attendancestatus->attendance_date;
@@ -487,7 +494,7 @@
 												else{
 													$presentdays++;
 												}
-												}else{
+												}}else{
 													if ($getdepartid->elsemployees_departid == 8) {
 														$presentdays++;
 													}else if($getdepartid->elsemployees_departid == 5){
@@ -500,7 +507,7 @@
 													}else{
 														$absentdays++;
 													}
-												}}}}
+												}}}}}
 												$daydate++;
 												$dateindex++;
 												?>

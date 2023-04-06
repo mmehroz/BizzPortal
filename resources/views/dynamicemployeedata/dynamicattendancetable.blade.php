@@ -43,7 +43,14 @@
     border-radius: 4px;
 	display:block;
 }
-
+.untext {
+    font-weight: bold;
+    color: #fff !important;
+    background: black;
+    padding: 4px 24px;
+    border-radius: 4px;
+    display: block;
+}
 .missoutext{
 	font-weight: bold;
     color: #000 !important;
@@ -51,6 +58,17 @@
     padding: 4px 24px;
     border-radius: 4px;
 	display:block;
+	
+}
+
+.missintext{
+	font-weight: bold;
+    color: #fff !important;
+    background: #0096FF;
+    padding: 4px 24px;
+    border-radius: 4px;
+    display: block;
+    font-family: 'Raleway', sans-serif;
 	
 }
 
@@ -336,12 +354,30 @@
 									<td class="text-center">{{$val['emp_day']}}</td>
 									<td class="text-center">
 									@if($val['emp_labelin'] == 1 )
-									<?php $attresult = "Present"?>
+									<?php $chkin = substr($val['emp_checkin'], -2);
+										if($chkin == "am"){
+									?>
+									<?php $attresult = "unacceptable"?>
+									<span class="untext">Unacceptable</span>
+									<?php }else{ $attresult = "Present"?>
+									<?php $chkin = substr($val['emp_checkin'], -2);
+									if($chkin == "am"){
+									?>
+									<?php $attresult = "unacceptable"?>
+									<span class="untext">Unacceptable</span>
+									<?php }else{?>
 									<span class="sucesstext">On Time</span>
+									<?php }}?>
 									@elseif($val['emp_labelin'] == 0) 
 									@if($val['emp_checkin'] >= $halfdaytime)
-									<?php $attresult = "Half Day"?>
+									<?php $chkin = substr($val['emp_checkin'], -2);
+										if($chkin == "am"){
+									?>
+									<?php $attresult = "unacceptable"?>
+									<span class="untext">Unacceptable</span>
+									<?php }else{ $attresult = "Half Day"?>
 									<span class="halfdaytext">Half Day</span>
+									<?php }?>
 									@else
 									<?php $attresult = "Late"?>
 									<span class="latearrivaltext">Late Arrival</span>
@@ -351,7 +387,7 @@
 									<span class="dangertext">Off Day</span>
 									@else
 									<?php $attresult = "Absent"?>
-										<h4><span class='badge badge-warning'>Miss In</span></h4>
+										<h4><span class='missintext'>Miss In</span></h4>
 									@endif
 											
 										<!-- @if($val['emp_batchid'] == 11599 && $val['emp_date'] == "2020-10-19" )
@@ -413,6 +449,9 @@
 									->select('onday_date')
 									->first();
 									?>
+									@if($attresult == "unacceptable")
+									<td class="text-center">Contact HR For Correction</td>
+									@else
 									@if(isset($getcorrection))
 									<td class="text-center">{{$getcorrection->attendancecorrection_status}} As {{$getcorrection->attendancecorrection_title}}</td>
 									@elseif($val['emp_labelout'] == 0 && $val['emp_labelin'] == 1)
@@ -450,7 +489,7 @@
 									@endif
 									@endif
 									@endif
-									
+									@endif
 								</tr>
 								
 						@endforeach
