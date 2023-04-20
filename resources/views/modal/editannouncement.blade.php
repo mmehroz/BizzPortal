@@ -55,7 +55,7 @@
 					</div>
 					<div class="form-group">
 					<label>Description:<span class="text-danger"></span></label>
-                        <textarea class="form-control" id="annoudesc" name="annoudesc" value="" rows="25" required>{{$data->announcement_desc}}</textarea>
+                        <textarea class="form-control" id="annoudesc" name="annoudesc" value="" rows="25" required>{!!$data->announcement_desc!!}</textarea>
                         <!-- <div id="summernote" class="summernote" data-plugin-summernote data-plugin-options='{ "height": 200, "dialogsInBody": true, "dialogsFade": false, "codemirror": { "theme": "ambiance" } }' ></div> -->
                     </div>
                      <div class="form-group">
