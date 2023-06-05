@@ -311,8 +311,54 @@ class elscontroller extends Controller
 				}	
 			
 	}
-	
-	
+	public function addtoemployee($id){
+		
+		if(session()->get("email")){
+		
+		$desg = DB::connection('mysql')->table('designation')
+		->select('designation.*')
+		->get();
+				
+		$depart = DB::connection('mysql')->table('hrm_Department')
+		->select('hrm_Department.*')
+		->get();
+		
+		$manager = DB::connection('mysql')->table('elsemployees')
+		->where('elsemployees.elsemployees_roleid','=','3')
+		->where('elsemployees.elsemployees_status','=',2)
+		->select('elsemployees.*')
+		->get();
+		
+		
+		$role = DB::connection('mysql')->table('role')
+		->orderBy('role.roleid', 'desc')
+		->select('role.*')
+		->get();
+		
+		$getcar = DB::connection('mysql')->table('car')
+		->where('status_id','=',2)
+		->select('car_id','car_name')
+		->get();
+		
+		$jobapplicant = DB::connection('mysql')->table('jobapplicant')
+		->where('jobapplicant_id','=',$id)
+		->select('jobapplicant_name','jobapplicant_fname','can_email','jobapplicant_cnic','jobapplicant_address','jobapplicant_contact')
+		->first();
+		
+		$allData = array("depart" => $depart, "desg" => $desg, "role" => $role, "manager" => $manager, 'car' => $getcar, 'jobapplicant' => $jobapplicant);
+		
+		// dd($allData);
+		
+			return view('addtoemployee' , ['data' => $allData]);
+		
+		
+				}
+			else{
+					return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
+				}	
+			
+	}
+
 	public function empsave(Request $request){
 
 		$empBatchID = DB::connection('mysql')->table('elsemployees')
@@ -349,6 +395,7 @@ class elscontroller extends Controller
 			$post->elsemployees_name = $request->emp_name ;
 			$post->elsemployees_fname = $request->emp_fname;
 			$post->elsemployees_image = "no_image.jpg";
+			$post->elsemployees_coverimage = "defaultcover.jpg";
 			$post->elsemployees_cnic = $request->emp_cnic ;
 			$post->elsemployees_cno = $request->emp_contactno ;
 			$post->elsemployees_email = $request->emp_com_email ;

@@ -42,7 +42,10 @@
 				</div>
 				<div class="col-auto float-right ml-auto">
 				@if( session()->get("role") <=	 3)
-					<a href="#" onclick="addemployeetimings()" class="btn add-btn" data-toggle="" data-target="#addemployeetimings"><i class="fa fa-plus"></i> Add Employee Timing</a>
+					<a href="#" onclick="addemployeetimings()" class="btn add-btn m-1" data-toggle="" data-target="#addemployeetimings"> Add Employee Timing</a>
+				@endif
+				@if( session()->get("role") <=	 2)
+					<a href="#" onclick="adddepartmenttimings()" class="btn add-btn m-1" data-toggle="" data-target="#adddepartmenttimings"> Add Department Timing</a>
 				@endif
 					<!-- <button class="btn add-btn" type="button" data-toggle="modal" data-target="#add_employeetimings"><i class="fa fa-plus"></i> Add Employee Timings</button> -->
 				</div>
@@ -169,6 +172,12 @@
 		$('#addemployeetimings').modal('show');
 		});
 	}
+	function adddepartmenttimings(){
+		$.get('{{ URL::to("/adddepartmenttimingsmodal")}}',function(data){
+		$('#modals').empty().append(data);
+		$('#adddepartmenttimings').modal('show');
+		});
+	}
 	$('#modals').on('submit','#submitemptime',function(e){
     	e.preventDefault();
 		$("#btnsubmit").attr("disabled", true);
@@ -194,6 +203,37 @@
             	$(".modal-body").append('<p class="alert alert-danger">Oops Something wrong...!</p>');               
             	setTimeout(function(){
                		$("#addemployeetimings").modal('hide')
+					window.location = "{{ URL::to('/employeetimings')}}";
+                }, 2000);
+            }
+    	})
+   	});
+
+	$('#modals').on('submit','#submitdeparttime',function(e){
+    	e.preventDefault();
+		$("#btnsubmit").attr("disabled", true);
+    	var frmData = $(this).serialize();
+    	$.ajax({
+        	url:'{{ URL::to("/adddepartmenttimings")}}',
+        	type:'POST',
+        	data: frmData,
+        	dataType: 'json',
+        	success : function (data){
+            	$("#loader").hide();
+            	$(".modal-body").append('<p class="alert alert-success">Employee Timings Added Successfully...! </p>');               
+            	setTimeout(function(){
+            		$("#adddepartmenttimings").modal('hide')
+                	window.location = "{{ URL::to('/employeetimings')}}";
+                }, 2000);
+
+            },
+            error : function(error){
+            	console.log("error");
+            	var error = error.responseJSON;
+            	$("#modals #errors").empty();
+            	$(".modal-body").append('<p class="alert alert-danger">Oops Something wrong...!</p>');               
+            	setTimeout(function(){
+               		$("#adddepartmenttimings").modal('hide')
 					window.location = "{{ URL::to('/employeetimings')}}";
                 }, 2000);
             }

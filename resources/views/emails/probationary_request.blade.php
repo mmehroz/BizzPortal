@@ -58,7 +58,7 @@
 							        	<table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
 								          	<tr>
 								            	<td align="center" valign="top" style="padding: 20px 24px;">
-								            		<a href="https://www.bizzworldcommunications.com/" target="_blank" style="display: inline-block;">
+								            		<a href="https://autelecom.net/" target="_blank" style="display: inline-block;">
 								                		<img src="http://209.182.216.71/public/assets/img/logo22.png" alt="BWC" border="0" width="48" style="display: block; width: 278px; max-width: 100%; min-width: 48px;">
 								            		</a>
 								            	</td>
@@ -95,7 +95,7 @@
 							            <td align="left" bgcolor="#ffffff" style="padding: 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 24px;">
 							            	<p style="margin: 0; color: #000;">Dear Manager,<br>Mr.
 						              			<span style="font-family: Arial, Helvetica, sans-serif; font-size: 16px; font-weight: 700; color: #000000;text-transform:capitalize;">{{$datas->elsemployees_name}}
-						              			</span> has recently completed <b style="color: red;">03</b> months in <b style="color: #000000;">Bizz World Communication</b>, you are requested to fill the probation form.</p>
+						              			</span> has recently completed <b style="color: red;">03</b> months in <b style="color: #000000;">AU Telecom</b>, you are requested to fill the probation form.</p>
 							            </td>
 							          </tr>
 							          <!-- end copy -->
@@ -142,7 +142,7 @@
 							          <tr>
 							            <td align="center" bgcolor="#e9ecef" style="padding: 12px 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #666;">
 							              <!-- <p style="margin: 0;">To stop receiving these emails, you can <a href="https://sendgrid.com" target="_blank">unsubscribe</a> at any time.</p> -->
-							              <p style="margin: 0;">&copy; <b>Bizz World Communication</b> 2021. All Right Reserved. </p>
+							              <p style="margin: 0;">&copy; <b>AU Telecom</b> 2021. All Right Reserved. </p>
 							            </td>
 							          </tr>
 							          <!-- end unsubscribe -->

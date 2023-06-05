@@ -24,7 +24,7 @@
 	.highcharts-data-table table {
 	    font-family: Verdana, sans-serif;
 	    border-collapse: collapse;
-	    border: 1px solid #ebebeb;
+	    border: 1px solid #9A192E;
 	    margin: 10px auto;
 	    text-align: center;
 	    width: 100%;
@@ -124,7 +124,7 @@ table.table td h2.table-avatar{
     font-family: 'Raleway', sans-serif;
 }
 .submitbtn{
-	background: #0F5298 !important;
+	background: #9A192E !important;
     color: #fff !important;
     font-weight: 600;
     width: 35%;
@@ -159,7 +159,7 @@ table.table td h2.table-avatar{
 		</div>
 		<div class="col-lg-4">
 			<div class="media">
-				<img src="{!! asset('public/img/user.png') !!}" style="width: 10%;">
+				<img src="{!! asset('public/dashboard-icons/user.png') !!}" style="width: 10%;">
 				<div class="media-body">
 				  <h5 class="mt-0">Name</h5>
 				 <span>{{$data['empdata']->elsemployees_name}}</span> 
@@ -170,7 +170,7 @@ table.table td h2.table-avatar{
 		<div class="col-lg-4">
 			
 			  <div class="media">
-				<img src="{!! asset('public/img/mail.png') !!}" style="width: 10%;">
+				<img src="{!! asset('public/dashboard-icons/mail.png') !!}" style="width: 10%;">
 				<div class="media-body">
 				  <h5 class="mt-0">Email address</h5>
 				  <span>{{$data['empdata']->elsemployees_email}}</span> 
@@ -179,7 +179,7 @@ table.table td h2.table-avatar{
 		</div>
 		<div class="col-lg-4">
 			<div class="media">
-				<img src="{!! asset('public/img/userid.png') !!}" style="width: 10%;">
+				<img src="{!! asset('public/dashboard-icons/userid.png') !!}" style="width: 10%;">
 				<div class="media-body">
 				  <h5 class="mt-0">User Id</h5>
 				 <span>{{$data['empdata']->elsemployees_batchid}}</span> 
@@ -189,10 +189,10 @@ table.table td h2.table-avatar{
 		</div>
 		<div class="col-lg-4 mt-5">
 			<div class="media">
-				<img src="{!! asset('public/img/company.png') !!}" style="width: 10%;">
+				<img src="{!! asset('public/dashboard-icons/company.png') !!}" style="width: 10%;">
 				<div class="media-body">
 				  <h5 class="mt-0">Company</h5>
-				 <span>BizzWorld Communication</span> 
+				 <span>AU Telecom</span> 
 				</div>
 			  </div>
 		
@@ -200,7 +200,7 @@ table.table td h2.table-avatar{
 
 		<div class="col-lg-4 mt-5">
 			<div class="media">
-				<img src="{!! asset('public/img/role.png') !!}" style="width: 10%;">
+				<img src="{!! asset('public/dashboard-icons/role.png') !!}" style="width: 10%;">
 				<div class="media-body">
 				  <h5 class="mt-0">Role</h5>
 				 <span>{{$data['empdata']->rolename}}</span> 
@@ -210,7 +210,7 @@ table.table td h2.table-avatar{
 		</div>
 		<div class="col-lg-4 mt-5">
 			<div class="media">
-				<img src="{!! asset('public/img/status.png') !!}" style="width: 10%;">
+				<img src="{!! asset('public/dashboard-icons/status.png') !!}" style="width: 10%;">
 				<div class="media-body">
 				  <h5 class="mt-0">Status</h5>
 				 <span>Active</span> 
@@ -225,7 +225,7 @@ table.table td h2.table-avatar{
 		</div>
 		<div class="col-lg-4">
 			<div class="media">
-				<img src="{!! asset('public/img/employees.png') !!}" style="width: 10%;">
+				<img src="{!! asset('public/dashboard-icons/employees.png') !!}" style="width: 10%;">
 				<div class="media-body">
 				  <h5 class="mt-0">No Of Employees</h5>
 				 <span>{{$data['emptota']}}</span> 
@@ -235,7 +235,7 @@ table.table td h2.table-avatar{
 
 		<div class="col-lg-4">
 			<div class="media">
-				<img src="{!! asset('public/img/departments.png') !!}" style="width: 10%;">
+				<img src="{!! asset('public/dashboard-icons/departments.png') !!}" style="width: 10%;">
 				<div class="media-body">
 				  <h5 class="mt-0">No Of Departments</h5>
 				 <span>{{$data['countdpt']}}</span> 
@@ -246,7 +246,7 @@ table.table td h2.table-avatar{
 
 		<div class="col-lg-4">
 			<div class="media">
-				<img src="{!! asset('public/img/designation.png') !!}" style="width: 10%;">
+				<img src="{!! asset('public/dashboard-icons/designation.png') !!}" style="width: 10%;">
 				<div class="media-body">
 				  <h5 class="mt-0">No Of Designations</h5>
 				 <span>{{$data['desgc']}}</span> 
@@ -281,7 +281,7 @@ table.table td h2.table-avatar{
 								
 								<div class="form-group d-flex">
 									<input type="month" class="form-control calendarbtn" name="filter" id="filter">
-									<input type="button" class="btn form-control submitbtn" name="btnfilter" value="Submit" onclick="filteradminDashboard();" style="color: #0c0c0c;background-color: #d5f3fe; border-color: #0f5298;">
+									<input type="button" class="btn form-control submitbtn" name="btnfilter" value="Submit" onclick="filteradminDashboard();" style="color: #0c0c0c;background-color: #9A192E; border-color: #9A192E;">
 								</div>
 							
 					<!-- <form> -->

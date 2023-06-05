@@ -129,9 +129,9 @@
 	.bd .btn{
  width: 160px;
     /*height: 20px !important;*/
-    border: 1px solid ##0f5298;
+    border: 1px solid ##101D3B;
     outline: none;
-    background-color: ##0f5298;
+    background-color: ##101D3B;
     color: white;
     border-radius: 20px;
     padding-bottom: 30px !important;
@@ -140,7 +140,7 @@
 }
 .bd .btn:hover{
     background-color: white;
-    color: ##0f5298;
+    color: ##101D3B;
 }
 	
 

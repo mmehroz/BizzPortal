@@ -8,6 +8,9 @@ Route::get('/cc', function() {
 Route::get('/keypress',function(){
 	return view('keypress');
 });
+Route::get('/thankyou',function(){
+	return view('thankyou');
+});
 Route::get('/outofservice',function(){
 	return view('outofservice');
 });
@@ -128,7 +131,7 @@ Route::any('submitmarkattendance','attendanceController@submitmarkattendance');
 
 
 Route::any('/mylogin','hrmcontroller@hrmlogin');
-Route::get('/canLogin','hrmcontroller@canlopage');
+Route::get('/careers','hrmcontroller@canlopage');
 Route::any('/candidatelogin','hrmcontroller@hrmcandatelogin');
 Route::get('/newempform','hrmcontroller@newpreemployeeform');
 Route::any('/submitjobapplicant','hrmcontroller@submitjobapplicant');
@@ -215,6 +218,8 @@ Route::middleware('email.manager.check')->group(function(){
 	Route::get('/employeetimings','hrmcontroller@employeetimings');	
 	Route::get('/addemployeetimingsmodal','hrmcontroller@addemployeetimingsmodal');
 	Route::any('/addemployeetimings', 'hrmcontroller@addemployeetimings');
+	Route::get('/adddepartmenttimingsmodal','hrmcontroller@adddepartmenttimingsmodal');
+	Route::any('/adddepartmenttimings', 'hrmcontroller@adddepartmenttimings');
 	Route::get('/editemployeetiming/{id}','hrmcontroller@editemployeetiming');
 	Route::any('/submiteditemployeetiming', 'hrmcontroller@submiteditemployeetiming');
 Route::middleware('email.user.check')->group(function(){
@@ -344,6 +349,7 @@ Route::get('/hrmform', 'elscontroller@departmentpictures');
 Route::any('/savepictures', 'elscontroller@savepictures');
 Route::get('/hrmreport','elscontroller@hrmreport');
 Route::get('/viewpicture/{id}','elscontroller@viewpicture');
+Route::get('/addtoemployee/{id}','elscontroller@addtoemployee');
 
 Route::get('/dailyattendance','payrollController@dailyattendancesearch');
 Route::get('/attendancedashboarddata','payrollController@attendancedatumdashboard');

@@ -36,7 +36,7 @@
 .dash-widget-icons {
 	background-color: #d5f3fe;
     border-radius: 100%;
-    color: #0f5298;
+    color: #101D3B;
     display: inline-block;
     font-size: 26px;
     height: 52px;

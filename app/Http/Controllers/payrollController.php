@@ -4522,8 +4522,8 @@ class payrollController extends Controller
         ->where('increment.elsemployees_batchid','=',$request->addBatchId)
         ->where('increment.increment_year','<=',$splitfunddate[0])
         ->where('increment.increment_month','<=',$splitfunddate[1])
-        ->where('increment.increment_year','!=',$formatedpreviousyear)
-		->where('increment.increment_month','!=',$formatedpreviousmonth)
+        ->where('increment.increment_year','>',$formatedpreviousyear)
+		// ->where('increment.increment_month','>',$formatedpreviousmonth)
         ->where('increment.status_id','=',2)
         ->select('increment.increment_amount')
         ->sum('increment.increment_amount');
@@ -4559,8 +4559,8 @@ class payrollController extends Controller
         ->where('decrement.elsemployees_batchid','=',$request->addBatchId)
         ->where('decrement.decrement_year','<=',$splitfunddate[0])
         ->where('decrement.decrement_month','<=',$splitfunddate[1])
-        ->where('decrement.decrement_year','!=',$formatedpreviousyear)
-        ->where('decrement.decrement_month','!=',$formatedpreviousmonth)
+        ->where('decrement.decrement_year','>',$formatedpreviousyear)
+        // ->where('decrement.decrement_month','>',$formatedpreviousmonth)
         ->where('decrement.status_id','=',2)
         ->select('decrement.decrement_amount')
         ->sum('decrement.decrement_amount');
@@ -4814,7 +4814,10 @@ class payrollController extends Controller
             ->select('hrm_department.DEPT_ID','hrm_department.DEPT_NAME')
             ->where('hrm_department.DEPT_ID','=',session()->get('dptid'))
             ->first();
-            return view('modal.addonday', ['data'=>$result]);
+            $depart = DB::connection('mysql')->table('hrm_Department')
+            ->select('hrm_Department.*')
+            ->get();
+            return view('modal.addonday', ['data'=>$result,'depart'=>$depart]);
         }else{
             return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
         }

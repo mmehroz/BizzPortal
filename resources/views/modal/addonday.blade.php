@@ -44,8 +44,18 @@
 			{{ csrf_field() }} 
 					<div class="form-group">
 						<label>Department <span class="text-danger"></span></label>
-						<input type="hidden" name="departid" value="{{$data->DEPT_ID}}">
-						<input class="form-control" value="{{$data->DEPT_NAME}}" name="department" id="department" type="text" readonly>
+
+						@if(session()->get('role') == 1)
+							<select class="form-control "   placeholder="Select Department" name="departid"  required>
+								<option selected="" disabled="" value="{{ old('emp_dept') }}">Select Employee Department</option>
+								@foreach($depart as $departs)
+								<option value={{$departs->dept_id}}>{{$departs->dept_name}}</option>
+								@endforeach 
+							</select>
+						@else
+							<input type="hidden" name="departid" value="{{$data->DEPT_ID}}">
+							<input class="form-control" value="{{$data->DEPT_NAME}}" name="department" id="department" type="text" readonly>
+						@endif
 					</div> 
 					<div class="form-group">
 						<label>Date <span class="text-danger"></span></label>

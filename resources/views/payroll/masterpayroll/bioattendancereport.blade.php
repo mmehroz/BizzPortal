@@ -210,8 +210,8 @@
 										        ->where('increment.elsemployees_batchid','=',$val->elsemployees_batchid)
 										        ->where('increment.increment_year','<=',$data['sendyear'])
 										        ->where('increment.increment_month','<=',$data['sendmonth'])
-										        ->where('increment.increment_year','!=',$formatedpreviousyear)
-										        ->where('increment.increment_month','!=',$formatedpreviousmonth)
+										        ->where('increment.increment_year','>',$formatedpreviousyear)
+										        // ->where('increment.increment_month','>',$formatedpreviousmonth)
 										        ->where('increment.status_id','=',2)
 										        ->select('increment.increment_amount')
 										        ->sum('increment.increment_amount');
@@ -253,8 +253,8 @@
 										        ->where('decrement.elsemployees_batchid','=',$val->elsemployees_batchid)
 										        ->where('decrement.decrement_year','<=',$data['sendyear'])
 										        ->where('decrement.decrement_month','<=',$data['sendmonth'])
-										        ->where('decrement.decrement_year','!=',$formatedpreviousyear)
-										        ->where('decrement.decrement_month','!=',$formatedpreviousmonth)
+										        ->where('decrement.decrement_year','>',$formatedpreviousyear)
+										        // ->where('decrement.decrement_month','>',$formatedpreviousmonth)
 										        ->where('decrement.status_id','=',2)
 										        ->select('decrement.decrement_amount')
 										        ->sum('decrement.decrement_amount');

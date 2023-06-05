@@ -1,101 +1,109 @@
 @extends('layout.logintheme')
 @section('content')
-<style>
-.account-box
-{
-	width:380px;
-	
-    background-color: rgba(0, 0, 0, 0.35);
-    border: 1px solid #969292;
-}
-@media screen and (max-width: 480px) {
- .account-box
-{
-	width:360px;
-	margin:0;
-	padding: 0;
+<link href="http://192.168.0.7/bizzportal/public/assets/css/login.css" rel="stylesheet" />
 
-    background-color: rgba(0, 0, 0, 0.57);
-    border: 1px solid #969292;
-}
-}
-
-.account-subtitle
-{
-	color:#fff;
-}
-.account-box label
-{
-	color:#fff;
-}
-.text-muted:hover
-{
-	color: #ffffff !important;
-    font-style: italic;
-}
-.field-icon {
-	float: right;
-	color: #6f8c51;
-	font-size: 23px;
-	margin-left: -25px;
-	margin-top: -36px;
-	position: relative;
-	z-index: 2;
-}
-
-.container{
-  padding-top:50px;
-  margin: auto;
-}
-.fa-fw {
-    width: 2.285714em;
-}
-</style>
-   <body style="background-color: #232428">
-	<section class="ftco-section">
-		<div class="container">
-			<div class="row justify-content-center">
-				<div class="col-md-12 col-lg-10">
-					<div class="wrap d-md-flex">
-						<div class="text-wrap p-4 p-lg-5 text-center d-flex align-items-center order-md-last">
-							<div class="text w-100">
-								<h2>Welcome To</h2>
-								<p>Bizz World Communications</p>
-							</div>
-			      </div>
-						<div class="login-wrap p-4 p-lg-5">
-			      	<div class="d-flex">
-			      		<div class="w-100">
-			      			<h3 class="mb-4">Sign In</h3>
-			      		</div>
-					</div>
-			      		@if(session('message'))
-								<!-- <div class="account-title">{{session('message')}}</div> -->
-								<div class="account-title">   <p class="alert alert-success" >{{session('message')}}</p>
+   <body>
+   <div class="w-screen h-screen overflow-y-scroll">
+		<div class="w-full h-full flex">
+			<div
+				class="h-full w-1/2  hidden land:flex flex-col items-start p-10 justify-between" style="background-image: linear-gradient(133.03deg, #101D3B 3.21%, #97172D 100%)">
+				<a href="/">
+				<img src="http://192.168.0.7/bizzportal/public/loginimg/mainlogo.png" style="width: 24%;">
+				</a>
+				<div class="-mt-20 flex flex-col gap-5 w-[80%]">
+					<!-- <div class="w-full flex gap-10 items-center">
+						<div class="2xl:w-60 2xl:h-60 w-[40%] h-[100%] relative"><img alt="" sizes="100vw"
 								
-								</div>
-							@endif
-							<form method="Post" action="{{url('/mylogin')}}" style="margin-top: 30px;">
-								{{ csrf_field() }}
-			      		<div class="form-group mb-3">
-			      			<label class="label" for="name">Email Address</label>
-			      			<input type="text" class="form-control" name="username" placeholder="Enter Email" required>
-			      		</div>
-		            <div class="form-group mb-3">
-		            	<label class="label" for="password">Password</label>
-		              <input type="password" class="form-control" name="pass" placeholder="Enter Password" id="password-field" required>
-		              <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"  id="pass-status" onclick="viewPassword()"></span>
-		            </div>
-		            <div class="form-group">
-		            	<button type="submit" class="form-control btn btn-primary submit px-3">Login</button>
-		            </div>
-		          </form>
-		        </div>
-		      </div>
+							src="{!! asset('public/img/logo.png') !!}"
+								decoding="async" data-nimg="fill" class="object-cover" loading="lazy"
+								style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+						</div>
+						<div class="flex flex-col w-[54%] gap-4">
+							<h2
+								class="text-white font-bold w-full text-[24px] 2xl:text-[40px] font-primary mt-2 uppercase">
+								Start your journey with us.</h2>
+				
+						</div>
+					</div> -->
+					<div class="row" style="margin-top: 190px;">
+<div class="col-lg-12">
+	<img alt="" sizes="100vw"
+								
+							src="http://192.168.0.7/bizzportal/public/loginimg/loho.png"
+								decoding="async" data-nimg="fill" class="object-cover" loading="lazy"
+								style=" height: 100%; width: 100%; inset: 0px; color: transparent;">
+</div>
+
+					</div>
+				</div>
+				<div class="w-full flex">
+					<p class="text-white">© Copyright 2023 Bizz World Communications. All rights reserved</p>
 				</div>
 			</div>
+			<div
+				class="w-full land:w-1/2 flex flex-col items-start px-10 py-10 pb-40 sm:pb-40 justify-between overflow-y-scroll">
+				<div>
+					<h2 class="text-[26px] font-bold text-primaryText font-primary">Login</h2>
+					<h2 class="font-semibold text-primaryText font-primary">Enter Your Credentials</h2>
+				</div>
+				@if(session('message'))
+					<!-- <div class="account-title">{{session('message')}}</div> -->
+					<div class="account-title">   <p class="alert alert-success" >{{session('message')}}</p>
+					
+					</div>
+				@endif
+				<div class="w-full flex gap-5 mt-10">
+				
+				
+				</div>
+				<form method="Post" action="{{url('/mylogin')}}" class="w-[100%] flex flex-col gap-4 mt-10">
+					{{ csrf_field() }}
+					<h2 class="font-bold text-primaryText/80 font-primary text-sx">Email *</h2>
+					<div
+						class="w-[100%] flex items-center undefined bg-white rounded-lg h-8 p-6 border gap-2 px-3 -mt-2 false">
+						<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+							class="text-primaryText/60" height="22" width="22" xmlns="http://www.w3.org/2000/svg">
+							<path fill="none" d="M0 0h24v24H0z"></path>
+							<path
+								d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z">
+							</path>
+						</svg><input placeholder="Enter your email" type="email" name="username"
+							class="w-[100%] outline-none bg-white font-semibold font-primary text-primaryText text-sx"
+							value="">
+					</div>
+
+					<h2 class="font-bold text-primaryText/80 font-primary text-sx">Password</h2>
+					<div
+						class="w-[100%] flex items-center undefined bg-white rounded-lg h-8 p-6 border gap-2 px-3 -mt-2 false">
+						<svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 24 24"
+							class="text-primaryText/60" height="22" width="22" xmlns="http://www.w3.org/2000/svg">
+							<path
+								d="M20.005 5.995h-1v2h1v8h-1v2h1c1.103 0 2-.897 2-2v-8c0-1.102-.898-2-2-2zm-14 4H15v4H6.005z">
+							</path>
+							<path
+								d="M17.005 17.995V4H20V2h-8v2h3.005v1.995h-11c-1.103 0-2 .897-2 2v8c0 1.103.897 2 2 2h11V20H12v2h8v-2h-2.995v-2.005zm-13-2v-8h11v8h-11z">
+							</path>
+						</svg><input name="pass" placeholder="Enter Password" id="password-field" type="password"
+							class="w-[100%] outline-none bg-white font-semibold font-primary text-primaryText text-sx"
+							value="">
+							<span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"  id="pass-status" onclick="viewPassword()"></span>
+					</div>
+
+					<div class=" sm:w-[50%] 2xl:w-[40%] flex mt-10 justify-between items-center"><button
+							class="w-44 h-12 disabled:cursor-not-allowed submit disabled:shadow-none flex items-center justify-center rounded-md  transition duration-100  text-sx font-primary font-semibold hover:shadow-lg  select-none"
+							style="color: white; transform: none;    background-image: linear-gradient(133.03deg, #101D3B 3.21%, #97172D 100%);" type="submit" ><span>Login</span></button>
+					
+					
+					</div>
+				
+				</form>
+				<div></div>
+			</div>
 		</div>
-	</section>
+	</div>
+
+   
+
 </body>
 
     <script type="text/javascript">

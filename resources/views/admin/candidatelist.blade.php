@@ -6,7 +6,6 @@
 	    padding: 1.25rem;
 	    flex: 1 1 auto;
 	}
-
     .action-icon {
 	    background-color: #fff;
 	    border: 1px solid #e3e3e3;
@@ -41,7 +40,7 @@
 				<div class="col-auto float-right ml-auto">
 					<div class="view-icons">
 						<div class="dropdown profile-action" style="right: 0px!important;">
-							<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Grid-view"><i class="fa fa-th"></i></a>
+							<a href="#" class="fa fa-ellipsis-v dropdown-toggle" data-toggle="dropdown" aria-expanded="false" title="Grid-view"><i class="fa fa-th"></i></a>
 							<div class="dropdown-menu dropdown-menu-right">
 								<a class="dropdown-item" href="{{url('/candidate_list')}}" ><i class="fa fa-eye m-r-5"></i>Fresh Candidate List</a>
 								<a class="dropdown-item" href="{{url('/screening_list')}}" ><i class="fa fa-eye m-r-5"></i>Screening List</a>
@@ -96,7 +95,7 @@
 									<th>View</th>
 									<th>PDF</th>
 									<th>Name</th>
-								<!--	<th>Email</th>-->
+									<th>Email</th>
 									<th>Contact No</th>
 								<!--<th>Department</th>-->
 									<th>Postion Appplied for</th>
@@ -121,7 +120,7 @@
 										<td><a href="{{ URL::to('public/file/')}}/{{$datas->jobapplicant_cv}}" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-download"></i> View Resume/CV</a></td>
 										<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a style="color: #0f5298 !important" href="{{ URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
+												<a style="color: #9A192E !important" href="{{ URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="fa fa-ellipsis-v"></i></a>
 												<!---<div class="dropdown-menu dropdown-menu-right">
 													<a class="dropdown-item" href="URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" data-toggle="modal" data-target="#view_screening"><i class="fa fa-clock-o m-r-5"></i> View Details</a>
 												</div>--->
@@ -129,13 +128,12 @@
 										</td>
 										<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a style="color: #0f5298 !important" href="{{ URL::to('/preemployementpdf')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
+												<a style="color: #9A192E !important" href="{{ URL::to('/preemployementpdf')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="fa fa-ellipsis-v"></i></a>
 												</div>
 										</td>
 										<td>{{$datas->jobapplicant_name}}</td>
-										<!--<td>{{$datas->log_email}}</td>-->
+										<td>{{$datas->can_email}}</td>
 										<td>{{$datas->jobapplicant_contact}}</td>
-										<!--<td>{{$datas->dept_name}}</td>-->
 										<td>{{$datas->jobapplicant_postionapppliedform}}</td>
 										@if( session()->get("role") ==	 1)
 										<td>{{$datas->jobapplicant_gender}}</td>
@@ -163,7 +161,7 @@
 									<th>View</th>
 									<th>PDF</th>
 									<th>Name</th>
-									<!--<th>Email</th>-->
+									<th>Email</th>
 									<th>Contact No</th>
 									<!--<th>Department</th>-->
 									<th>Postion Appplied for</th>
@@ -178,7 +176,7 @@
 										<td><a href="{{ URL::to('public/file/')}}/{{$datas->jobapplicant_cv}}" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
 										<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a style="color: #0f5298 !important" href="{{ URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
+												<a style="color: #9A192E !important" href="{{ URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="fa fa-ellipsis-v"></i></a>
 												<!---<div class="dropdown-menu dropdown-menu-right">
 													<a class="dropdown-item" href="URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" data-toggle="modal" data-target="#view_screening"><i class="fa fa-clock-o m-r-5"></i> View Details</a>
 												</div>-->
@@ -186,13 +184,12 @@
 										</td>
 										<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a style="color: #0f5298 !important" href="{{ URL::to('/preemployementpdf')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
+												<a style="color: #9A192E !important" href="{{ URL::to('/preemployementpdf')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="fa fa-ellipsis-v"></i></a>
 												</div>
 										</td>
 										<td>{{$datas->jobapplicant_name}}</td>
-										<!--<td>{{$datas->log_email}}</td>-->
+										<td>{{$datas->can_email}}</td>
 										<td>{{$datas->jobapplicant_contact}}</td>
-										<!--<td>{{$datas->dept_name}}</td>-->
 										<td>{{$datas->jobapplicant_postionapppliedform}}</td>
 										@if( session()->get("role") ==	 1)
 										<td>{{$datas->jobapplicant_gender}}</td>
@@ -221,7 +218,7 @@
 									<th>View</th>
 									<th>PDF</th>
 									<th>Name</th>
-									<!--<th>Email</th>-->
+									<th>Email</th>
 									<th>Contact No</th>
 									<!--<th>Department</th>-->
 									<th>Postion Appplied for</th>
@@ -245,7 +242,7 @@
 										<td><a href="{{ URL::to('public/file/')}}/{{$datas->jobapplicant_cv}}" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
 										<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a style="color: #0f5298 !important" href="{{ URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
+												<a style="color: #9A192E !important" href="{{ URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="fa fa-ellipsis-v"></i></a>
 												<!---<div class="dropdown-menu dropdown-menu-right">
 													<a class="dropdown-item" href="URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" data-toggle="modal" data-target="#view_screening"><i class="fa fa-clock-o m-r-5"></i> View Details</a>
 												</div>-->
@@ -253,13 +250,12 @@
 										</td>
 										<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a style="color: #0f5298 !important" href="{{ URL::to('/preemployementpdf')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
+												<a style="color: #9A192E !important" href="{{ URL::to('/preemployementpdf')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="fa fa-ellipsis-v"></i></a>
 												</div>
 										</td>
 										<td>{{$datas->jobapplicant_name}}</td>
-										<!--<td>{{$datas->log_email}}</td>-->
+										<td>{{$datas->can_email}}</td>
 										<td>{{$datas->jobapplicant_contact}}</td>
-										<!--<td>{{$datas->dept_name}}</td>-->
 										<td>{{$datas->jobapplicant_postionapppliedform}}</td>
 										@if( session()->get("role") ==	 1)
 										<td>{{$datas->jobapplicant_gender}}</td>
@@ -287,7 +283,7 @@
 									<th>View</th>
 									<th>PDF</th>
 									<th>Name</th>
-									<!--<th>Email</th>-->
+									<th>Email</th>
 									<th>Contact No</th>
 									<!--<th>Department</th>-->
 									<th>Postion Appplied for</th>
@@ -302,7 +298,7 @@
 										<td><a href="{{ URL::to('public/file/')}}/{{$datas->jobapplicant_cv}}" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
 										<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a style="color: #0f5298 !important" href="{{ URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
+												<a style="color: #9A192E !important" href="{{ URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="fa fa-ellipsis-v"></i></a>
 												<!---<div class="dropdown-menu dropdown-menu-right">
 													<a class="dropdown-item" href="#" data-toggle="modal" data-target="#view_screening"><i class="fa fa-clock-o m-r-5"></i> View Details</a>
 												</div>-->
@@ -310,13 +306,12 @@
 										</td>
 										<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a style="color: #0f5298 !important" href="{{ URL::to('/preemployementpdf')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
+												<a style="color: #9A192E !important" href="{{ URL::to('/preemployementpdf')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="fa fa-ellipsis-v"></i></a>
 												</div>
 										</td>
 										<td>{{$datas->jobapplicant_name}}</td>
-										<!--<td>{{$datas->log_email}}</td>-->
+										<td>{{$datas->can_email}}</td>
 										<td>{{$datas->jobapplicant_contact}}</td>
-										<!--<td>{{$datas->dept_name}}</td>-->
 										<td>{{$datas->jobapplicant_postionapppliedform}}</td>
 										@if( session()->get("role") ==	 1)
 										<td>{{$datas->jobapplicant_gender}}</td>
@@ -341,7 +336,7 @@
 	
 </div>
 <!-- /Page Wrapper -->			
-
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
 
 
@@ -349,40 +344,24 @@
 	  
 
 
-function getedit($value){
-		
-		// console.log($value);
-		
-		swal({
-                title: "Are you sure ?",
-                text: "Once Approved, you will not be able to change the status of this request!",
-                icon: "warning",
-                buttons: true,
-                dangerMode: true,
-              })
-              .then((willDelete) => {
-                if (willDelete) {
-		
-		
-		  $.get('{{ URL::to("/adamaction")}}/'+$value,function(data){
-				
-				console.log("true");
-				
-				location.reload();
-				// $('#cl').DataTable().ajax.reload();
-				 // $('#modals').empty();
-				 // $('#modals').append(data)
-				// $('#Editemployee').modal('show');
-				});
-                  swal("Your request successfully approved!", {
-                    icon: "success",
-                  });
-
-
-                } else {
-                  swal("Your request is unchanged!");
-                }
-              });
+function getedit($id){
+	Swal.fire({
+    title: "Are you sure?",
+	text: "Once Submited, you will not be able to request for a change",
+    input: 'text',
+    showCancelButton: true        
+	}).then((result) => {
+	    if (result.value) {
+	    	$comment = result.value;
+	        $.get('{{ URL::to("/adamaction")}}/'+$id+'/'+$comment);
+			// window.location.reload();
+	  		swal("Aww! Delivered Successfully!", {
+	   	   icon: "success",
+	   	   });
+	    }else{
+	    	swal("Canceled");
+	    }
+	});
 }
 
 </script>

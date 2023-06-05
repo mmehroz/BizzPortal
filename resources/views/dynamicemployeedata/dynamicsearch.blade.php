@@ -34,7 +34,7 @@
 								</div>
 								@if( session()->get("role") <=	 2)
 								<div class="dropdown profile-action">
-									<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
+									<a href="#" class="fa fa-ellipsis-v dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v">more_vert</i></a>
 									<div class="dropdown-menu dropdown-menu-right">
 										<a class="dropdown-item" href="#" onclick="getedit({{'"'.$val->elsemployees_empid.'"'}})" ><i class="fa fa-pencil m-r-5"></i> Edit</a>
 									</div>
@@ -42,9 +42,9 @@
 								@endif
 								<h4 class="user-name m-t-10 mb-0 text-ellipsis">{{$val->elsemployees_name}}</h4>
 								<hr>
-								<h6 class="text-left mt-" style="color: black"><span><i class="fa fa-user" style="color: ##0f5298"></i></span> <span> {{$val->DESG_NAME}}</span></h6>
-								<h6 class="text-left" style="color: black"><span><i class="fa fa-at" style="color: ##0f5298"></i></span> {{$val->elsemployees_emailaddress}}</h6>
-								<h6 class="text-left" style="color: black"><span><i class="fa fa-phone" style="color: ##0f5298"></i></span> {{$val->elsemployees_ext}}</h6>
+								<h6 class="text-left mt-" style="color: black"><span><i class="fa fa-user" style="color: ##9A192E"></i></span> <span> {{$val->DESG_NAME}}</span></h6>
+								<h6 class="text-left" style="color: black"><span><i class="fa fa-at" style="color: ##9A192E"></i></span> {{$val->elsemployees_emailaddress}}</h6>
+								<h6 class="text-left" style="color: black"><span><i class="fa fa-phone" style="color: ##9A192E"></i></span> {{$val->elsemployees_ext}}</h6>
 							</div>
 						</div>
 					</div>

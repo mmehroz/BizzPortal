@@ -13,7 +13,12 @@
 
 	<!-- Page Content -->
     <div class="content container-fluid">
-	
+		@if(session('message'))
+			<!-- <div class="account-title">{{session('message')}}</div> -->
+			<div class="account-title">   <p class="alert alert-success" >{{session('message')}}</p>
+			
+			</div>
+		@endif
 		<!-- Page Header -->
 		<div class="page-header">
 			<div class="row align-items-center">
@@ -61,12 +66,10 @@
 								<tr style="text-align: center;">
 									<th>Action</th>
 									<th>Pre Employeement</th>
-									<th>Evaluation</th>
 									<th>Offer Letter</th>
 									<th>Name</th>
 									<th>Email</th>
 									<th>Contact No</th>
-									<th>Department</th>
 									<th>Postion Appplied for</th>
 								</tr>
 							</thead>
@@ -83,12 +86,11 @@
 											</select>
 									</td>
 									<td><a href="{{ URL::to('/modalademployeeviewol')}}/{{$datas->jobapplicant_id}}" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
-									<td><a href="{{ URL::to('/evalution_formpdf')}}/{{$datas->jobapplicant_id}}" target="_blank"  class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
-									<td><a href="{{ URL::to('/generatepdf/')}}/{{$datas->log_email}}" target="_blank"  class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
+									<!-- <td><a href="{{ URL::to('/coo_interview_evalution_form')}}/{{$datas->jobapplicant_id}}" target="_blank"  class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Evaluation</a></td> -->
+									<td><a href="{{ URL::to('/generatepdf/')}}/{{$datas->can_email}}" target="_blank"  class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
 									<td>{{$datas->jobapplicant_name}}</td>
-									<td>{{$datas->log_email}}</td>
+									<td>{{$datas->can_email}}</td>
 									<td>{{$datas->jobapplicant_contact}}</td>
-									<td>{{$datas->dept_name}}</td>
 									<td>{{$datas->jobapplicant_postionapppliedform}}</td>
 								</tr>
 							@endforeach
@@ -110,12 +112,12 @@
 							<thead>
 								<tr style="text-align: center;">
 									<th>Pre Employeement</th>
-									<th>Evaluation</th>
+									<!-- <th>Evaluation</th> -->
 									<th>Offer Letter</th>
+									<th>Add Employee</th>
 									<th>Name</th>
 									<th>Email</th>
 									<th>Contact No</th>
-									<th>Department</th>
 									<th>Postion Appplied for</th>
 								</tr>
 							</thead>
@@ -123,12 +125,12 @@
 							@foreach($data['join'] as $datas)
 								<tr style="text-align: center;">
 									<td><a href="{{ URL::to('/modalademployeeviewol')}}/{{$datas->jobapplicant_id}}" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
-									<td><a href="{{ URL::to('/evalution_formpdf')}}/{{$datas->jobapplicant_id}}" target="_blank"  class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
-									<td><a href="{{ URL::to('/generatepdf/')}}/{{$datas->log_email}}" target="_blank"  class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
+									<!-- <td><a href="{{ URL::to('/evalution_formpdf')}}/{{$datas->jobapplicant_id}}" target="_blank"  class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td> -->
+									<td><a href="{{ URL::to('/generatepdf/')}}/{{$datas->can_email}}" target="_blank"  class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
+									<td><a href="{{ URL::to('/addtoemployee/')}}/{{$datas->jobapplicant_id}}" target="_blank"  class="btn btn-sm btn-primary"><i class="fa fa-add"></i> Add</a></td>
 									<td>{{$datas->jobapplicant_name}}</td>
-									<td>{{$datas->log_email}}</td>
+									<td>{{$datas->can_email}}</td>
 									<td>{{$datas->jobapplicant_contact}}</td>
-									<td>{{$datas->dept_name}}</td>
 									<td>{{$datas->jobapplicant_postionapppliedform}}</td>
 								</tr>
 							@endforeach
@@ -150,12 +152,11 @@
 							<thead>
 								<tr style="text-align: center;">
 									<th>Pre Employeement</th>
-									<th>Evaluation</th>
+									<!-- <th>Evaluation</th> -->
 									<th>Offer Letter</th>
 									<th>Name</th>
 									<th>Email</th>
 									<th>Contact No</th>
-									<th>Department</th>
 									<th>Postion Appplied for</th>
 								</tr>
 							</thead>
@@ -163,12 +164,11 @@
 								@foreach($data['notinterested'] as $datas)
 								<tr style="text-align: center;">
 									<td><a href="{{ URL::to('/modalademployeeviewol')}}/{{$datas->jobapplicant_id}}" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
-									<td><a href="{{ URL::to('/evalution_formpdf')}}/{{$datas->jobapplicant_id}}" target="_blank"  class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
-									<td><a href="{{ URL::to('/generatepdf/')}}/{{$datas->log_email}}" target="_blank"  class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
+									<!-- <td><a href="{{ URL::to('/evalution_formpdf')}}/{{$datas->jobapplicant_id}}" target="_blank"  class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td> -->
+									<td><a href="{{ URL::to('/generatepdf/')}}/{{$datas->can_email}}" target="_blank"  class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
 									<td>{{$datas->jobapplicant_name}}</td>
-									<td>{{$datas->log_email}}</td>
+									<td>{{$datas->can_email}}</td>
 									<td>{{$datas->jobapplicant_contact}}</td>
-									<td>{{$datas->dept_name}}</td>
 									<td>{{$datas->jobapplicant_postionapppliedform}}</td>
 								</tr>
 								@endforeach

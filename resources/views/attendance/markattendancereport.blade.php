@@ -28,7 +28,7 @@
 	            <div class="col-lg-12">
 	            	<div class="table-responsive">
 						<table class="table table-striped custom-table mb-0 datatable dataTable no-footer" id="sreq">
-							<thead style="color: white; background-color: ##0f5298">	
+							<thead style="color: white; background-color: ##101D3B">	
 								<tr>
 									<th>Name</th>
 	                				<th>Date</th>

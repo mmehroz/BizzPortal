@@ -80,7 +80,7 @@
             	<div class="page-header">
 					<div class="row">
 						<div class="col">
-							<h3 class="page-title" style="padding-top: 70px; font-size: 36px; font-weight: 900; text-align: center;">Bizz World Communication</h3>
+							<h3 class="page-title" style="padding-top: 70px; font-size: 36px; font-weight: 900; text-align: center;">AU Telecom</h3>
 							@if(session('message'))
 								<div class="alert alert-success" ><h4>{!!session('message')!!}</h4></div> 
 						  

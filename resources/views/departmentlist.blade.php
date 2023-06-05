@@ -39,10 +39,10 @@
 						<thead>
 							<tr>
 					        @if(session()->get("role") <= 2)
-							<th class="text-right" style="width: 10%!important;">Action</th>
+							<th class="text-center">Action</th>
 							@endif
-							<th style="width: 30px;">Department ID</th>
-								<th>Department Name</th>
+							<th class="text-center">Department ID</th>
+								<th class="text-center">Department Name</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -53,7 +53,7 @@
 	                    			<a href="#" onclick="deletedepartment({{$val->dept_id}})"> <i class="fa fa-trash"></i></a>
 								</td>
 									<td class="text-center">{{$val->dept_id}}</td>
-									<td>{{$val->dept_name}}</td>
+									<td class="text-center">{{$val->dept_name}}</td>
 								</tr>
 							@endforeach
 							

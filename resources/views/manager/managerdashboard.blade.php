@@ -83,7 +83,7 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label>Company</label>
-                                                <input type="text" class="form-control" disabled placeholder="Company" value="Bizz World Communication">
+                                                <input type="text" class="form-control" disabled placeholder="Company" value="AU Telecom">
                                             </div>
                                         </div>
                                    

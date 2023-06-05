@@ -62,7 +62,6 @@
 									<th>Name</th>
 									<th>Email</th>
 									<th>Contact No</th>
-									<th>Department</th>
 									<th>Postion Appplied for</th>
 								</tr>
 							</thead>
@@ -72,7 +71,7 @@
 										<td><a href="{{ URL::to('public/file/')}}/{{$datas->jobapplicant_cv}}" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
 										<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a style="color: #0f5298" href="{{ URL::to('/modalademployeeviewol/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
+												<a style="color: #9A192E" href="{{ URL::to('/modalademployeeviewol/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="fa fa-ellipsis-v"></i></a>
 												<!---<div class="dropdown-menu dropdown-menu-right">
 													<a class="dropdown-item" href="URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" data-toggle="modal" data-target="#view_screening"><i class="fa fa-clock-o m-r-5"></i> View Details</a>
 												</div>--->
@@ -80,16 +79,15 @@
 										</td>
 										<td>
 											<div class="dropdown dropdown-action">
-											<a href="#" style="color: #0f5298" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more</i></a>
+											<a href="#" style="color: #9A192E" class="fa fa-ellipsis-v dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
 												<div class="dropdown-menu dropdown-menu-right">
 													<a class="dropdown-item" onclick="getedit({{$datas->jobapplicant_id}})" data-toggle="modal" data-target="#view_irrelevent"><i class="fa fa-clock-o m-r-5"></i> View Details</a>
 												</div>
 											</div>
 										</td>
 										<td>{{$datas->jobapplicant_name}}</td>
-										<td>{{$datas->log_email}}</td>
+										<td>{{$datas->can_email}}</td>
 										<td>{{$datas->jobapplicant_contact}}</td>
-										<td>{{$datas->dept_name}}</td>
 										<td>{{$datas->jobapplicant_postionapppliedform}}</td>
 									</tr>
 								@endforeach
@@ -116,7 +114,6 @@
 									<th>Name</th>
 									<th>Email</th>
 									<th>Contact No</th>
-									<th>Department</th>
 									<th>Postion Appplied for</th>
 								</tr>
 							</thead>
@@ -126,7 +123,7 @@
 										<td><a href="{{ URL::to('public/file/')}}/{{$datas->jobapplicant_cv}}" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-download"></i> Download</a></td>
 										<td class="text-right">
 											<div class="dropdown dropdown-action">
-												<a href="{{ URL::to('/modalademployeeviewol/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="material-icons">more</i></a>
+												<a href="{{ URL::to('/modalademployeeviewol/')}}/{{$datas->jobapplicant_id}}" target="_blank" ><i class="fa fa-ellipsis-v"></i></a>
 												<!---<div class="dropdown-menu dropdown-menu-right">
 													<a class="dropdown-item" href="URL::to('/modalemployeeview/')}}/{{$datas->jobapplicant_id}}" data-toggle="modal" data-target="#view_screening"><i class="fa fa-clock-o m-r-5"></i> View Details</a>
 												</div>--->
@@ -134,16 +131,15 @@
 										</td>
 										<td>
 											<div class="dropdown dropdown-action">
-											<a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more</i></a>
+											<a href="#" class="fa fa-ellipsis-v dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
 												<div class="dropdown-menu dropdown-menu-right">
 													<a class="dropdown-item" onclick="getedit({{$datas->jobapplicant_id}})" data-toggle="modal" data-target="#view_irrelevent"><i class="fa fa-clock-o m-r-5"></i> View Details</a>
 												</div>
 											</div>
 										</td>
 										<td>{{$datas->jobapplicant_name}}</td>
-										<td>{{$datas->log_email}}</td>
+										<td>{{$datas->can_email}}</td>
 										<td>{{$datas->jobapplicant_contact}}</td>
-										<td>{{$datas->dept_name}}</td>
 										<td>{{$datas->jobapplicant_postionapppliedform}}</td>
 									</tr>
 								@endforeach
@@ -242,12 +238,19 @@
         data: frmData,
        })
         .done(function(data){
-        $("#modald #errors").show();
-        $("#modald #errors").empty().append('<li class="alert alert-success" >Task added successfully...!</li>');
-        setTimeout(function(){$("#view_inprocess").modal('hide')
-		location.reload();
-                 }, 2000);
-      })
+			if(data == "false"){
+				$("#modald #errors").show();
+				$("#modald #errors").empty().append('<li class="alert alert-danger" >Oops! Something went wrong</li>');
+				setTimeout(function(){$("#view_inprocess").modal('hide')
+				}, 2000);
+			}else{
+				$("#modald #errors").show();
+				$("#modald #errors").empty().append('<li class="alert alert-success" >Task addedddd successfully...!</li>');
+				setTimeout(function(){$("#view_inprocess").modal('hide');
+				location.reload();
+				}, 2000);
+			}
+     	 })
       .fail(function(error){
         var errors = error.responseJSON;
        // console.log(errors);

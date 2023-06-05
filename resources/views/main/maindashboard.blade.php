@@ -69,10 +69,8 @@ background-color:#000 !important;
     color: white !important;
     border: #232428 !important;
     outline: #232428 !important;
-    margin-left: 0px !important;
 }
 .dark-mode .scroll2 .emojiPickerIconWrap input{
-    left: 0px !important;
 }
 .dark-mode .scroll {
     background-color: #fff !important;
@@ -98,7 +96,7 @@ background-color:#000 !important;
 
 .reply__text{
     cursor: pointer;
-    color: #0f5298;
+    color: #101D3B;
     font-size: 11px;
     font-weight: bold;
     font-size: 13px;
@@ -111,7 +109,7 @@ background-color:#000 !important;
 
 .view__reply{
     cursor: pointer;
-    color: #0f5298;
+    color: #101D3B;
     font-size: 11px;
     font-weight: bold;
     display: block;
@@ -124,7 +122,7 @@ background-color:#000 !important;
 
 .reply__btn{
     cursor: pointer;
-    background-color: #0f5298;
+    background-color: #101D3B;
     color: white;
     font-size: 10px;
     padding: 10px 15px;
@@ -267,17 +265,17 @@ width: 99%;
     }
     .comment:hover{
         background-color: white;
-        color: #0f5298;
-        border: 1px solid #0f5298;
+        color: #101D3B;
+        border: 1px solid #101D3B;
         font-weight: 700;
     }
     .aqua51{
         background-color: rgba(100, 13, 29, 1);
     background-image: -webkit-gradient(linear, 0% 0%, 0% 90%, from (rgba(56, 0, 0, 1)), to (rgba(100, 13, 29, 1)));
     border-top-color: #963d44;
-    border-right-color: #0f5298;
+    border-right-color: #101D3B;
     border-bottom-color: #30080881;
-    border-left-color: #0f5298;
+    border-left-color: #101D3B;
     }
     .time51{
         /* width: 85px; */
@@ -333,7 +331,7 @@ width: 99%;
     top: -112px !important;
     left: 263px !important;
     height: 38px !important;
-    background-color: #0f5298!important;
+    background-color: #101D3B!important;
     color: white !important;
     border-radius: 5px;
 }
@@ -343,19 +341,18 @@ width: 99%;
     width: 38px;
     background-color: rgb(238, 238, 238);
     position: relative;
-    right: -218px;
     top: -74px;
     }
     @media screen and (min-width: 1201px){
         .cp .emojiPickerIconWrap input{
         position: relative;
-    left: 64px !important;
+
     background: rgb(238, 238, 238) !important;
     border: 1px solid rgb(238, 238, 238) !important;
     width: 108% !important;
     }
     .scroll .cp button {
-    background-color: #0f5298!important;
+    background-color: #101D3B!important;
     color: white !important;
    
 }
@@ -366,7 +363,7 @@ width: 99%;
     color: black !important;
 }
 .scroll .vc2 {
-    color: #0f5298!important;
+    color: #101D3B!important;
     position: absolute;
     top: -8px;
     left: 43px;
@@ -376,7 +373,7 @@ width: 99%;
     top: -112px !important;
     left: 234px !important;
     height: 38px !important;
-    background-color: #0f5298!important;
+    background-color: #101D3B!important;
     color: white !important;
     border-radius: 5px;
     width: 44px;
@@ -390,7 +387,7 @@ width: 99%;
     width: 40px;
     height: 40px;
     position: relative;
-    left: 25px;
+    margin-top: 3px;
 }
     .cp .emojiPickerIconWrap input{
         position: relative;
@@ -408,7 +405,7 @@ width: 99%;
     .cp button {
     top: -2px;
     width: 55px;
-    background-color: #0f5298;
+    background-color: #101D3B;
     color: white;
     height: 40px;
     border-radius: 6px;
@@ -424,7 +421,7 @@ width: 99%;
 @media screen and (max-width: 1259px){
     .cp button {
     width: 51px;
-    background-color: #0f5298;
+    background-color: #101D3B;
     color: white;
     height: 40px;
     border-radius: 6px;
@@ -439,7 +436,6 @@ width: 99%;
     border-radius: 4px;
     background-color: #f3f3f3;
     position: relative;
-    left: 16px;
                 }
                 .rounded-circle{
                     width: 40px;
@@ -452,13 +448,12 @@ width: 99%;
 @media screen and (max-width: 1200px){
     .cp .emojiPickerIconWrap input{
         position: relative;
-    left: 59px;
     background: rgb(238, 238, 238) !important;
     border: 1px solid rgb(238, 238, 238) !important;
     width: 108% !important;
     }
     .scroll .cp button {
-    background-color: #0f5298!important;
+    background-color: #101D3B!important;
     color: white !important;
 
 }
@@ -471,7 +466,7 @@ width: 99%;
 }
 @media screen and (max-width: 1000px){
 .scroll .cp button {
-    background-color: #0f5298!important;
+    background-color: #101D3B!important;
     color: white !important;
 
 }
@@ -485,11 +480,11 @@ width: 99%;
     width: 108% !important;
     }
     .scroll .cp button {
-    background-color: #0f5298!important;
+    background-color: #101D3B!important;
     color: white !important;
 
 }.scroll .vc2 {
-    color: #0f5298!important;
+    color: #101D3B!important;
     position: absolute;
     top: -8px;
     left: 43px;
@@ -501,7 +496,7 @@ width: 99%;
   
 
     .scroll .vc2 {
-        color: #0f5298!important;
+        color: #101D3B!important;
         position: absolute;
         top: -8px;
         left: 52px;
@@ -513,13 +508,13 @@ width: 99%;
 @media screen and (min-width: 1500px){
 
     .scroll .cp button {
-    background-color: #0f5298!important;
+    background-color: #101D3B!important;
     color: white !important;
  
 }
 
 .scroll .vc2 {
-    color: #0f5298!important;
+    color: #101D3B!important;
     position: absolute;
     top: -8px;
     left: 52px;
@@ -530,7 +525,7 @@ width: 99%;
 }
 /* @media screen and (min-width: 1500px){
     .scroll .cp button {
-    background-color: #0f5298!important;
+    background-color: #101D3B!important;
     color: white !important;
     width: 65%;
     position: absolute;
@@ -560,13 +555,13 @@ width: 99%;
     top: -110px;
     left: 263px;
     height: 38px;
-    background-color: #0f5298!important;
+    background-color: #101D3B!important;
     color: white !important;
     border-radius: 5px;
 } */
 .scroll .vc {
     cursor: pointer;
-    color: #0f5298!important;
+    color: #101D3B!important;
     font-weight: bold !important;
     
 }
@@ -588,7 +583,9 @@ width: 99%;
     font-family: 'Raleway', sans-serif;
 }
 
-
+.dark-mode .desc li{
+    color: #fff;
+}
 
 @media screen and (min-width: 1600px){
 
@@ -650,12 +647,13 @@ top: 99% !important;
             <nav class="navbar navbar-expand-lg">
                 @if($data->roleid <= 2)
                 <a href="{{URL::to('adminDashboard')}}">
-                <img src="http://192.168.0.7/bizzportal/public/bizzmain/bizzlogo.png" class="headerlogo" alt="">
+                <img src="{!! asset('public/assets/img/logo_white_header.svg') !!}" class="headerlogo" alt="">
+                
                 @elseif($data->roleid == 3)
                 <a href="{{URL::to('managerDashboard')}}">
-                <img src="http://192.168.0.7/bizzportal/public/bizzmain/bizzlogo.png" class="headerlogo" alt="">
+                <img src="{!! asset('public/assets/img/logo_white_header.svg') !!}" class="headerlogo" alt="">
                 @else
-                <img src="http://192.168.0.7/bizzportal/public/bizzmain/bizzlogo.png" class="headerlogo" alt="">
+                <img src="{!! asset('public/assets/img/logo_white_header.svg') !!}" class="headerlogo" alt="">
                 @endif
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -746,46 +744,46 @@ top: 99% !important;
                         <h3 class="text-center personaldetailsheading1">Personal Details</h3>
                         <div class="d-flex mt-4 personaldetailsinnerdiv">
                             <div class="col-lg-5"><p class="persondetailcolhead">Batch ID:</p></div>
-                            <div class="col-lg-7"><span class="font-weight-bold text-black">{{$data->elsemployees_batchid}}</span></div>        
+                            <div class="col-lg-7"><span class="font-weight-bold personaldetailspan">{{$data->elsemployees_batchid}}</span></div>        
                         </div>
                         <hr>
                     
                         <div class="d-flex mt-1" style="padding-top: 5px;">
                             <div class="col-lg-5"><p class="persondetailcolhead">CNIC:</p></div>
-                            <div class="col-lg-7"><span class="font-weight-bold text-black">{{$data->elsemployees_cnic}}</span></div>
+                            <div class="col-lg-7"><span class="font-weight-bold personaldetailspan">{{$data->elsemployees_cnic}}</span></div>
                         </div>
                         <hr>
                         <div class="d-flex mt-1" style="padding-top: 5px;">
                             <div class="col-lg-5"> <p class="persondetailcolhead">Cell:</p></div>
-                            <div class="col-lg-7"><span class="font-weight-bold text-black">{{$data->elsemployees_cno}}</span></div>
+                            <div class="col-lg-7"><span class="font-weight-bold personaldetailspan">{{$data->elsemployees_cno}}</span></div>
                         </div>
                         
                        
                         <hr>
                         <div class="d-flex  mt-1" style="padding-top: 5px;">
                             <div class="col-lg-5"><p class="persondetailcolhead">Department:</p></div>
-                            <div class="col-lg-7"><span class="font-weight-bold text-black">{{$data->dept_name}}</span></div>
+                            <div class="col-lg-7"><span class="font-weight-bold personaldetailspan">{{$data->dept_name}}</span></div>
                         </div>
 
                          <hr>
                          <div class="d-flex  mt-1" style="padding-top: 5px;">
                             <div class="col-lg-5"> <p class="persondetailcolhead">Designation:</p></div>
-                           <div class="col-lg-7"><span class="font-weight-bold text-black">{{$data->DESG_NAME}}</span></div>
+                           <div class="col-lg-7"><span class="font-weight-bold personaldetailspan">{{$data->DESG_NAME}}</span></div>
                         </div>
                          <hr>
                          <div class="d-flex  mt-1" style="padding-top: 5px;">
                             <div class="col-lg-5"><p class="persondetailcolhead">Reporting To:</p></div>
-                            <div class="col-lg-7"><span class="font-weight-bold text-black">{{$data->reportingto}}</span></div>
+                            <div class="col-lg-7"><span class="font-weight-bold personaldetailspan">{{$data->reportingto}}</span></div>
                         </div>
 						<hr>
                          <div class="d-flex mt-1" style="padding-top: 5px;">
                             <div class="col-lg-5"><p class="persondetailcolhead">Joining Date:</p></div>
-                            <div class="col-lg-7"><span class="font-weight-bold text-black">{{$data->elsemployees_dofjoining}}</span></div>
+                            <div class="col-lg-7"><span class="font-weight-bold personaldetailspan">{{$data->elsemployees_dofjoining}}</span></div>
                         </div>
                          <hr>
                          <div class="d-flex  mt-1 pb-3" style="padding-top: 5px;">
                             <div class="col-lg-5"><p class="persondetailcolhead">Date Of Birth:</p></div>
-                            <div class="col-lg-7"><span class="font-weight-bold text-black">{{$data->elsemployees_dofbirth}}</span></div>
+                            <div class="col-lg-7"><span class="font-weight-bold personaldetailspan">{{$data->elsemployees_dofbirth}}</span></div>
                             
                             
                         </div>
@@ -876,14 +874,14 @@ top: 99% !important;
                                             </div> -->
                                             
                                                 
-                                            <div class="col-2 mt-5">
+                                            <div class="col-1 mt-3">
                                                 <img class="rounded-circle" src="{{URL::to('public/img/')}}/{{session()->get("image")}}" alt="">
                                             </div>
-                                            <div class="col-8 mt-5">
-                                                <input type="text" class="form-control" name="" id="input-default{{$data->bdannouncementid[$indexannbd]}}" class="" placeholder="Type Comment" >
+                                            <div class="col-9 mt-3" style="padding-right: 0px;">
+                                                <input type="text" class="form-control" name="" style="height:45px;margin-left:10px" id="input-default{{$data->bdannouncementid[$indexannbd]}}" class="" placeholder="Type Comment" >
                                                 </div>
-                                            <div class="col-1 mt-5" style="padding-left: 0;">
-                                                <button style="background: #0f5298; color: #fff; height: 38px; width: 40px;" onclick="submitcomment({{$data->bdannouncementid[$indexannbd]}})"><span><i class="fas fa-paper-plane"></i></span></button>
+                                            <div class="col-1 mt-3" style="padding-left: 0;">
+                                                <button class="inputsubmitbtn2" onclick="submitcomment({{$data->bdannouncementid[$indexannbd]}})"><span><i class="fas fa-paper-plane"></i></span></button>
                                             </div>
                                             
                                                 <script>
@@ -933,11 +931,11 @@ top: 99% !important;
                                     </div>
                                     
                                     <div class="col-12">
-                                    <a class="vc" style="cursor: pointer; color: #0f5298; font-weight: bold;display: flex;justify-content: center;" onclick="viewdetails({{$data->bdannouncementid[$indexannbd]}})">Click To View Comments</a>
+                                    <a class="vc" style="cursor: pointer; color: #101D3B; font-weight: bold;display: flex;justify-content: center;" onclick="viewdetails({{$data->bdannouncementid[$indexannbd]}})">Click To View Comments</a>
                                     </div>
                                     
                                     <br>
-                                    <div class="hor ml-auto mr-auto mb-3" style="width: 95%; border-bottom: 2px solid #0f5298; margin-top: px;"></div>
+                                    <div class="hor ml-auto mr-auto mb-3" style="width: 95%; border-bottom: 2px solid #101D3B; margin-top: px;"></div>
                                 <?php
                                 $indexannbd++;
                                 ?>
@@ -949,7 +947,7 @@ top: 99% !important;
                         </div>
                 </div>
                 <div class="col-lg-6">
-                    <div style="background: #fff; box-shadow: 0px 6px 16px rgb(0 0 0 / 20%); border-radius: 10px;">
+                    <div class="bannersection">
                         <div class="banner">
                             @if($data->elsemployees_coverimage == null)
                             <img src="{{URL::to('public/img/defaultcover.png')}}" alt=" ">
@@ -972,7 +970,7 @@ top: 99% !important;
                              
                                 </div>
                                 <div class="w-100" style="position: absolute;top:34%;">
-                                    <h6 style="color: #0f5298; font-weight: 700;text-align: center;padding-top: 20px;">{{$data->elsemployees_name}}</h6>
+                                    <h6 style="color: #101D3B; font-weight: 700;text-align: center;padding-top: 20px;">{{$data->elsemployees_name}}</h6>
                                     <div class="d-flex justify-content-center">
                                         <h6 class="mt-1" style="font-weight: bold;">{{$data->DESG_NAME}}</h6>
                                       <h6 class="pro" style="font-weight: bold;">{{$data->dept_name}}</h6>
@@ -983,9 +981,9 @@ top: 99% !important;
                         </div>
                     </div>
                   
-                    <div style="background: #fff;box-shadow: 0px 6px 16px rgb(0 0 0 / 20%); border-radius: 10px; padding-bottom: 25px;margin-top: 15px; padding-left: 15px; padding-right: 15px;height: 1710px;">
-                        <h3 style="padding-top: 30px;font-weight: bold;color: #000;" class="text-center">Announcement Feed</h3>
-                        <div class="bio bio1" style="height: 1560px !important; overflow-y: scroll !important; background-color: white; margin-top: 15px; border-radius: 4px;">
+                    <div class="announcementsection">
+                        <h3>Announcement Feed</h3>
+                        <div class="bio bio1 div1">
                             <div class="col-lg-12 col-md-12 col-sm-12 m-0 p-0">
                         <div class="ann">
                         <div class="time11 aqua11">
@@ -1098,16 +1096,16 @@ top: 99% !important;
                                         </div>
                                     </div>
                                     <div class="row">        
-                                <div class="col-lg-2"><img class="rounded-circle" style="width: 40px; height: 40px" src="{{URL::to('public/img/')}}/{{session()->get("image")}}" alt=""></div>
-                                <div class="col-lg-8" style=" background-color: #f9f9f9 !important;border-radius:26px"><input type="text" class="form-control contr2" name="" id="input-default{{$data->allannouncementid[$indexannall]}}" class="" placeholder="Type Comment" ></div>
-                                <div class="col-lg-2" style=""><button style="background: #0f5298; color: #fff; height: 38px; width: 40px;" onclick="submitcomment({{$data->allannouncementid[$indexannall]}})"><span><i class="fas fa-paper-plane"></i></span></button></div>
+                                <div class="col-lg-1"><img class="rounded-circle" style="width: 40px; height: 40px" src="{{URL::to('public/img/')}}/{{session()->get("image")}}" alt=""></div>
+                                <div class="col-lg-10" style="padding-left:0px;padding-right:0px;"><input type="text" style="height:45px" class="form-control contr2" name="" id="input-default{{$data->allannouncementid[$indexannall]}}" class="" placeholder="Type Comment" ></div>
+                                <div class="col-lg-1" style="padding:0"><button class="inputsubmitbtn" onclick="submitcomment({{$data->allannouncementid[$indexannall]}})"><span><i class="fas fa-paper-plane"></i></span></button></div>
                             </div> 
                                     <div class="col-12 mt-2">
-                                    <a class="" style="cursor: pointer; color: #0f5298; font-weight: bold;text-align: center;display: flex;justify-content: center;" onclick="viewdetails({{$data->allannouncementid[$indexannall]}})">Click To View Comments</a>
+                                    <a class="viewcmntbtn" onclick="viewdetails({{$data->allannouncementid[$indexannall]}})">Click To View Comments</a>
                                     </div>
                                   
                                     <br>
-                                    <div class="hor ml-auto mr-auto" style="width: 95%; border-bottom: 2px solid #0f5298; margin-top: 10px;"></div>
+                                    <div class="hor ml-auto mr-auto" style="width: 95%; border-bottom: 2px solid #101D3B; margin-top: 10px;"></div>
                                 <?php
                                 $indexannall++;
                                 ?>
@@ -1211,34 +1209,31 @@ top: 99% !important;
                     <hr class="statussectionhr">
 </div>
 <div>
-                        <div class="col-lg-12 mt-3"><a class="mainbtns" id="upload_link" target="_blank" href="http://192.168.0.6:5100/"><span><i class="mainbtnsspan fa fa-envelope-open-text"></i></span>Email</a></div>
-                        <div class="col-lg-12 mt-3"><a class="mainbtns" id="upload_link" target="_blank" href="http://192.168.0.6:3000/"><span><i class="mainbtnsspan  fas fa-comment"></i></span>Chat</a></div>
-                        <div class="col-lg-12 mt-3"><a class="mainbtns" id="upload_link" target="_blank" href="http://192.168.0.7:4001"><span><i  class="mainbtnsspan fa fa fa-users"></i></span>CRM</a></div>
+                        <div class="col-lg-12 mt-3" style="padding-left:0px;padding-right:0px"><a class="mainbtns" id="upload_link" target="_blank" href="http://192.168.0.6:5100/"><span><i class="mainbtnsspan fa fa-envelope-open-text"></i></span>Email</a></div>
+                        <div class="col-lg-12 mt-3" style="padding-left:0px;padding-right:0px"><a class="mainbtns" id="upload_link" target="_blank" href="http://192.168.0.6:3000/"><span><i class="mainbtnsspan  fas fa-comment"></i></span>Chat</a></div>
+                        <div class="col-lg-12 mt-3" style="padding-left:0px;padding-right:0px"><a class="mainbtns" id="upload_link" target="_blank" href="http://192.168.0.7:4001"><span><i  class="mainbtnsspan fa fa fa-users"></i></span>CRM</a></div>
                     </div>
                     <div class="activitiesection">
-                    <h3 class="font-weight-bold text-black text-center pt-4 pb-4">My Acitivities</h3>
+                    <h3 class="font-weight-bold text-center pt-4 pb-4">My Acitivities</h3>
                    <div class="row">
                     <div class="col-lg-4"> 
                         <div class="activitiesectiondivleft">
 
-<a href="{{URL::to('myforms')}}" target="_blank" class="activitiesectionanchor"><span> <i class="abc msgs fa fa-file-signature" style="    color: #007bff;
-                font-size: 20px;padding-bottom: 10px;"></i></span><br>My Forms</a>
+<a href="{{URL::to('myforms')}}" target="_blank" class="activitiesectionanchor"><span> <i class="abc msgs fa fa-file-signature" ></i></span><br>My Forms</a>
 </div>
                 </div>
                     <div class="col-lg-4">
                         <div class="activitiesectiondivcenter">
 
 <a href="{{URL::to('selectbioattendancemonth')}}" target="_blank" class="activitiesectionanchor"><span>
- <i class="abc msgs fa fa-file-invoice-dollar" style="    color: #007bff;
-                font-size: 20px;padding-bottom: 10px;"></i></span><br>Pay Slips</a>
+ <i class="abc msgs fa fa-file-invoice-dollar" ></i></span><br>Pay Slips</a>
 </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="activitiesectiondivright">
 
 <a href="{{URL::to('restaurantlist')}}" target="_blank" class="activitiesectionanchor"><span> 
-<i class="abc msgs fa fa-drumstick-bite" style="    color: #007bff;
-                font-size: 20px;padding-bottom: 10px;"></i></span><br>Food Portal</a>
+<i class="abc msgs fa fa-drumstick-bite" ></i></span><br>Food Portal</a>
 </div>
                     </div>
                    </div>
@@ -1248,16 +1243,14 @@ top: 99% !important;
                         <div class="activitiesectiondivleft">
 
 <a href="{{URL::to('games')}}" target="_blank" class="activitiesectionanchor"><span> 
-<i class="abc msgs fa fa-gamepad" style="    color: #007bff;
-                font-size: 20px;padding-bottom: 10px;"></i></span><br>Game</a>
+<i class="abc msgs fa fa-gamepad" ></i></span><br>Game</a>
 </div>
                     </div>
                     <div class="col-lg-4">
                         <div class="activitiesectiondivcenter">
 
 <a href="{{URL::to('bizzlibrary')}}" target="_blank" class="activitiesectionanchor"><span>
-<i class="abc msgs fa fa-book-reader" style="    color: #007bff;
-                font-size: 20px;padding-bottom: 10px;"></i></span><br>Library</a>
+<i class="abc msgs fa fa-book-reader" ></i></span><br>Library</a>
 </div>
 </div>
 <div class="col-lg-4">
@@ -1265,8 +1258,7 @@ top: 99% !important;
     <div class="activitiesectiondivright">
 
 <a href="{{URL::to('websites')}}" target="_blank" class="activitiesectionanchor"><span>
-<i class="abc msgs fa fa-globe" style="    color: #007bff;
-                font-size: 20px;padding-bottom: 10px;"></i></span><br>Websites</a>
+<i class="abc msgs fa fa-globe" ></i></span><br>Websites</a>
 </div>
 </div>
                    </div>
@@ -1275,28 +1267,27 @@ top: 99% !important;
                         <div class="activitiesectiondivleft">
 
 <a href="{{URL::to('employee_list')}}" target="_blank" class="activitiesectionanchor"><span>
-<i class="abc msgs fa fa-address-book" style="    color: #007bff;
-                font-size: 20px;padding-bottom: 10px;"></i></span><br>Bizz Directory</a>
+<i class="abc msgs fa fa-address-book" ></i></span><br>Bizz Directory</a>
 </div>
                         </div>
                     </div>
                 </div>
-            <div style="background: #fff; box-shadow: 0px 6px 16px rgb(0 0 0 / 20%); border-radius: 10px;  padding-bottom: 10px;margin-top: 15px;">
-                        <h3 class="font-weight-bold text-black text-center" style="padding-top: 20px;">My Attendance</h3>
-                      <div style="height: 362px; overflow-x: scroll;">
-                        <table class="table" style="width: 95%;margin-left:5px;">
+            <div class="attendancediv">
+                        <h3>My Attendance</h3>
+                      <div class="tablediv">
+                        <table class="table">
                             <thead>
-                              <tr style="border: 1px solid #d3d3d3;">
-                                <th scope="col" style="border-top-left-radius: 5px;border-top-right-radius: 5px;">Date</th>
+                              <tr>
+                                <th scope="col" class="firstd">Date</th>
                                 <th scope="col">Time-In</th>
                                 <th scope="col">Time-Out</th>
-                                <th scope="col" style="border-top-left-radius: 5px;border-top-right-radius: 5px;">Result</th>
+                                <th scope="col" class="lastd">Result</th>
                               </tr>
                             </thead>
                             <tbody style="white-space: nowrap;">
                                 @if($attendancedata != null)
                                 @foreach($attendancedata as $attdata)
-                                <tr style="border: 1px solid #d3d3d3;">
+                                <tr>
                                     <?php $splitattendancedate = explode("-",$attdata['emp_date']);?>
                                    <td >{{$splitattendancedate[1]}}-{{$splitattendancedate[2]}}</td>
                                    <td>{{$attdata['emp_checkin']}}</td>
@@ -1315,16 +1306,16 @@ top: 99% !important;
                                     ?>
                                    @if($attdata['emp_checkin'] == "MissIn" || $attdata['emp_checkout'] == "MissOut")
                                    <?php $attresult = "Absent"?>
-                                   <td class="attt" style="background-color: #FFE4E1;color: #db7093;font-weight: bold;">Absent</td>
+                                   <td class="attt absentd">Absent</td>
                                     @elseif($gettime < 7.56)
                                     <?php $attresult = "Late"?>
-                                    <td class="attt" style="background-color: #FAFAD2;color: orange;font-weight: bold;">Late</td>
+                                    <td class="attt latetd">Late</td>
                                     @elseif($gettime < 4)
                                     <?php $attresult = "Half Day"?>
-                                    <td class="attt" style="background-color: #b7cefa;">Half Day</td>
+                                    <td class="attt halfdaytd">Half Day</td>
                                     @else
                                     <?php $attresult = "Present"?>
-                                    <td class="attt" style="background-color: #e5ffe5;color: #4ee44e;font-weight: bold;">Present</td>
+                                    <td class="attt presentd">Present</td>
                                    @endif
                                 <!--    @if($attdata['emp_checkin'] == "MissIn" || $attdata['emp_checkout'] == "MissOut")
                                    <td>0</td>
@@ -1346,31 +1337,28 @@ top: 99% !important;
                        
                         
                     </div>
-                    <div style="background: #fff;box-shadow: 0px 6px 16px rgb(0 0 0 / 20%); border-radius: 10px; padding-bottom: 25px;margin-top: 15px;">
-                    <h3 class="font-weight-bold text-black text-center" style="padding-top: 20px;">Training Manual</h3>
+                    <div class="trainingmanual">
+                    <h3>Training Manual</h3>
                    <div class="row mt-3">
                     <div class="col-lg-4"> 
-                        <div style="background: #f9f9f9;display: flex;justify-content: center;margin-left: 10px;">
+                        <div class="iconsdiv1">
 
-<a href="{{URL::to('trainingmanualpdf')}}" target="_blank"style="color: #000;font-size: 11px;padding-top: 10px;font-weight: 600;"><span> <i class="abc msgs fa fa-file-pdf" style="    color: #007bff;
-                font-size: 20px;padding-bottom: 10px;"></i></span><br>PDF</a>
+<a href="{{URL::to('trainingmanualpdf')}}" target="_blank"><span> <i class="abc msgs fa fa-file-pdf" ></i></span><br>PDF</a>
 </div>
                         
                 
                 </div>
                     <div class="col-lg-4">
-                        <div style="background: #f9f9f9;display: flex;justify-content: center;margin-left: 10px;margin-right: 10px;">
+                        <div class="iconsdiv2">
 
-<a href="{{URL::to('trainingmanualvideo')}}" target="_blank"style="color: #000;font-size: 11px;padding-top: 10px;font-weight: 600;"><span> <i class="abc msgs fa fa-video" style="    color: #007bff;
-                font-size: 20px;padding-bottom: 10px;"></i></span><br>Video</a>
+<a href="{{URL::to('trainingmanualvideo')}}" target="_blank"><span> <i class="abc msgs fa fa-video" ></i></span><br>Video</a>
 </div>      
                     
                     </div>
                     <div class="col-lg-4">
-                        <div style="background: #f9f9f9;display: flex;justify-content: center;margin-right: 10px;">
+                        <div class="iconsdiv3">
 
-<a href="{{URL::to('trainingmanualaudio')}}" target="_blank"style="color: #000;font-size: 11px;padding-top: 10px;font-weight: 600;"><span> <i class="abc msgs fa fa-volume-up" style="    color: #007bff;
-                font-size: 20px;padding-bottom: 10px;"></i></span><br>Audio</a>
+<a href="{{URL::to('trainingmanualaudio')}}" target="_blank"><span> <i class="abc msgs fa fa-volume-up" ></i></span><br>Audio</a>
 </div> 
 
 
@@ -1378,8 +1366,8 @@ top: 99% !important;
                    </div>
               
                 </div>
-                <div class="" style="background: #fff;box-shadow: 0px 6px 16px rgb(0 0 0 / 20%); border-radius: 10px; margin-top: 15px;padding-bottom: 25px;margin-bottom: 20px;">
-                    <h3 class="font-weight-bold text-black text-center" style="padding-top: 20px;">My Gallery</h3>
+                <div class="gallerydiv">
+                    <h3>My Gallery</h3>
                             
                     <div id="demo" class="carousel slide" data-ride="carousel">
                 
@@ -1403,7 +1391,7 @@ top: 99% !important;
                                         <div class="carousel-item">
                                         @endif
                                         <a href="{{URL::to('gallerylist/')}}/{{$val}}" target="_blank" class="avatar">
-                                            <img src="{{URL::to('public/album/')}}/{{$data->albumimage[$indexalbum]}}" alt="Los Angeles" width="100%" >
+                                            <img src="{{URL::to('public/album/')}}/{{$data->albumimage[$indexalbum]}}" alt="Los Angeles" width="100%" style="height: 380px;" >
                                         </a>
                                         </div>
                                     <?php
@@ -1421,7 +1409,7 @@ top: 99% !important;
                                     <span class="carousel-control-next-icon"></span>
                                 </a>
                             </div>
-                            <a href="{{URL::to('albumlist')}}" style="text-decoration: none;color:#fff;height: 40px; margin-top: 38px; border-radius: 10px; margin-left: 5px; margin-right: 5px;  text-align: center; padding-top: 10px; background: #0f5298;display:flex;justify-content:center">View Gallery</a>
+                            <a href="{{URL::to('albumlist')}}" class="gallerybtn">View Gallery</a>
                         </div>
                         
            

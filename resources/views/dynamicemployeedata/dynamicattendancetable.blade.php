@@ -355,29 +355,41 @@
 									<td class="text-center">
 									@if($val['emp_labelin'] == 1 )
 									<?php $chkin = substr($val['emp_checkin'], -2);
+									if($checkintime >= "10:00:00pm" && $todaytime->emptime_start <= "10:00:00pm"){
+										$attresult = "Half Day";?>
+										<span class="halfdaytext">Half Day</span>
+									<?php }else{
 										if($chkin == "am"){
 									?>
 									<?php $attresult = "unacceptable"?>
 									<span class="untext">Unacceptable</span>
-									<?php }else{ $attresult = "Present"?>
+									<?php }else{ $attresult = "Present";?>
 									<?php $chkin = substr($val['emp_checkin'], -2);
+									if($checkintime >= "10:00:00pm" && $todaytime->emptime_start <= "10:00:00pm"){
+										$attresult = "Half Day";?>
+										<span class="halfdaytext">Half Day</span>
+									<?php }else{
 									if($chkin == "am"){
 									?>
 									<?php $attresult = "unacceptable"?>
 									<span class="untext">Unacceptable</span>
 									<?php }else{?>
 									<span class="sucesstext">On Time</span>
-									<?php }}?>
+									<?php }}}}?>
 									@elseif($val['emp_labelin'] == 0) 
 									@if($val['emp_checkin'] >= $halfdaytime)
 									<?php $chkin = substr($val['emp_checkin'], -2);
+									if($checkintime >= "10:00:00pm" && $todaytime->emptime_start <= "10:00:00pm"){
+										$attresult = "Half Day";?>
+										<span class="halfdaytext">Half Day</span>
+									<?php }else{
 										if($chkin == "am"){
 									?>
 									<?php $attresult = "unacceptable"?>
 									<span class="untext">Unacceptable</span>
 									<?php }else{ $attresult = "Half Day"?>
 									<span class="halfdaytext">Half Day</span>
-									<?php }?>
+									<?php }}?>
 									@else
 									<?php $attresult = "Late"?>
 									<span class="latearrivaltext">Late Arrival</span>

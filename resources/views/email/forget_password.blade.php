@@ -48,7 +48,7 @@
 						<div class="account-wrapper">
 							<!-- start preheader -->
 							<div class="preheader" style="display: none; max-width: 0; max-height: 0; overflow: hidden; font-size: 1px; line-height: 1px; color: #fff; opacity: 0;">
-						Bizz World Communication | Human Resource Management System
+						AU Telecom | Human Resource Management System
 							</div>
 							<!-- end preheader -->
 							<table border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -58,7 +58,7 @@
 							        	<table border="0" cellpadding="0" cellspacing="0" width="100%" style="max-width: 600px;">
 								          	<tr>
 								            	<td align="center" valign="top" style="padding: 20px 24px;">
-								            		<a href="https://www.bizzworldcommunications.com/" target="_blank" style="display: inline-block;">
+								            		<a href="https://autelecom.net/" target="_blank" style="display: inline-block;">
 								                		<img src="{{asset('public/assets/img/logo22.png')}}" alt="BWC" border="0" width="48" style="display: block; width: 278px; max-width: 100%; min-width: 48px;">
 								            		</a>
 								            	</td>
@@ -137,7 +137,7 @@
 							          <tr>
 							            <td align="center" bgcolor="#e9ecef" style="padding: 12px 24px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 20px; color: #666;">
 							              <!-- <p style="margin: 0;">To stop receiving these emails, you can <a href="https://sendgrid.com" target="_blank">unsubscribe</a> at any time.</p> -->
-							              <p style="margin: 0;">&copy; <b>Bizz World Communication</b> 2021. All Right Reserved. </p>
+							              <p style="margin: 0;">&copy; <b>AU Telecom</b> 2021. All Right Reserved. </p>
 							            </td>
 							          </tr>
 							          <!-- end unsubscribe -->
