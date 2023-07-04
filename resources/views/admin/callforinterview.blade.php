@@ -410,7 +410,7 @@ function getedit($value){
         data: frmData,
        })
         .done(function(data){
-    		if(data == "false"){
+			if(data == "false"){
 				$("#modald #errors").show();
 				$("#modald #errors").empty().append('<li class="alert alert-danger" >Oops! Something went wrong</li>');
 				setTimeout(function(){$("#view_inprocess").modal('hide')

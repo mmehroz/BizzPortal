@@ -148,7 +148,7 @@ input[type="file"] {
 	padding-top:5px
 }
 .mainheader{
-	background-image: linear-gradient(to right bottom, #6416ec, #33e0e0) !important;
+	background-image: linear-gradient(133.03deg, #101D3B 3.21%, #97172D 100%);
 	padding-top: 10px;
 	padding-bottom: 10px;
 	position: sticky;
@@ -160,7 +160,8 @@ input[type="file"] {
 	margin-top: 20px;
 }
 .logo img{
-	width:35%
+	width: 65%;
+    margin-top: 5px;
 }
 .logouttext{
 	font-size: 17px;
@@ -183,7 +184,8 @@ input[type="file"] {
     font-weight: bold;
 }
 .logo img{
-	width:30%
+	width: 65%;
+  
 }
 .logouttext{
 	font-size: 15px;
@@ -210,8 +212,8 @@ input[type="file"] {
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-lg-3 col-12">
-						<a href="{{url('/canLogin')}}" class="logo">
-							<img src="{!! asset('public/images/logo.svg') !!}">
+						<a href="{{url('/careers')}}" class="logo">
+							<img src="{!! asset('public/loginimg/mainlogo.png') !!}">
 						</a>
 					</div>
 					<div class="col-lg-6 col-9 pt-1">

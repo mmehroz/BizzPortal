@@ -21,8 +21,8 @@
     }
     
     nav {
-        text-shadow: 0 10px 15px 0 rgb(0 0 0 / 20%), 0 10px 20px 0 rgb(0 0 0 / 19%);
-        background-color: rgba(87, 190, 107, 0.7);
+       
+        background: linear-gradient(133.03deg, #101D3B 3.21%, #97172D 100%);
     }
     
     nav a {
@@ -70,9 +70,9 @@
         width: 250px;
         height: 60px;
         font-size: 1.2rem;
-        background-color: #57be6b;
+        background-color: #97172D;
         color: white;
-        border: 1px solid #57be6b;
+        border: 1px solid #97172D;
         border-radius: 26px;
         padding-bottom: 5px;
         letter-spacing: 1px;
@@ -111,7 +111,7 @@
     .rest .as {
         font-size: 1.5rem;
         font-weight: 600;
-        color: #57be6b;
+        color: #9A192E;
         text-decoration: none;
     }
     
@@ -124,7 +124,7 @@
     
     .rest .fa-pencil-alt,
     .fa-trash-alt {
-        color: #57be6b;
+        color: #9A192E;
     }
     
     .rest h5 {
@@ -133,7 +133,7 @@
     
     .footer {
         color: white;
-        background-color: #57be6b;
+        background: #101D3B;
         font-size: 1.1rem;
         font-weight: 600;
         width: 100%;
@@ -149,7 +149,7 @@
         $(window).scroll(function() {
             var scroll = $(window).scrollTop();
             if (scroll > 300) {
-                $(".navbar").css("background", "#57be6b");
+                $(".navbar").css("background", "linear-gradient(133.03deg, #101D3B 3.21%, #97172D 100%)");
             } else {
                 $(".navbar").css("background", "");
             }
@@ -162,15 +162,13 @@
             <div class="row">
                 <div class="col-12">
                     <nav class="navbar navbar-expand-lg fixed-top">
-                        <a class="navbar-brand"><img src="{{URL::to('public/restaurant/food-logo.png')}}" alt="" width="250px"></a>
+                        <a class="navbar-brand"><img src="{{URL::to('public/assets/img/logo_white_header.svg')}}" alt="" width="250px"></a>
                         <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div id="my-nav" class="collapse navbar-collapse">
                             <ul class="navbar-nav ml-auto  text-right pr-5">
-                                <li class="nav-item">
-                                    <a class="nav-link " href="#" onclick="userorderlist()"><i class="fa fa-shopping-cart" style="color: #ffffff;"></i></a>
-                                </li>
+                            
                                 <li class="nav-item dropdown has-arrow main-drop">
                                     <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
                                         <span class="user-img">
@@ -179,10 +177,13 @@
                                         <span>{{session()->get("name")}}</span>
                                     </a>
                                     <div class="dropdown-menu">
-                                        <a class="dropdown-item" style="color: black;" href="#" onclick="return viewprofile({{session()->get(" id ")}});"><i class="fa fa-user" style="padding-right: 7px; font-size: 12px; color: #57be6b;"></i>My Profile</a>
-                                        <a class="dropdown-item" style="color: black;" href="{{url('/')}}"><i class="fa fa-power-off" style="padding-right: 7px;  font-size: 12px; color: #57be6b;"></i>Logout</a>
-                                        <a class="dropdown-item" style="color: black;" href="{{url('/chapass')}}"><i class="fa fa-key" style="padding-right: 7px; font-size: 12px; color: #57be6b;"></i>Change Password</a>
+                                        <a class="dropdown-item" style="color: black;" href="#" onclick="return viewprofile({{session()->get(" id ")}});"><i class="fa fa-user" style="padding-right: 7px; font-size: 12px; color: #97172D;"></i>My Profile</a>
+                                        <a class="dropdown-item" style="color: black;" href="{{url('/')}}"><i class="fa fa-power-off" style="padding-right: 7px;  font-size: 12px; color: #97172D;"></i>Logout</a>
+                                        <a class="dropdown-item" style="color: black;" href="{{url('/chapass')}}"><i class="fa fa-key" style="padding-right: 7px; font-size: 12px; color: #97172D;"></i>Change Password</a>
                                     </div>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link " href="#" onclick="userorderlist()"><i class="fa fa-shopping-cart" style="color: #ffffff;"></i></a>
                                 </li>
                             </ul>
                         </div>

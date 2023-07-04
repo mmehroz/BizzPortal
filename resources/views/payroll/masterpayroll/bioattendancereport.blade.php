@@ -55,9 +55,9 @@
 											<th>Other Allowance</th>
 											<th>Last / Advance</th>
 											<th>Gross Salary</th>
-											<th>Tax</th>
+											<th>Useless</th>
 											<th>Loan Installment</th>
-											<th>Spiff Delivered</th>
+											<th>Tax</th>
 											<th>Advance Salary</th>
 											<th>Car Rent Deduction</th>
 											<th>Allowance Deduction</th>
@@ -823,7 +823,7 @@ color: black;
                     <tr>
                         <td style="font-weight: 700;">Total Spiff</td>
                         <td>PKR {{$spiff}}</td>
-                        <td style="font-weight: 700;">Tax</td>
+                        <td style="font-weight: 700;">Spiff Delivered</td>
                         <td>{{$tax}}</td>
                     </tr>
                     <tr>
@@ -835,7 +835,7 @@ color: black;
                     <tr>
                         <td style="font-weight: 700;">Last Salary / Advance</td>
                         <td>PKR {{$last}}</td>
-                          <td style="font-weight: 700;">Spiff Delivered
+                          <td style="font-weight: 700;">Tax
                         </td>
                         <td>PKR {{$spiffdeliver}}</td>
                        

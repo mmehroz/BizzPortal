@@ -28,10 +28,13 @@
 						50% 50% 
 						no-repeat;
 		}
+		.modal-header{
+			background: linear-gradient(133.03deg, #101D3B 3.21%, #97172D 100%);
+		}
 		.modal-content{
 			width: 100% !important;
 			/*white-space: nowrap;*/
-			padding: 2px;
+			
 		}
 		.modal-body{
 			padding: 0px !important;
@@ -59,35 +62,24 @@
 			border: 1px solid #d0202e;
 			
 		}
-		.order{
-			color: gray;
-			font-weight: 700;
-		}
-		.modal-title{
-			
-			color: #D0202E;
-			font-weight: 600;
-		}
-		.modal-header{
-			text-align: center;
-			justify-content: center;
-			margin: 0 auto;
-		}
-		table thead {
-			background-color: #d0202e;
-			color: white;
-			/*font-size: 11px;*/
-			
-		}
+	
 		table{
-			border: 1px solid #D0202E;
+			
 			white-space: nowrap;
 			/*font-size: 10px;*/
 		}
 		.close span{
 			position: absolute;
-    		top: 0;
-    		right: 0px;
+    top: 6px;
+    right: 10px;
+    color: #fff;
+		}
+		.titleheading{
+			width: 100%;
+    color: #fff;
+    text-align: center;
+    font-size: 35px;
+    text-transform: uppercase;
 		}
 </style>
 <div id="userorderlist" class="modal custom-modal fade" role="dialog">
@@ -95,7 +87,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 
-				<h3 class="modal-title"><span class="order">Order</span> List</h3>
+				<h3 class="modal-title titleheading">Order List</h3>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -130,12 +122,16 @@
 				</tbody>
 			</table>
 			@if($proceedordercount > 0)
-			<div class="submit-section">
-				<button id="proceedorder" class="btn btn-primary submit-btn">Proceed</button>
-			</div>
+			
 			@endif
 		</form>
 	</div>
+	<div class="modal-footer">
+		<div class="col-lg-12 text-center">
+			<button id="proceedorder" class="btn btn-primary submit-btn" style="width: 50%; font-size: 20px; font-weight: bold; background: #9A192E; border: 1px solid;">Proceed</button>
+		</div>
+	
+      </div>
 </div>
 </div>
 </div>

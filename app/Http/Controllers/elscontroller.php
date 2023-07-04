@@ -311,6 +311,7 @@ class elscontroller extends Controller
 				}	
 			
 	}
+	
 	public function addtoemployee($id){
 		
 		if(session()->get("email")){
@@ -358,7 +359,7 @@ class elscontroller extends Controller
 				}	
 			
 	}
-
+	
 	public function empsave(Request $request){
 
 		$empBatchID = DB::connection('mysql')->table('elsemployees')

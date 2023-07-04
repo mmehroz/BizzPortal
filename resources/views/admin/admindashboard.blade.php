@@ -192,7 +192,7 @@ table.table td h2.table-avatar{
 				<img src="{!! asset('public/dashboard-icons/company.png') !!}" style="width: 10%;">
 				<div class="media-body">
 				  <h5 class="mt-0">Company</h5>
-				 <span>AU Telecom</span> 
+				 <span>Bizz World Communications</span> 
 				</div>
 			  </div>
 		

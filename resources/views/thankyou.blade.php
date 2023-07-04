@@ -6,7 +6,7 @@
 	<div class="w-screen h-screen overflow-y-scroll">
 		<div class="w-full h-full flex">
 			<div
-				class="h-full w-1/2  hidden land:flex flex-col items-start p-10 justify-between" style="background-image: linear-gradient(to right bottom, #6416ec, #33e0e0);">
+				class="h-full w-1/2  hidden land:flex flex-col items-start p-10 justify-between" style="background-image: linear-gradient(133.03deg, #101D3B 3.21%, #97172D 100%);">
 				<a href="/">
 				<img src="{!! asset('public/img/arc-logo.gif') !!}" style="width: 24%;">
 				</a>
@@ -65,7 +65,7 @@ Bizz World Communications</b>
 				
 				<div class=" sm:w-[50%] 2xl:w-[40%] flex mt-10 justify-between items-center">				<a style="text-decoration:none;" href="https://bizzworldcommunications.com/"><button
 							class="w-44 h-12 disabled:cursor-not-allowed submit disabled:shadow-none flex items-center justify-center rounded-md  transition duration-100  text-sx font-primary font-semibold hover:shadow-lg  select-none"
-							style="color: white; transform: none;    background-image: linear-gradient(to right bottom, #6416ec, #33e0e0);" type="submit" ><span>Finish</span></button></a>
+							style="color: white; transform: none;    background-image: linear-gradient(133.03deg, #101D3B 3.21%, #97172D 100%);" type="submit" ><span>Finish</span></button></a>
 					
 					
 					</div>

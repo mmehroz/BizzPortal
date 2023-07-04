@@ -8,6 +8,9 @@ Route::get('/cc', function() {
 Route::get('/keypress',function(){
 	return view('keypress');
 });
+
+Route::any('/candidatelogincopy','hrmcontroller@hrmcandatelogin');
+
 Route::get('/thankyou',function(){
 	return view('thankyou');
 });

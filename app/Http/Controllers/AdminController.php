@@ -13,6 +13,15 @@ use Image;
 class AdminController extends Controller
 {
     public function admindashboard(){
+		// Mail::send('emails.done_employee',[
+		// 	'can_name' => "Mehroz",
+		// 	],
+		// function ($message) {
+		// $message->from('avidhaus.mehroz@gmail.com', 'Alex');
+		// $message->to('avidhaus.mehroz@gmail.com');
+		// $message->cc('recruitment@bizzworldcommunications.com');
+		// $message->subject('Application Received for Job');
+		// });
 		$task = DB::connection('mysql')->table('elsemployees')
 		->join('role','role.roleid', '=','elsemployees.elsemployees_roleid')
 		->where('elsemployees.elsemployees_batchid','=',session()->get("batchid"))
@@ -1193,7 +1202,6 @@ class AdminController extends Controller
 					}catch ( \Exception $e ) {
 						return redirect('/hiredcandidates')->with('message','Successfully Updated Without Email');
 					}
-					
 			// }catch ( \Exception $e ) {
 			// 	return redirect('/callforinterview');
 			// }

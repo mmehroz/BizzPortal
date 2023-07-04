@@ -250,7 +250,7 @@
 				location.reload();
 				}, 2000);
 			}
-     	 })
+      })
       .fail(function(error){
         var errors = error.responseJSON;
        // console.log(errors);

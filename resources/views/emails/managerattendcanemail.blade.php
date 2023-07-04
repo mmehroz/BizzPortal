@@ -406,7 +406,7 @@
                                                                     cellpadding="0">
                                                                     <tr>
                                                                         <td class="text-footer"
-                                                                            style="color:#5d5c5c; font-family:'Raleway', Arial,sans-serif; font-size:13px; line-height:22px; text-align:left;">
+                                                                            style="color:#5d5c5c; font-family:'Raleway', Arial,sans-serif; font-size:10px; line-height:22px; text-align:left;">
                                                                             <multiline>
                                                                                 <strong>info@bizzworldcommunications.com</strong>
                                                                             </multiline>
@@ -423,7 +423,7 @@
                                                                     cellpadding="0">
                                                                     <tr>
                                                                         <td class="text-footer"
-                                                                            style="color:#5d5c5c; font-family:'Raleway', Arial,sans-serif; font-size:13px; line-height:22px; text-align:left;">
+                                                                            style="color:#5d5c5c; font-family:'Raleway', Arial,sans-serif; font-size:10px; line-height:22px; text-align:left;">
                                                                             <multiline>
                                                                                 <strong>www.bizzworldcommunications.com</strong>
                                                                             </multiline>
