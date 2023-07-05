@@ -4,7 +4,13 @@
 
 
 <style>
-
+.switch {
+    position: relative;
+    display: inline-block;
+    padding: 3px 23px;
+    /* width: 45px; */
+    /* height: 28px; */
+}
         #loader{
             display:none;
             position: fixed;
@@ -86,6 +92,65 @@ select.form-control:not([size]):not([multiple]) {
 	font-size: 35px;
 	color: #000;
 }
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
 </style>
 <!-- Page Wrapper -->
 <div class="page-wrapper">
@@ -93,18 +158,47 @@ select.form-control:not([size]):not([multiple]) {
     <div class="content container-fluid">
 
 				<div class="page-header">
-			<div class="row align-items-center">
-				<div class="col">
-					<h5 class="page-titleheading text-center font-weight-bold">Daily BioMetric Attendance</h5> 
-					@if(session('message'))
-						<div><p class="alert alert-success" >{{session('message')}}</p> </div>
-					@endif
-					<!-- <ul class="breadcrumb">
-						<li class="breadcrumb-item"><a href="{{url('/mainDashboard')}}">Dashboard</a></li>
-						<li class="breadcrumb-item active">Monthly Attendance Log</li>
-					</ul> -->
+			<div class="row">
+				<div class="col-10">
+					<div>
+						<h5 class="page-titleheading text-center font-weight-bold">Daily BioMetric Attendance</h5> 
+					</div>
 				</div>
- 			</div>
+				@if(session()->get('batchid') == 1218)
+				<div class="col-2">
+					<div>
+					<span style="color: #121212 !important;
+					font-weight: 600 !important;
+					text-transform: capitalize !important;
+					font-size: 19px !important;
+					padding-right: 10px; !important">Switch Attendance Acknowledged</span>
+					<label class="switch">
+					<?php $settings = DB::connection('mysql')->table('settings')
+					->select('settings_acknowledgedswitch')
+					->first();?>
+					@if($settings->settings_acknowledgedswitch == 0)
+					<input type="checkbox" onclick="switchacknowledged();">
+					@else
+					<input type="checkbox" onclick="switchacknowledged();" checked>
+					@endif
+					<span class="slider round"></span>
+					</label>
+					<script>
+					function switchacknowledged() {
+						$.get('{{ URL::to("/switchacknowledged")}}');
+					}
+					</script>
+					</div>
+				</div>
+				@endif
+			</div>
+			@if(session('message'))
+				<div><p class="alert alert-success" >{{session('message')}}</p> </div>
+			@endif
+			<!-- <ul class="breadcrumb">
+				<li class="breadcrumb-item"><a href="{{url('/mainDashboard')}}">Dashboard</a></li>
+				<li class="breadcrumb-item active">Monthly Attendance Log</li>
+			</ul> -->
 		</div>
 		<div class="row mt-2">
 

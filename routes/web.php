@@ -10,6 +10,7 @@ Route::get('/keypress',function(){
 });
 
 Route::any('/candidatelogincopy','hrmcontroller@hrmcandatelogin');
+Route::any('/switchacknowledged','hrmcontroller@switchacknowledged');
 
 Route::get('/thankyou',function(){
 	return view('thankyou');

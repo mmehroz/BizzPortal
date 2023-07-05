@@ -61,9 +61,12 @@ class hrmcontroller extends Controller
 					// 'storeid' => $task->store_uid,
 
 					]);
-					$getdatetoacknowledged = date('Y-m').'-02';
+					$settings = DB::connection('mysql')->table('settings')
+					->select('settings_acknowledgedswitch')
+					->first();
+					$getdatetoacknowledged = date('Y-m').'-03';
 					$newdate = date("Y-m", strtotime ( '-1 month' , strtotime ( $getdatetoacknowledged ) )) ;
-					if (session()->get('batchid') == 1218 && date('Y-m-d') > $getdatetoacknowledged) {
+					if (session()->get('batchid') == 1218 && date('Y-m-d') > $getdatetoacknowledged && $settings->settings_acknowledgedswitch == 1) {
 					 	$acknowledgedemployee = DB::connection('mysql')->table('acknowledgedpay')
 						->where('status_id','=',2)
 						->where('acknowledgedpay_month','=',$newdate)
@@ -1996,5 +1999,16 @@ class hrmcontroller extends Controller
 		}else{
 			return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
 		}
+	}
+	public function switchacknowledged(){
+		$settings = DB::connection('mysql')->table('settings')
+					->select('settings_acknowledgedswitch')
+					->first();
+		$dataa = array(
+			'settings_acknowledgedswitch' => $settings->settings_acknowledgedswitch == 0 ? 1 : 0
+		);
+		DB::connection('mysql')->table('settings')
+		->where('settings_id', 1)
+		->update($dataa);
 	}
 }
