@@ -127,6 +127,9 @@ th, td {
         <div>
             <label style="color: #000; font-weight: bold; padding-left: 50px;  text-decoration:  underline;">Period Required For Joining:</label><span> <label>{{ $datas->jobapplicant_periodjoining }}</label></span>
         </div>
+        <div style="margin-left: 400px; margin-top: -20px; padding-bottom: 10px">
+            <label style="color: #000; font-weight: bold; text-decoration: underline;">Application Submit Date:</label><span> <label>{{ $datas->created_at }}</label></span>
+        </div>
     </section>
     <!-- Personal detail -->
      <section class="main" style="margin-top: 50px;">
