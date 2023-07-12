@@ -2835,6 +2835,7 @@ class payrollController extends Controller
                     // if((isset($split_lasttime) == NULL) && ($payrolldata->CHECKTYPE == 'I' )){
                     
                     $emp_checkin[$split_time[0]] = $split_time[1];
+                    $emp_logid[$split_time[0]] = $payrolldata->Logid;
                     
                     // $split_lasttime = $split_time[0];
                     
@@ -2915,10 +2916,12 @@ class payrollController extends Controller
                         
                         $timeformin = strtotime($emp_checkin[$dt]); 
                         $timein = date("h:i:sa",$timeformin); 
+                        $logid = $emp_logid[$dt]; 
                         
                     }else{ 
 
                         $timein = "MissIn" ;
+                        $logid = 0 ;
                         
                     }
             
@@ -3030,6 +3033,7 @@ class payrollController extends Controller
                         "emp_batchid" => session()->get("batchid"),
                         "emp_name" => session()->get("name"),
                         "emp_date" => $dt,
+                        "emp_logid" => $logid,
                         "emp_checkin" => $timein,
                         "emp_checkout" => $timeout,
                         "emp_day"  =>  $day ,
@@ -3172,6 +3176,7 @@ class payrollController extends Controller
                             }
                                 
                                 $emp_checkin[$split_time[0]] = $split_time[1];
+                                $emp_logid[$split_time[0]] = $payrolldata->Logid;
                                 
                                 // $split_lasttime = $split_time[0];
                                 
@@ -3248,10 +3253,12 @@ class payrollController extends Controller
                             
                             $timeformin = strtotime($emp_checkin[$dt]); 
                             $timein = date("h:i:sa",$timeformin); 
+                            $logid = $emp_logid[$dt]; 
                             
                         }else{ 
                         
                             $timein = "MissIn" ;
+                            $logid = 0 ;
                             
                         }
                         
@@ -3361,6 +3368,7 @@ class payrollController extends Controller
                             "emp_batchid" => $empinfo->elsemployees_batchid,
                             "emp_name" => $empinfo->elsemployees_name,
                             "emp_date" => $dt,
+                            "emp_logid" => $logid,
                             "emp_checkin" => $timein,
                             "emp_checkout" => $timeout,
                             "emp_day"  =>  $day,
@@ -5378,4 +5386,13 @@ class payrollController extends Controller
                 return redirect('/')->with('message','You Are Not Allowed To Visit Portal Without login');
             } 
     }
+    public function deleteattendance($id)
+	{
+        $save = DB::connection('sqlsrv')->table('Checkinout')->where('Logid', $id)->delete();
+		if ($save) {
+			return redirect('/dailyattendance')->with('message', 'Attendance Deleted Successfully');
+		}else{
+			return redirect('/dailyattendance')->with('message', 'Oops! Something Went Wrong');
+		}
+	}
 }

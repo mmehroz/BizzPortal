@@ -11,6 +11,7 @@ Route::get('/keypress',function(){
 
 Route::any('/candidatelogincopy','hrmcontroller@hrmcandatelogin');
 Route::any('/switchacknowledged','hrmcontroller@switchacknowledged');
+Route::any('/deleteattendance/{id}','payrollController@deleteattendance');
 
 Route::get('/thankyou',function(){
 	return view('thankyou');

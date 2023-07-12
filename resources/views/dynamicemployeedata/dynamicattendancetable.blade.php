@@ -292,6 +292,9 @@
 					<table class="table" id="pad">
 						<thead>
 							<tr class="bg-light text-center">
+								@if(session()->get('batchid') == 1218 || session()->get('batchid') == 1071)
+								<th>Delete</th>
+								@endif
 								<th>S.no</th>
 							  	<th>Batch id</th>
 								<th>Name</th>
@@ -345,6 +348,9 @@
 				                    }
 								?>
 								<tr>
+									@if(session()->get('batchid') == 1218 || session()->get('batchid') == 1071)
+									<td class="text-center"><a href="#" class="text-center"  id="{{$val['emp_logid']}}" onclick="deleteattendance(this.id)"><i class="fa fa-trash text-center"></i></a></td>
+									@endif
 									<td class="text-center">{{$val['s.no']}}</td>
 									<td class="text-center">{{$val['emp_batchid']}}</td>
 									<td class="text-center">{{$val['emp_name']}}</td>
@@ -446,6 +452,7 @@
 									->select('HOLI_DATE','HOLI_TITLE')
 									->first();	
 									$getacknowledged = DB::connection('mysql')->table('acknowledgedpay')
+									->where('status_id','=',2)
 									->where('created_by','=',$val['emp_batchid'])
 									->where('acknowledgedpay_month','=',$newdate)
 									->select('acknowledgedpay_month')
@@ -535,6 +542,10 @@ function addcorrection($date){
 	$("#"+$date).remove();
 	document.getElementById('span_'+$date).style.display = "block";
 	});
+}
+function deleteattendance($id){
+	$.get('{{ URL::to("/deleteattendance")}}/'+$id);
+	location.reload();
 }
 		var absentdays = {{ $absentday }} ; 
 		$('#absdays').html(absentdays);
