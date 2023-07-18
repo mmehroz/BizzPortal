@@ -367,6 +367,24 @@ class elscontroller extends Controller
 		->select('elsemployees.*')
 		->first();
 
+		$batchidcount = DB::connection('mysql')->table('elsemployees')
+		->where('elsemployees.elsemployees_batchid','=',$request->emp_batch)
+		->select('elsemployees_empid')
+		->count();
+
+		if($batchidcount >= 1){
+			return redirect('/addemployeenos')->with("message","Your Requested Batch ID ($request->emp_batch) Have Already Taken");
+		}
+
+		$emailcount = DB::connection('mysql')->table('elsemployees')
+		->where('elsemployees.elsemployees_email','=',$request->emp_com_email)
+		->select('')
+		->count();
+
+		if($emailcount >= 1){
+			return redirect('/addemployeenos')->with("message","Your Requested Email ID ($request->emp_com_email) Have Already Taken");
+		}
+
 		// dd($empBatchID->elsemployees_batchid);
 
 		$empEmail = DB::connection('mysql')->table('elsemployees')
