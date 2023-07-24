@@ -335,8 +335,11 @@
 													// dd($getyearlydeductamount);
 													$yearlydeductamount = $getyearlydeductamount/100*$gettax->tax_percent;
 													$sumyeartax = $yearlydeductamount+$basictax;
-													// $tax = $sumyeartax/12;
-													$tax = "0";
+													if($data['sendyear'].'-'.$data['sendmonth'] >= "2023-06"){
+														$tax = $sumyeartax/12;
+													}else{
+														$tax = "0";
+													}
 												}else{
 													$tax = "0";
 												}

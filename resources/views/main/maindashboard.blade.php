@@ -586,14 +586,14 @@ width: 99%;
 .dark-mode .desc li{
     color: #fff;
 }
-
+hr{
+    width: 100%;
+    margin-top: 0.5rem !important;margin-bottom: 0.5rem !important;
+}
 @media screen and (min-width: 1600px){
 
 
-hr{
-    width: 81%;
-    margin-left: 50px;margin-top: 10px !important;margin-bottom: 0 !important;
-}
+
 table {
         border-collapse: separate;
         border-spacing: 0 1px;
@@ -790,7 +790,8 @@ top: 99% !important;
                         </div>
                         
                             <div class="mess">
-<div class="col-lg-12"> 
+                             
+ <div class="col-lg-12"> 
     <button class="w-100 mt-3 messbtn1" type="button" name="rd" id="rd" value="1" checked>Mission</button>
     </div>
 
@@ -819,7 +820,7 @@ top: 99% !important;
                                             <li>Deliver 100% client satisfaction.</li></span></p>
                                    
                                         
-                                    </div>
+                                    </div> 
                                 
                             </div>
                        

@@ -55,9 +55,9 @@
 											<th>Other Allowance</th>
 											<th>Last / Advance</th>
 											<th>Gross Salary</th>
-											<th>Useless</th>
-											<th>Loan Installment</th>
 											<th>Tax</th>
+											<th>Loan Installment</th>
+											<th>Spiff Deliverd</th>
 											<th>Advance Salary</th>
 											<th>Car Rent Deduction</th>
 											<th>Allowance Deduction</th>
@@ -356,8 +356,11 @@
 													// dd($getyearlydeductamount);
 													$yearlydeductamount = $getyearlydeductamount/100*$gettax->tax_percent;
 													$sumyeartax = $yearlydeductamount+$basictax;
-													// $tax = $sumyeartax/12;
-													$tax = "0";
+													if($data['sendyear'].'-'.$data['sendmonth'] >= "2023-06"){
+														$tax = $sumyeartax/12;
+													}else{
+														$tax = "0";
+													}
 												}else{
 													$tax = "0";
 												}
@@ -823,7 +826,7 @@ color: black;
                     <tr>
                         <td style="font-weight: 700;">Total Spiff</td>
                         <td>PKR {{$spiff}}</td>
-                        <td style="font-weight: 700;">Spiff Delivered</td>
+                        <td style="font-weight: 700;">Tax</td>
                         <td>{{$tax}}</td>
                     </tr>
                     <tr>
@@ -835,7 +838,7 @@ color: black;
                     <tr>
                         <td style="font-weight: 700;">Last Salary / Advance</td>
                         <td>PKR {{$last}}</td>
-                          <td style="font-weight: 700;">Tax
+                          <td style="font-weight: 700;">Spiff Delivered
                         </td>
                         <td>PKR {{$spiffdeliver}}</td>
                        

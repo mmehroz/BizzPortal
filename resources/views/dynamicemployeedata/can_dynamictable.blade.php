@@ -1,11 +1,30 @@
 
-<center>
-    <div class="row">
-        <div class="col-md-4">
-            {{ $data->links() }}
-        </div>
-    </div>
-    </center>
+<style>
+    .profile-widget{
+        height: 95%;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important;
+    border-radius: 5px !important;
+    border: none;
+    }
+   .user-name {
+        text-transform: capitalize; color: #000;font-size: 25px;height: 30px;
+    }
+    .profile-widget .contentdiv {
+        margin-top: 20px;
+    }
+    .btnsdivs{
+    display: flex!important; margin-top: 4%;
+}
+.small h6{
+    text-align: left;
+    font-weight: bold;
+    font-size: 18px;
+}
+.small p{
+    text-align: left;
+    font-size: 16px;
+}
+    </style>
 
             <div class="container-fluid">
                 <div class="row" style="display: flex !important;">
@@ -13,7 +32,7 @@
                     <div class="col-md-4">
                       
                        
-                        <div class="profile-widget" style="height: 425px;box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px !important; border-radius: 5px !important; border: none;">
+                        <div class="profile-widget">
                             <div class="profile-img">
                                 <a href="{{ URL::to('/modalemployeeview/')}}/{{$val->jobapplicant_id}}" title="Click To View Application Form" target="_blank" class="avatar">
                                     <img src="{{URL::to('public/img/')}}/{{$val->jobapplicant_picture}}">
@@ -38,53 +57,59 @@
                                 </div>
                             </div> -->
                             
-                            <h3 class="user-name m-t-10 mb-0 text-ellipsis" style="text-transform: capitalize; color: #000;font-size: 25px;">{{$val->jobapplicant_name}}</h3>
-                            <div style="height: 175px; margin-top: 20px;">
+                            <h3 class="user-name m-t-10 mb-0 text-ellipsis">{{$val->jobapplicant_name}}</h3>
+                            <div class="contentdiv">
 
 
-                            <div class="row" style="display: flex!important;margin-top: 5px;">
-                                <div class="col-md-7">
-                                    <div class="small " style="font-style: normal!important;font-size: 14px; text-align: left!important;color:#000">
-                                        <b>Position Applied For:</b> {{$val->jobapplicant_postionapppliedform}}
+                            <div class="row" style="display: flex !important;">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="small " >
+                                        <h6>Position Applied For:</h6> 
+                                        <p>{{$val->jobapplicant_postionapppliedform}}</p>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
-                                    <div class="small " style="font-style: normal!important;font-size: 14px; text-align: left!important;color:#000">
-                                         <b>Gender:</b> {{$val->jobapplicant_gender}}
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="small " >
+                                    <h6>Gender:</h6> 
+                                    <p> {{$val->jobapplicant_gender}}</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="row" style="display: flex!important;margin-top: 5px;">
+                            <div class="row" style="display: flex !important;">
                                 
-                                <div class="col-md-7">
-                                    <div class="small " style="font-style: normal!important;font-size: 14px; text-align: left!important;color:#000">
-                                        <b>Current Salary:</b> {{$val->jobapplicant_currentsalary}}
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="small " >
+                                        <h6>Current Salary:</h6>
+                                        <p> {{$val->jobapplicant_currentsalary}}</p>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
-                                    <div class="small " style="font-style: normal!important;font-size: 14px; text-align: left!important;color:#000">
-                                        <b>Expected Salary:</b> {{$val->jobapplicant_monthlyexpectedsalary}}
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="small">
+                                        <h6>Expected Salary:</h6> 
+                                        <p>{{$val->jobapplicant_monthlyexpectedsalary}}</p>
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="row" style="display: flex!important;margin-top: 5px;">
-                                <div class="col-md-7">
-                                    <div class="small " style="font-style: normal!important;font-size: 14px; text-align: left!important;color:#000">
-                                        <b>Comfortable in Night?:</b> {{$val->jobapplicant_nightshift}}
+                            <div class="row" style="display: flex !important;">
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="small " >
+                                        <h6>Comfortable in Night?:</h6>
+                                        <p> {{$val->jobapplicant_nightshift}}</p>
                                     </div>
                                 </div>
-                                <div class="col-md-5">
-                                    <div class="small " style="font-style: normal!important;font-size: 14px; text-align: left!important;color:#000">
-                                        <b>Contact#:</b> {{$val->jobapplicant_contact}}
+                                <div class="col-lg-6 col-md-12">
+                                    <div class="small " >
+                                        <h6>Contact#:</h6> 
+                                        <p>{{$val->jobapplicant_contact}}</p>
                                     </div>
                                 </div>
                             </div>
 
                             <!-- <div class="row" style="display: flex!important;margin-top: 5px;">
                                 <div class="col-md-8 col-sm-8 col-8 col-lg-8 col-xl-8">
-                                    <div class="small " style="font-style: normal!important;font-size: 14px; text-align: left!important;color:#000">
+                                    <div class="small " >
                                         <b>Career Level:</b> @if($val->jobapplicant_careerlevel == "stusclcol" ) Student (School/College)
                                                                 @elseif( $val->jobapplicant_careerlevel == "undgra" ) Student (Undergrad./Grad.)
                                                                 @elseif( $val->jobapplicant_careerlevel == "entlev" ) Entry Level
@@ -98,23 +123,25 @@
                          
                             </div> -->
 
-                            <div class="row" style="display: flex!important;margin-top: 5px;">
-                                <div class="col-md-12 col-sm-12 col-12 col-lg-12 col-xl-12">
-                                    <div class="small " style="font-style: normal!important;font-size: 14px; text-align: left!important;color:#000">
-                                        <b>Education:</b> {{$val->jobapplicant_edu_cerdeg}}
+                            <div class="row">
+                                <div class="col-sm-12 col-12 col-lg-12 col-xl-12">
+                                    <div class="small " >
+                                        <h6>Education:</h6> 
+                                        <p>{{$val->jobapplicant_edu_cerdeg}}</p>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row" style="display: flex!important;margin-top: 5px;">
-                                <div class="col-md-12 col-sm-12 col-12 col-lg-12 col-xl-12">
-                                    <div class="small " style="font-style: normal!important;font-size: 14px; text-align: left!important;color:#000">
-                                        <b>HR Comment:</b> {{$val->jobapplicant_hrcomment}}
+                            <div class="row">
+                                <div class="col-sm-12 col-12 col-lg-12 col-xl-12">
+                                    <div class="small " >
+                                        <h6>HR Comment:</h6> 
+                                        <p>{{$val->jobapplicant_hrcomment}}</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                            <div class="row" style="display: flex!important; margin-top: 4%;">
-                                <div class="col-md-5 col-sm-5 col-5 col-lg-5 col-xl-5">
+                            <div class="row btnsdivs">
+                                <div class="col-lg-7 col-12">
                                     <select class="form-control" id="mySelect" onchange="getedit(this.value)" style="height: 95%;">
                                         <!-- <option value="">New</option>-->
                                         <option value="candidatelist~{{$val->jobapplicant_id}}">Candidate List</option>
@@ -124,11 +151,11 @@
                                         <option value="attend~{{$val->jobapplicant_id}}">Attend Interview</option>
                                     </select>
                                 </div>
-                                <div class="col-md-4 col-sm-4 col-4 col-lg-4 col-xl-4">
-                                    <a href="{{ URL::to('public/file/')}}/{{$val->jobapplicant_cv}}" title="Click To Download Resume" target="_blank" class="btn btn-sm btn-primary"><i class="fa fa-download"></i> View Resume/CV</a>
+                                <div class="col-lg-6 col-12 text-left mt-2">
+                                    <a href="{{ URL::to('public/file/')}}/{{$val->jobapplicant_cv}}" title="Click To Download Resume" target="_blank" class="btn btn-sm btn-primary w-100"><i class="fa fa-download"></i> View Resume/CV</a>
                                 </div>
-                                <div class="col-md-3 col-sm-3 col-3 col-lg-3 col-xl-3">
-                                <a href="#" title="Click To View PDF" class="btn btn-sm btn-primary" onclick="getimageview({{'"'.$val->jobapplicant_id.'"'}})" ><i class="fa fa-eye"></i> PDF</a>
+                                <div class="col-lg-6 col-12 text-left mt-2 ">
+                                <a href="#" title="Click To View PDF" class="btn btn-sm btn-primary w-100" onclick="getimageview({{'"'.$val->jobapplicant_id.'"'}})" ><i class="fa fa-eye"></i> PDF</a>
                                 </div>
                             </div>
 
@@ -138,6 +165,13 @@
                     @endforeach
                 </div>
             </div>
+            <center>
+<div class="row">
+        <div class="col-md-4">
+            {{ $data->links() }}
+        </div>
+    </div>
+    </center>
     <!-- Candidates Tab -->
     <div class="tab-pane show active">
         <!-- Candidates List Table -->

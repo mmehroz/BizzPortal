@@ -443,7 +443,7 @@ background-image: linear-gradient(to bottom, #101D3B 0%, #101D3B 100%);
 									<li><a href="{{url('#')}}">Daily Attendance</a></li>
 								</ul>
 							</li> -->
-							@if( session()->get("role") !=	 4 )
+							@if( session()->get("role") == 1 || session()->get("role") == 3 )
 							<li class="menu-title" style="color: ##101D3B; font-weight: bold"> 
 								<span>HR</span>
 							</li>
@@ -525,14 +525,14 @@ background-image: linear-gradient(to bottom, #101D3B 0%, #101D3B 100%);
 								</ul>	
 							</li>
 
-							<li class="submenu">
+							<!-- <li class="submenu">
 								<a href="#"><i class="fa fa-sign-out"></i> <span> Resignation</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">	
 									<li class="submenu">
 										<li><a href="{{url('/resignationlist')}}">Resignation List</a></li>
 									</li>
 								</ul>	
-							</li>
+							</li> -->
 
 							<!--<li class="submenu">
 								<a href="#"><i class="la la-external-link-square"></i> <span> Resignation</span> <span class="menu-arrow"></span></a>
@@ -561,7 +561,7 @@ background-image: linear-gradient(to bottom, #101D3B 0%, #101D3B 100%);
 							@endif
 
 							
-							<li class="submenu">
+							<!-- <li class="submenu">
 								<a href="#"><i class="fa-solid fa-receipt"></i> <span>Probationary Form</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">
 									<li><a href="{{url('/probationaryformlist')}}">Probationary Form List</a></li>
@@ -569,7 +569,7 @@ background-image: linear-gradient(to bottom, #101D3B 0%, #101D3B 100%);
 									<li><a href="{{url('/probationaryreport')}}">Probationary Report</a></li>
 									@endif
 								</ul>
-							</li>
+							</li> -->
 							<!--<li class="submenu">
 								<a href="#"><i class="la la-object-group"></i> <span> Forms</span> <span class="menu-arrow"></span></a>
 								<ul style="display: none;">

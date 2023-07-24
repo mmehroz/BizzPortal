@@ -4,13 +4,7 @@
 
 
 <style>
-.switch {
-    position: relative;
-    display: inline-block;
-    padding: 3px 23px;
-    /* width: 45px; */
-    /* height: 28px; */
-}
+
         #loader{
             display:none;
             position: fixed;
@@ -157,14 +151,14 @@ input:checked + .slider:before {
 	<!-- Page Content -->
     <div class="content container-fluid">
 
-				<div class="page-header">
+		<div class="page-header">
 			<div class="row">
 				<div class="col-10">
 					<div>
 						<h5 class="page-titleheading text-center font-weight-bold">Daily BioMetric Attendance</h5> 
 					</div>
 				</div>
-				@if(session()->get('batchid') == 1218)
+				@if(session()->get('batchid') == 1218 || session()->get('batchid') == 1071)
 				<div class="col-2">
 					<div>
 					<span style="color: #121212 !important;
@@ -192,13 +186,6 @@ input:checked + .slider:before {
 				</div>
 				@endif
 			</div>
-			@if(session('message'))
-				<div><p class="alert alert-success" >{{session('message')}}</p> </div>
-			@endif
-			<!-- <ul class="breadcrumb">
-				<li class="breadcrumb-item"><a href="{{url('/mainDashboard')}}">Dashboard</a></li>
-				<li class="breadcrumb-item active">Monthly Attendance Log</li>
-			</ul> -->
 		</div>
 		<div class="row mt-2">
 
