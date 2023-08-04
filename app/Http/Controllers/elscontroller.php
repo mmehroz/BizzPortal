@@ -375,6 +375,10 @@ class elscontroller extends Controller
 		if($batchidcount >= 1){
 			return redirect('/addemployeenos')->with("message","Your Requested Batch ID ($request->emp_batch) Have Already Taken");
 		}
+		$validate = $this->validate($request, [
+			'emp_batch' => 'required|unique:mysql.elsemployees,elsemployees_batchid',
+			'emp_com_email' => 'required|unique:mysql.elsemployees,elsemployees_email',
+		]);
 
 		$emailcount = DB::connection('mysql')->table('elsemployees')
 		->where('elsemployees.elsemployees_email','=',$request->emp_com_email)
@@ -1210,7 +1214,28 @@ class elscontroller extends Controller
 				// }else{
 				// 	$leave_year = $jdate[0];
 				// }
-		
+				$checkduplicate = DB::connection('mysql')->table('elsemployees')
+				->where('elsemployees.elsemployees_empid','=',$request->hdnempid)
+				->select('elsemployees_batchid')
+				->first();
+				if($checkduplicate->elsemployees_batchid != $request->emp_batch){
+					$batchidcount = DB::connection('mysql')->table('elsemployees')
+					->where('elsemployees.elsemployees_batchid','=',$request->emp_batch)
+					->select('elsemployees_empid')
+					->count();
+					if($batchidcount >= 1){
+						return redirect('/editemployee'.'/'.$request->hdnempid)->with("message","Your Requested Batch ID ($request->emp_batch) Have Already Taken");
+					}
+
+					$emailcount = DB::connection('mysql')->table('elsemployees')
+					->where('elsemployees.elsemployees_email','=',$request->emp_com_email)
+					->select('elsemployees_empid')
+					->count();
+			
+					if($emailcount >= 1){
+						return redirect('/editemployee'.'/'.$request->hdnempid)->with("message","Your Requested Email ($request->emp_batch) Have Already Taken");
+					}
+				}
 				$post = elsemployee::on('mysql')->findOrFail($request->hdnempid);
 				$post->elsemployees_type = $request->emp_type ; 
 				$post->elsemployees_ext = $request->ext ; 
@@ -1809,7 +1834,7 @@ class elscontroller extends Controller
 				->Where('elsleaverequests.elsleaverequests_status','=',"Approved")
 				->where('elsemployees.elsemployees_status','=',2)
 				->select('elsleaverequests.*','elsemployees.*')
-				// ->orderBy('elsleaverequests.elsleaverequests_status','ASC')
+				->orderBy('elsleaverequests.elsleaverequests_id','DESC')
 				->get();
 					
 				}elseif(session()->get("email") == "salman.khairi@bizzworld.com"){
@@ -1821,6 +1846,7 @@ class elscontroller extends Controller
 				->where('elsleaverequests.elsleaverequests_status','=',"Pending")
 				// ->orWhere('elsleaverequests.elsleaverequests_status','=',"COO Approval Required")
 				->select('elsleaverequests.*','elsemployees.*')
+				->orderBy('elsleaverequests.elsleaverequests_id','DESC')
 				->get();
 					
 				}else{
@@ -1831,6 +1857,7 @@ class elscontroller extends Controller
 				->where('elsemployees.elsemployees_status','=',2)
 				->Where('elsleaverequests.elsleaverequests_status','=',"Pending")
 				->select('elsleaverequests.*','elsemployees.*')
+				->orderBy('elsleaverequests.elsleaverequests_id','DESC')
 				->get();
 				
 				}

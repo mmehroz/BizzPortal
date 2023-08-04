@@ -1198,31 +1198,31 @@ top: 99% !important;
                             </div>
                     </div>
                     <hr class="statussectionhr">
-                    <div class="row" style="padding-top: 7px;">
-                        <div class="col-lg-4"> 
-                            <p class="officeoptionsheading">Compose :</p>
-                            </div>
-                            <div class="col-lg-8">
-                                <div class="statussectioninnerdiv" onclick="itticket()">
-                                    <a class="abc officeoptionheadingpara" href="{{url('/composeemail')}}"><span class="statussectionpara"><i class="abc msgs fas fa-mail-bulk "></i></span>Compose Email</a></div>
-                            </div>
-                    </div>
-                    <hr class="statussectionhr">
+                     <!-- <div class="row" style="padding-top: 7px;">
+                         <div class="col-lg-4"> 
+                             <p class="officeoptionsheading">Compose :</p>
+                             </div>
+                             <div class="col-lg-8">
+                                 <div class="statussectioninnerdiv" onclick="itticket()">
+                                     <a class="abc officeoptionheadingpara" href="{{url('/composeemail')}}"><span class="statussectionpara"><i class="abc msgs fas fa-mail-bulk "></i></span>Compose Email</a></div>
+                             </div> 
+                    </div> -->
+                  
 </div>
 <div>
-                        <div class="col-lg-12 mt-3" style="padding-left:0px;padding-right:0px"><a class="mainbtns" id="upload_link" target="_blank" href="http://192.168.0.6:5100/"><span><i class="mainbtnsspan fa fa-envelope-open-text"></i></span>Email</a></div>
-                        <div class="col-lg-12 mt-3" style="padding-left:0px;padding-right:0px"><a class="mainbtns" id="upload_link" target="_blank" href="http://192.168.0.6:3000/"><span><i class="mainbtnsspan  fas fa-comment"></i></span>Chat</a></div>
-                        <div class="col-lg-12 mt-3" style="padding-left:0px;padding-right:0px"><a class="mainbtns" id="upload_link" target="_blank" href="http://192.168.0.7:4001"><span><i  class="mainbtnsspan fa fa fa-users"></i></span>CRM</a></div>
+                        <div class="col-lg-12 mt-3" style="padding-left:0px;padding-right:0px"><a class="mainbtns"  target="_blank" href="https://hostinger.titan.email/mail/"><span><i class="mainbtnsspan fa fa-envelope-open-text"></i></span>Email</a></div>
+                        <div class="col-lg-12 mt-3" style="padding-left:0px;padding-right:0px"><a class="mainbtns"  target="_blank" href="http://192.168.0.7:3000/"><span><i class="mainbtnsspan  fas fa-comment"></i></span>Chat</a></div>
+                        <div class="col-lg-12 mt-3" style="padding-left:0px;padding-right:0px"><a class="mainbtns"  target="_blank" href="http://192.168.0.7:4001"><span><i  class="mainbtnsspan fa fa fa-users"></i></span>CRM</a></div> 
                     </div>
                     <div class="activitiesection">
                     <h3 class="font-weight-bold text-center pt-4 pb-4">My Acitivities</h3>
                    <div class="row">
-                    <div class="col-lg-4"> 
+                    <!-- <div class="col-lg-4"> 
                         <div class="activitiesectiondivleft">
 
 <a href="{{URL::to('myforms')}}" target="_blank" class="activitiesectionanchor"><span> <i class="abc msgs fa fa-file-signature" ></i></span><br>My Forms</a>
 </div>
-                </div>
+                </div> -->
                     <div class="col-lg-4">
                         <div class="activitiesectiondivcenter">
 
@@ -1237,16 +1237,17 @@ top: 99% !important;
 <i class="abc msgs fa fa-drumstick-bite" ></i></span><br>Food Portal</a>
 </div>
                     </div>
-                   </div>
-                   <div class="row mt-2">
                     <div class="col-lg-4">
                         
-                        <div class="activitiesectiondivleft">
+                        <div class="activitiesectiondivleft" style="margin-right: 10px;">
 
 <a href="{{URL::to('games')}}" target="_blank" class="activitiesectionanchor"><span> 
 <i class="abc msgs fa fa-gamepad" ></i></span><br>Game</a>
 </div>
                     </div>
+                   </div>
+                   <div class="row mt-2">
+                
                     <div class="col-lg-4">
                         <div class="activitiesectiondivcenter">
 
@@ -1262,16 +1263,15 @@ top: 99% !important;
 <i class="abc msgs fa fa-globe" ></i></span><br>Websites</a>
 </div>
 </div>
-                   </div>
-                   <div class="row mt-2">
-                    <div class="col-lg-4">
-                        <div class="activitiesectiondivleft">
+<div class="col-lg-4">
+                        <div class="activitiesectiondivleft" style="margin-right: 10px;">
 
 <a href="{{URL::to('employee_list')}}" target="_blank" class="activitiesectionanchor"><span>
 <i class="abc msgs fa fa-address-book" ></i></span><br>Bizz Directory</a>
 </div>
                         </div>
-                    </div>
+                   </div>
+                  
                 </div>
             <div class="attendancediv">
                         <h3>My Attendance</h3>

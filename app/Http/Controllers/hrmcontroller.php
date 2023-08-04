@@ -66,7 +66,7 @@ class hrmcontroller extends Controller
 					->first();
 					$getdatetoacknowledged = date('Y-m').'-03';
 					$newdate = date("Y-m", strtotime ( '-1 month' , strtotime ( $getdatetoacknowledged ) )) ;
-					if (session()->get('batchid') == 1218 && date('Y-m-d') > $getdatetoacknowledged && $settings->settings_acknowledgedswitch == 1) {
+					if (session()->get('batchid') == 1071 && date('Y-m-d') > $getdatetoacknowledged && $settings->settings_acknowledgedswitch == 1) {
 					 	$acknowledgedemployee = DB::connection('mysql')->table('acknowledgedpay')
 						->where('status_id','=',2)
 						->where('acknowledgedpay_month','=',$newdate)
@@ -543,7 +543,9 @@ class hrmcontroller extends Controller
 					// 'can_empreport_reasoleave.*' =>'required',
 				]);
 				
-				
+				$this->validate($request, [
+					'can_email' 	=> 'unique:mysql.jobapplicant,can_email',
+				]);
 				$edu_sno = "";
 				
 				$edu_edu_cerdeg = implode("~",$request->can_edu_cerdeg);

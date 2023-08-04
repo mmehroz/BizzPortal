@@ -340,8 +340,10 @@ background-image: linear-gradient(to bottom, #101D3B 0%, #101D3B 100%);
 								<ul style="display: none;">
 									<li><a href="{{url('/selfrequest')}}">Self Request</a></li>
 									@if(session()->get('role') <= 3)
-										<li><a href="{{url('/emprequest')}}">Employee Request</a></li>
 										<li><a href="{{url('/viewemprequest')}}">Pending Employee Request</a></li>
+									@endif
+									@if(session()->get('role') == 1)
+										<li><a href="{{url('/emprequest')}}">Employee Request</a></li>
 									@endif
 									<?php
 										$task = DB::connection('mysql')->table('elsemployees')
