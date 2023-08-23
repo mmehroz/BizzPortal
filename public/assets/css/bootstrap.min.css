@@ -2719,14 +2719,14 @@ fieldset:disabled a.btn {
 
 .btn-success {
     color: #fff;
-    background-color: #0f5298;
-    border-color: #0f5298
+    background-color: #101D3B;
+    border-color: #101D3B
 }
 
 .btn-success:hover {
     color: white !important;
-    background-color: #0f5298;
-    border-color: #0f5298;
+    background-color: #101D3B;
+    border-color: #101D3B;
 }
 
 .btn-success.focus,
@@ -3488,7 +3488,7 @@ tbody.collapse.show {
 .dropdown-item:hover {
     color: white;
     text-decoration: none;
-    background-color: #0F5298
+    background-color: #101D3B
 }
 
 .dropdown-item.active,
@@ -4942,7 +4942,7 @@ tbody.collapse.show {
 }
 
 .breadcrumb-item.active {
-    color: #0F5298;
+    color: #101D3B;
 }
 
 .pagination {

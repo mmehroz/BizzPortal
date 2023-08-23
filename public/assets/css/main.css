@@ -166,7 +166,6 @@
   color: white !important;
   border: #232428 !important;
   outline: #232428 !important;
-  margin-left: -31px;
 }
 
 .dark-mode .scroll .emojiPickerIconWrap input::-webkit-input-placeholder {
@@ -588,7 +587,7 @@
 }
 
 .dark-mode .scroll2 .emojiPickerIconWrap input {
-  width: 91% !important;
+  width: 100% !important;
 }
 
 .dark-mode .scroll2 .emojiPickerIconWrap input::-webkit-input-placeholder {
@@ -609,8 +608,6 @@
 
 .dark-mode .scroll2 .emojiPickerIcon {
   position: relative;
-  right: -176px !important;
-  top: -38px !important;
 }
 
 .dark-mode .scroll2 .BA {
@@ -715,10 +712,8 @@
     height: 540px !important;
   }
   .dark-mode .scroll2 .emojiPickerIconWrap input {
-    width: 106% !important;
+    width: 100% !important;
     position: relative !important;
-    left: 70px !important;
-    top: 0px !important;
   }
   .dark-mode .scroll2 .BA button {
     left: 73px !important;
@@ -753,7 +748,7 @@
     height: 582px !important;
   }
   .scroll .emojiPickerIconWrap input {
-    width: 110% !important;
+    width: 100% !important;
   }
   .dark-mode .scroll2 .BA .rounded-circle {
     width: 35px;
@@ -762,10 +757,8 @@
     left: 28px;
   }
   .dark-mode .scroll2 .emojiPickerIconWrap input {
-    width: 91% !important;
+    width: 100% !important;
     position: relative !important;
-    left: 65px !important;
-    top: 0px !important;
   }
   .dark-mode .scroll2 .BA button {
     left: 23px !important;
@@ -781,7 +774,6 @@
     margin-top: 4px;
   }
   .dark-mode .BA .emojiPickerIcon {
-    right: -146px !important;
   }
 }
 
@@ -791,9 +783,8 @@
     right: -188px !important;
   }
   .dark-mode .scroll2 .emojiPickerIconWrap input {
-    width: 114% !important;
+    width: 100% !important;
     position: relative;
-    left: 23px;
   }
   .dark-mode .scroll2 .BA button {
     left: 64px !important;
@@ -818,9 +809,8 @@
     left: 57px;
   }
   .dark-mode .scroll2 .emojiPickerIconWrap input {
-    width: 122% !important;
+    width: 100% !important;
     position: relative;
-    left: 23px;
   }
 }
 
@@ -838,9 +828,9 @@
     left: 89px !important;
   }
   .dark-mode .scroll2 .emojiPickerIconWrap input {
-    width: 130% !important;
+    width: 100% !important;
     position: relative;
-    left: 23px;
+  
   }
   .dark-mode .scroll2 .emojiPickerIcon {
     position: relative;
@@ -866,21 +856,21 @@
   }
   .dark-mode .scroll .emojiPickerIconWrap input {
     width: 108% !important;
+    height: 45px;
   }
   .dark-mode .scroll .cp .emojiPickerIcon {
     position: absolute;
-    top: 0px;
-    right: -81px;
+
   }
   .dark-mode .scroll2 .BA button {
     left: 111px !important;
   }
   .dark-mode .scroll2 .emojiPickerIconWrap input {
-    width: 142% !important;
+    width: 100% !important;
   }
   .dark-mode .scroll2 .emojiPickerIcon {
     position: relative;
-    right: -234px !important;
+   
   }
 }
 
@@ -889,11 +879,18 @@
     left: 138px !important;
   }
   .dark-mode .scroll2 .emojiPickerIconWrap input {
-    width: 160% !important;
+    width: 100% !important;
   }
   .dark-mode .scroll2 .emojiPickerIcon {
     position: relative;
-    right: -261px !important;
+   
   }
+}
+
+.viewcmntbtn{
+  cursor: pointer; color: #101D3B; font-weight: bold;text-align: center;display: flex;justify-content: center;
+}
+.dark-mode .viewcmntbtn{
+   color: #fff;
 }
 /*# sourceMappingURL=main.css.map */
